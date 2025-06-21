@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bcsfmjkbfpspt"]
 
-[ext_resource type="Texture2D" uid="uid://cjc4twtspqju5" path="res://icon.svg" id="1_hgwhc"]
-[ext_resource type="Script" uid="uid://f0e4u0sj1yxi" path="res://player.gd" id="2_snm78"]
+[ext_resource type="Texture2D" uid="uid://cjc4twtspqju5" path="res://Assets/Materials/icon.svg" id="1_o1qwh"]
+[ext_resource type="Script" uid="uid://f0e4u0sj1yxi" path="res://Scripts/player.gd" id="2_7op4v"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_snm78"]
 size = Vector3(1.5, 0.4, 3)
@@ -20,7 +20,7 @@ height = 0.25
 radial_segments = 12
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ost65"]
-albedo_texture = ExtResource("1_hgwhc")
+albedo_texture = ExtResource("1_o1qwh")
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_yh0k8"]
@@ -111,7 +111,7 @@ shape = SubResource("ConcavePolygonShape3D_2l7wk")
 transform = Transform3D(1, 0, 0, 0, 0.0708358, 0.997488, 0, -0.997488, 0.0708358, 0, 28.0604, 0)
 
 [node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("2_snm78")
+script = ExtResource("2_7op4v")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62285, -16.8591)

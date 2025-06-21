@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Horror Drive"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Materials/icon.svg"
 
 [dotnet]
 
