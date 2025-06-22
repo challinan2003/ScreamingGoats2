@@ -1,4 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=16 format=3 uid="uid://o1qfsdfpsdp1"]
+
+[ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
+[ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="2_he6wq"]
+[ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="3_he6wq"]
 
 [sub_resource type="Curve3D" id="Curve3D_1p7x2"]
 
@@ -51,6 +55,22 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ym2k"]
+transparency = 1
+albedo_texture = ExtResource("2_he6wq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fi326"]
+material = SubResource("StandardMaterial3D_0ym2k")
+size = Vector2(8, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi326"]
+transparency = 1
+albedo_texture = ExtResource("3_he6wq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1p7x2"]
+material = SubResource("StandardMaterial3D_fi326")
+size = Vector2(8, 12)
 
 [node name="HarlanTestScene" type="Node3D"]
 
@@ -211,3 +231,14 @@ path_joined = false
 
 [node name="Path3D" type="Path3D" parent="Loop5"]
 curve = SubResource("Curve3D_u87b5")
+
+[node name="tree1" parent="." instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.5, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -12, 6, -9)
+mesh = SubResource("PlaneMesh_fi326")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -14, 6, -9)
+mesh = SubResource("PlaneMesh_1p7x2")
