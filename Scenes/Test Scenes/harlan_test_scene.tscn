@@ -1,8 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=21 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="2_he6wq"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="3_he6wq"]
+[ext_resource type="PackedScene" uid="uid://dfr3bs2vedkut" path="res://Assets/Models/sign1.glb" id="4_1p7x2"]
+[ext_resource type="PackedScene" uid="uid://dff5kn8frjg7p" path="res://Assets/Models/sign2.glb" id="5_u87b5"]
+[ext_resource type="PackedScene" uid="uid://deyr5ircr601a" path="res://Assets/Models/sign3.glb" id="6_uc85k"]
+[ext_resource type="PackedScene" uid="uid://bjn1xv4f4qb5t" path="res://Assets/Models/sign4.glb" id="7_uc85k"]
+[ext_resource type="PackedScene" uid="uid://cptmukel4rdx4" path="res://Assets/Models/sign5.glb" id="8_dlbj2"]
 
 [sub_resource type="Curve3D" id="Curve3D_1p7x2"]
 
@@ -242,3 +247,18 @@ mesh = SubResource("PlaneMesh_fi326")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -14, 6, -9)
 mesh = SubResource("PlaneMesh_1p7x2")
+
+[node name="sign1" parent="." instance=ExtResource("4_1p7x2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7.5)
+
+[node name="sign2" parent="." instance=ExtResource("5_u87b5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -9)
+
+[node name="sign3" parent="." instance=ExtResource("6_uc85k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10.5)
+
+[node name="sign4" parent="." instance=ExtResource("7_uc85k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -12)
+
+[node name="sign5" parent="." instance=ExtResource("8_dlbj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -13.5)
