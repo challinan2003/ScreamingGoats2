@@ -14,6 +14,10 @@ config/name="Horror Drive"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/Materials/icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Horror Drive"
