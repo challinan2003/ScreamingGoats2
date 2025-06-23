@@ -70,6 +70,10 @@ func _physics_process(delta: float) -> void:
 	
 	
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if !get_tree().paused:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

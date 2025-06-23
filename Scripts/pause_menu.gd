@@ -9,6 +9,7 @@ func resume():
 	$AnimationPlayer.play_backwards("blur")
 	
 func pause():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	print("test")
 	get_tree().paused = true
 	$AnimationPlayer.play("blur")
@@ -22,7 +23,8 @@ func testEsc():
 
 
 func _on_resume_button_pressed() -> void:
-	resume()
+	if get_tree().paused:
+		resume()
 	#hide()
 
 func _process(delta: float) -> void:
@@ -30,4 +32,5 @@ func _process(delta: float) -> void:
 
 
 func _on_quit_button_pressed() -> void:
-	get_tree().quit()
+	if get_tree().paused:
+		get_tree().quit()
