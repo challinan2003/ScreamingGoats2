@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://qv5jqmewhyrl"]
-
-[node name="Ui" type="CanvasLayer"]
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "dasasdadsdas"
