@@ -458,84 +458,84 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5, 0.5, -9)
 [node name="GuardRails" parent="." instance=ExtResource("12_d6811")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.5, 0.5, -7)
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Vista" type="Node3D" parent="."]
 
-[node name="Vista_Flat_1" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_1" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(2.08616e-07, -1, -8.88178e-15, 4.37114e-08, 3.44906e-15, -1, 1, 2.08616e-07, 4.37114e-08, 296.557, 8, 1.7263)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_2" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_2" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.707107, -0.707107, -3.09086e-08, 4.37114e-08, 1.67164e-15, -1, 0.707107, -0.707107, 3.09086e-08, 263.307, -20, 59.317)
 mesh = SubResource("PlaneMesh_pd64n")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_3" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_3" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(0.965926, -0.258819, 1.13133e-08, -8.57914e-16, -4.37114e-08, -1, -0.258819, -0.965926, 4.2222e-08, 191.635, 20.5, 96.4567)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_4" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_4" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(0.866025, -0.5, 2.18557e-08, -8.57914e-16, -4.37114e-08, -1, -0.5, -0.866025, 3.78552e-08, 253.135, -4.5, 131.957)
 mesh = SubResource("PlaneMesh_j43uk")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_5" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_5" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-1, -1.78814e-07, -4.37114e-08, 4.37114e-08, 1.67164e-15, -1, 1.78814e-07, -1, -1.24345e-14, 103.807, 36, 103.317)
 mesh = SubResource("PlaneMesh_pd64n")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_6" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_6" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(0.965926, -0.258819, 1.13133e-08, -8.57914e-16, -4.37114e-08, -1, -0.258819, -0.965926, 4.2222e-08, 191.635, 37.5, 148.957)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_7" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_7" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-1, -1.64905e-07, -4.37114e-08, 4.37114e-08, 3.44906e-15, -1, 1.64905e-07, -1, -1.07925e-14, 98.0574, 35.5, 165.226)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_8" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_8" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(0.5, -0.866025, 3.78552e-08, -8.57914e-16, -4.37114e-08, -1, -0.866025, -0.5, 2.18557e-08, 305.635, -5, 65.9567)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_9" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_9" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.258819, -0.965926, -1.13134e-08, 4.37114e-08, 3.44906e-15, -1, 0.965926, -0.258819, 4.2222e-08, 330.557, 1.5, 54.2263)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_10" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_10" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-2.38419e-07, -1, 4.37114e-08, 9.18443e-16, -4.37114e-08, -1, -1, 2.38419e-07, -8.88178e-15, 345.635, 7.5, -35.0433)
 mesh = SubResource("PlaneMesh_j43uk")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_11" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_11" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 8.13722e-16, -1, 0.866025, -0.5, 3.78552e-08, 319.307, -13, 126.817)
 mesh = SubResource("PlaneMesh_pd64n")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_12" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_12" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 8.13722e-16, -1, 0.866025, -0.5, 3.78552e-08, 365.807, -13, 46.817)
 mesh = SubResource("PlaneMesh_pd64n")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_13" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_13" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(0.866025, 0.5, -2.18557e-08, -8.57914e-16, -4.37114e-08, -1, 0.5, -0.866025, 3.78552e-08, 148.683, 37.5, 76.9241)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_14" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_14" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.707107, 0.707106, -3.09086e-08, 4.37114e-08, 3.44906e-15, -1, -0.707106, -0.707107, -3.09086e-08, 77.0094, 35.5, 22.2589)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_15" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_15" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.707107, 0.707106, -3.09086e-08, 4.37114e-08, 3.44906e-15, -1, -0.707106, -0.707107, -3.09086e-08, 33.0094, 23, 79.2589)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
-[node name="Vista_Flat_16" type="MeshInstance3D" parent="Node3D"]
+[node name="Vista_Flat_16" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -17, 122.759)
 mesh = SubResource("PlaneMesh_nm4gv")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
