@@ -21,6 +21,7 @@ offset_left = 497.0
 offset_top = 198.0
 offset_right = 725.0
 offset_bottom = 392.0
+mouse_filter = 1
 theme = ExtResource("1_706bw")
 bbcode_enabled = true
 text = "[b]Bold[/b]
