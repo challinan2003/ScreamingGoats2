@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmb6i3t0vhyla"]
+[gd_scene load_steps=7 format=3 uid="uid://bmb6i3t0vhyla"]
+
+[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="1_lui43"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7drjp"]
 emission_shape = 3
@@ -11,6 +13,10 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_348o6"]
 material = SubResource("StandardMaterial3D_lui43")
 
+[sub_resource type="Environment" id="Environment_348o6"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_2vlc6"]
+
 [node name="ColinTestScene" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
@@ -19,3 +25,14 @@ amount = 6166
 lifetime = 12.27
 process_material = SubResource("ParticleProcessMaterial_7drjp")
 draw_pass_1 = SubResource("QuadMesh_348o6")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
+script = ExtResource("1_lui43")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.5707, 186.397, -2.36093)
+light_energy = 11.11
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SpotLight3D"]
+environment = SubResource("Environment_348o6")
+camera_attributes = SubResource("CameraAttributesPractical_2vlc6")

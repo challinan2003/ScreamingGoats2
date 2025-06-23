@@ -1,0 +1,1 @@
+extends GPUParticlesCollisionBox3D
