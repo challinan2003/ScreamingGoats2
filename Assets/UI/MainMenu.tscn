@@ -65,7 +65,7 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme = ExtResource("2_trh8p")
 bbcode_enabled = true
-text = "[center][b]Game Title[/b][/center]"
+text = "[center][b]Missed My Exit[/b][/center]"
 fit_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer"]
