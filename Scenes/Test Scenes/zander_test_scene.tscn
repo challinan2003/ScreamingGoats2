@@ -132,3 +132,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0177924, 2.18823, -16.8198
 
 [node name="GuardRails" parent="." instance=ExtResource("4_dcf4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.86301, 1.5, -11.5231)
+
+[node name="GuardRails2" parent="." instance=ExtResource("4_dcf4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.76926, 1.5, -7.49695)
+
+[node name="GuardRails3" parent="." instance=ExtResource("4_dcf4f")]
+transform = Transform3D(0.953698, -0.00805357, -0.300659, 0.00440683, 0.999908, -0.0128055, 0.300735, 0.0108876, 0.953646, -8.00764, 1.46755, -16.2489)
