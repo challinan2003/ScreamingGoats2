@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://bmb6i3t0vhyla"]
+[gd_scene load_steps=4 format=3 uid="uid://bmb6i3t0vhyla"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7drjp"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(4, -9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lui43"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_348o6"]
+material = SubResource("StandardMaterial3D_lui43")
 
 [node name="ColinTestScene" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(239.395, 0, 0, 0, 239.395, 0, 0, 0, 239.395, 0, 285.496, 0)
+amount = 6166
+lifetime = 12.27
+process_material = SubResource("ParticleProcessMaterial_7drjp")
+draw_pass_1 = SubResource("QuadMesh_348o6")
