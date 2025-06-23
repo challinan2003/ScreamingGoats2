@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=52 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="2_he6wq"]
@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dvjhj65b2qbne" path="res://Assets/Models/sign6.glb" id="9_dlbj2"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="10_o401o"]
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="11_44usg"]
+[ext_resource type="AudioStream" uid="uid://dn3bub73gh16b" path="res://Assets/Sounds/Car_Idle_1.mp3" id="11_pd64n"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="12_d6811"]
+[ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o401o"]
 sky_top_color = Color(0.074531, 0.0980774, 0.130821, 1)
@@ -123,6 +125,17 @@ top_radius = 0.4
 bottom_radius = 0.4
 height = 0.25
 radial_segments = 12
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rr4e2"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(4, -9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lui43"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_1f5un"]
+material = SubResource("StandardMaterial3D_lui43")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
 
@@ -445,6 +458,19 @@ damping_relaxation = 2.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="car/back_right_wheel"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CylinderMesh_44usg")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="car"]
+transform = Transform3D(239.395, 0, 0, 0, 239.395, 0, 0, 0, 239.395, 0, 285.496, 0)
+amount = 6166
+lifetime = 12.27
+process_material = SubResource("ParticleProcessMaterial_rr4e2")
+draw_pass_1 = SubResource("QuadMesh_1f5un")
+
+[node name="Car_Idle_1" type="AudioStreamPlayer3D" parent="car"]
+stream = ExtResource("11_pd64n")
+
+[node name="Car_Drive_1" type="AudioStreamPlayer3D" parent="car"]
+stream = ExtResource("12_j43uk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
