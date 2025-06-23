@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://fnvl2u1r52px"
-path="res://.godot/imported/power_Pole.glb-0413ffe17bab1b0289ddb0df9f5099da.scn"
+uid="uid://bxhmfh8u0yrgu"
+path="res://.godot/imported/Boulder_3.glb-c1fdef50f46d9ef5a470c73f1919a7c6.scn"
 
 [deps]
 
-source_file="res://Assets/Models/power_Pole.glb"
-dest_files=["res://.godot/imported/power_Pole.glb-0413ffe17bab1b0289ddb0df9f5099da.scn"]
+source_file="res://Assets/Models/Boulder_3.glb"
+dest_files=["res://.godot/imported/Boulder_3.glb-c1fdef50f46d9ef5a470c73f1919a7c6.scn"]
 
 [params]
 
