@@ -2,6 +2,8 @@ extends Control
 
 signal start_game()
 @onready var button_box: VBoxContainer = %ButtonsBox
+@onready var intro: Node = %IntroCutscene
+@onready var menu: Node = %Menu
 
 func _ready() -> void:
 	focus_button()
@@ -10,9 +12,10 @@ func _ready() -> void:
 
 func _on_start_game_button_pressed() -> void:
 	start_game.emit()
-	get_tree().paused = false
-	#print("test2")
-	hide()
+	intro.show()
+	#get_tree().paused = false
+	print("test2")
+	menu.hide()
 		
 
 func _on_visibility_changes() -> void:
