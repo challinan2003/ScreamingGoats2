@@ -1,5 +1,6 @@
-[gd_scene load_steps=53 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=59 format=3 uid="uid://o1qfsdfpsdp1"]
 
+[ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="2_he6wq"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="3_he6wq"]
@@ -13,29 +14,40 @@
 [ext_resource type="PackedScene" uid="uid://cptmukel4rdx4" path="res://Assets/Models/sign5.glb" id="8_dlbj2"]
 [ext_resource type="PackedScene" uid="uid://dvjhj65b2qbne" path="res://Assets/Models/sign6.glb" id="9_dlbj2"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="10_o401o"]
-[ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="11_44usg"]
 [ext_resource type="AudioStream" uid="uid://dn3bub73gh16b" path="res://Assets/Sounds/Car_Idle_1.mp3" id="11_pd64n"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="12_d6811"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
+[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o401o"]
-sky_top_color = Color(0.074531, 0.0980774, 0.130821, 1)
-sky_horizon_color = Color(0.0981544, 0.104041, 0.112227, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
 ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.0981544, 0.104041, 0.112227, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+energy_multiplier = 0.8
 
-[sub_resource type="Sky" id="Sky_44usg"]
-sky_material = SubResource("ProceduralSkyMaterial_o401o")
+[sub_resource type="Sky" id="Sky_d7can"]
+sky_material = SubResource("ProceduralSkyMaterial_nm4gv")
 
-[sub_resource type="Environment" id="Environment_d6811"]
+[sub_resource type="Environment" id="Environment_fkd3l"]
 background_mode = 2
-sky = SubResource("Sky_44usg")
-tonemap_mode = 2
-sdfgi_enabled = true
-glow_enabled = true
+sky = SubResource("Sky_d7can")
 
 [sub_resource type="Curve3D" id="Curve3D_1p7x2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7can"]
+albedo_texture = ExtResource("1_nm4gv")
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 2
+
+[sub_resource type="Curve3D" id="Curve3D_uc85k"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0214024, 1, -0.319985, 0, 0, 0, 0, 0, 0, 0.921793, 1, -11.1247, 0, 0, 0, 0, 0, 0, 4.52336, 1, -24.1804, 0, 0, 0, 0, 0, 0, 19.3798, 1, -39.9373, 0, 0, 0, 0, 0, 0, 38.2881, 1, -46.6902, 0, 0, 0, 0, 0, 0, 59.8975, 1, -52.0926, 0, 0, 0, 0, 0, 0, 86.0089, 1, -57.9451, 0, 0, 0, 0, 0, 0, 106.268, 1, -57.0447, 0, 0, 0, 0, 0, 0, 128.327, 1, -51.1922, 0, 0, 0, 0, 0, 0, 152.638, 1, -45.7898, 0, 0, 0, 0, 0, 0, 182.351, 1, -48.9412, 0, 0, 0, 0, 0, 0, 215.215, 1, -58.3953, 0, 0, 0, 0, 0, 0, 237.275, 1, -77.3036, 0, 0, 0, 0, 0, 0, 253.482, 1, -99.8134, 0, 0, 0, 0, 0, 0, 261.45, 1, -127.535, 0, 0, 0, 0, 0, 0, 272.255, 1, -147.794, 0, 0, 0, 0, 0, 0, 294.315, 1, -162.2, 0, 0, 0, 0, 0, 0, 323.578, 1, -175.256, 0, 0, 0, 0, 0, 0, 345.637, 1, -195.515, 0, 0, 0, 0, 0, 0, 351.94, 1, -226.578, 0, 0, 0, 0, 0, 0, 344.287, 1, -251.789, 0, 0, 0, 0, 0, 0, 317.275, 1, -272.048, 0, 0, 0, 0, 0, 0, 288.912, 1, -278.801, 0, 0, 0, 0, 0, 0, 243.893, 1, -281.502, 0, 0, 0, 0, 0, 0, 193.921, 1, -283.753, 0, 0, 0, 0, 0, 0, 138.997, 1, -277.451, 0, 0, 0, 0, 0, 0, 90.3758, 1, -256.291, 0, 0, 0, 0, 0, 0, 62.0134, 1, -237.833, 0, 0, 0, 0, 0, 0, 38.6032, 1, -230.18, 0, 0, 0, 0, 0, 0, -10.9184, 1, -228.379, 0, 0, 0, 0, 0, 0, -36.1294, 1, -220.276, 0, 0, 0, 0, 0, 0, -55.938, 1, -202.268, 0, 0, 0, 0, 0, 0, -71.6949, 1, -176.156, 0, 0, 0, 0, 0, 0, -79.3482, 1, -148.694, 0, 0, 0, 0, 0, 0, -79.7984, 1, -123.483, 0, 0, 0, 0, 0, 0, -77.4338, 1, -75.0936, 0, 0, 0, 0, 0, 0, -81.9358, 1, -32.7751, 0, 0, 0, 0, 0, 0, -90.9397, 1, 3.6908, 0, 0, 0, 0, 0, 0, -91.3899, 1, 37.0053, 0, 0, 0, 0, 0, 0, -73.8322, 1, 54.563, 0, 0, 0, 0, 0, 0, -43.6691, 1, 55.9136, 0, 0, 0, 0, 0, 0, -17.1075, 1, 46.9096, 0, 0, 0, 0, 0, 0, -1.80083, 1, 22.1488),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 43
 
 [sub_resource type="Curve3D" id="Curve3D_uwut7"]
 _data = {
@@ -87,14 +99,6 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="Curve3D" id="Curve3D_uc85k"]
-closed = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0214024, 1, -0.319985, 0, 0, 0, 0, 0, 0, 0.921793, 1, -11.1247, 0, 0, 0, 0, 0, 0, 4.52336, 1, -24.1804, 0, 0, 0, 0, 0, 0, 19.3798, 1, -39.9373, 0, 0, 0, 0, 0, 0, 38.2881, 1, -46.6902, 0, 0, 0, 0, 0, 0, 59.8975, 1, -52.0926, 0, 0, 0, 0, 0, 0, 86.0089, 1, -57.9451, 0, 0, 0, 0, 0, 0, 106.268, 1, -57.0447, 0, 0, 0, 0, 0, 0, 128.327, 1, -51.1922, 0, 0, 0, 0, 0, 0, 152.638, 1, -45.7898, 0, 0, 0, 0, 0, 0, 182.351, 1, -48.9412, 0, 0, 0, 0, 0, 0, 215.215, 1, -58.3953, 0, 0, 0, 0, 0, 0, 237.275, 1, -77.3036, 0, 0, 0, 0, 0, 0, 253.482, 1, -99.8134, 0, 0, 0, 0, 0, 0, 261.45, 1, -127.535, 0, 0, 0, 0, 0, 0, 272.255, 1, -147.794, 0, 0, 0, 0, 0, 0, 294.315, 1, -162.2, 0, 0, 0, 0, 0, 0, 323.578, 1, -175.256, 0, 0, 0, 0, 0, 0, 345.637, 1, -195.515, 0, 0, 0, 0, 0, 0, 351.94, 1, -226.578, 0, 0, 0, 0, 0, 0, 344.287, 1, -251.789, 0, 0, 0, 0, 0, 0, 317.275, 1, -272.048, 0, 0, 0, 0, 0, 0, 288.912, 1, -278.801, 0, 0, 0, 0, 0, 0, 243.893, 1, -281.502, 0, 0, 0, 0, 0, 0, 193.921, 1, -283.753, 0, 0, 0, 0, 0, 0, 138.997, 1, -277.451, 0, 0, 0, 0, 0, 0, 90.3758, 1, -256.291, 0, 0, 0, 0, 0, 0, 62.0134, 1, -237.833, 0, 0, 0, 0, 0, 0, 38.6032, 1, -230.18, 0, 0, 0, 0, 0, 0, -10.9184, 1, -228.379, 0, 0, 0, 0, 0, 0, -36.1294, 1, -220.276, 0, 0, 0, 0, 0, 0, -55.938, 1, -202.268, 0, 0, 0, 0, 0, 0, -71.6949, 1, -176.156, 0, 0, 0, 0, 0, 0, -79.3482, 1, -148.694, 0, 0, 0, 0, 0, 0, -79.7984, 1, -123.483, 0, 0, 0, 0, 0, 0, -77.4338, 1, -75.0936, 0, 0, 0, 0, 0, 0, -81.9358, 1, -32.7751, 0, 0, 0, 0, 0, 0, -90.9397, 1, 3.6908, 0, 0, 0, 0, 0, 0, -91.3899, 1, 37.0053, 0, 0, 0, 0, 0, 0, -73.8322, 1, 54.563, 0, 0, 0, 0, 0, 0, -43.6691, 1, 55.9136, 0, 0, 0, 0, 0, 0, -17.1075, 1, 46.9096, 0, 0, 0, 0, 0, 0, -1.80083, 1, 22.1488),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 43
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ym2k"]
 transparency = 1
 albedo_texture = ExtResource("2_he6wq")
@@ -127,7 +131,7 @@ bottom_radius = 0.4
 height = 0.25
 radial_segments = 12
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rr4e2"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7can"]
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 gravity = Vector3(4, -9.8, 0)
@@ -135,7 +139,7 @@ gravity = Vector3(4, -9.8, 0)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lui43"]
 billboard_mode = 1
 
-[sub_resource type="QuadMesh" id="QuadMesh_1f5un"]
+[sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
 material = SubResource("StandardMaterial3D_lui43")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
@@ -178,16 +182,48 @@ metadata/_snap_enabled = true
 transparency = 1
 albedo_texture = SubResource("GradientTexture2D_1f5un")
 emission_enabled = true
-emission = Color(0.172833, 0.172833, 0.172833, 1)
+emission = Color(0.118581, 0.118581, 0.118581, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nm4gv"]
 material = SubResource("StandardMaterial3D_j43uk")
 size = Vector2(200, 100)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm4gv"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("3_he6wq")
+uv1_scale = Vector3(4, 8, 4)
+
+[sub_resource type="Curve3D" id="Curve3D_d7can"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.8646, 0, -1.3702, 0, 0, 0, 0, 0, 0, -3.88994, 0, -36.7883, 0, 0, 0, 0, 0, 0, 29.1709, 0, -56.5633, 0, 0, 0, 0, 0, 0, 63.1056, 0, -66.331, 0, 0, 0, 0, 0, 0, 96.7592, 0, -70.5519, 0, 0, 0, 0, 0, 0, 128.112, 0, -66.6467, 0, 0, 0, 0, 0, 0, 156.459, 0, -60.6053, 0, 0, 0, 0, 0, 0, 184.803, 0, -65.1587, 0, 0, 0, 0, 0, 0, 209.921, 0, -73.1762, 0, 0, 0, 0, 0, 0, 225.224, 0, -87.8024, 0, 0, 0, 0, 0, 0, 241.176, 0, -112.793, 0, 0, 0, 0, 0, 0, 254.191, 0, -140.676, 0, 0, 0, 0, 0, 0, 276.747, 0, -167.898, 0, 0, 0, 0, 0, 0, 306.518, 0, -183.334, 0, 0, 0, 0, 0, 0, 326.061, 0, -199.836, 0, 0, 0, 0, 0, 0, 331.384, 0, -219.989, 0, 0, 0, 0, 0, 0, 328.01, 0, -240.939, 0, 0, 0, 0, 0, 0, 315.805, 0, -252.013, 0, 0, 0, 0, 0, 0, 290.41, 0, -261.05, 0, 0, 0, 0, 0, 0, 260.998, 0, -264.234, 0, 0, 0, 0, 0, 0, 227.879, 0, -264.945, 0, 0, 0, 0, 0, 0, 198.648, 0, -267.305, 0, 0, 0, 0, 0, 0, 170.326, 0, -265.078, 0, 0, 0, 0, 0, 0, 140.987, 0, -261.506, 0, 0, 0, 0, 0, 0, 114.097, 0, -250.775, 0, 0, 0, 0, 0, 0, 89.9258, 0, -234.464, 0, 0, 0, 0, 0, 0, 60.7876, 0, -220.548, 0, 0, 0, 0, 0, 0, 24.4817, 0, -215.991, 0, 0, 0, 0, 0, 0, -6.02451, 0, -212.432, 0, 0, 0, 0, 0, 0, -26.7617, 0, -204.261, 0, 0, 0, 0, 0, 0, -40.5317, 0, -190.127, 0, 0, 0, 0, 0, 0, -54.5108, 0, -168.482, 0, 0, 0, 0, 0, 0, -62.2526, 0, -134.487, 0, 0, 0, 0, 0, 0, -61.259, 0, -106.04, 0, 0, 0, 0, 0, 0, -60.8279, 0, -76.4962, 0, 0, 0, 0, 0, 0, -63.8597, 0, -46.7331, 0, 0, 0, 0, 0, 0, -68.762, 0, -18.0474, 0, 0, 0, 0, 0, 0, -72.446, 0, 10.4145, 0, 0, 0, 0, 0, 0, -67.7937, 0, 35.1718, 0, 0, 0, 0, 0, 0, -55.9292, 0, 36.7673, 0, 0, 0, 0, 0, 0, -43.7907, 0, 39.4278, 0, 0, 0, 0, 0, 0, -20.6777, 0, 24.4625),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 42
+up_vector_enabled = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkd3l"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_he6wq")
+uv1_scale = Vector3(4, 8, 4)
+
+[sub_resource type="Curve3D" id="Curve3D_2l6m4"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.97704, 0, -1.30001, 0, 0, 0, 0, 0, 0, -3.38751, 0, -27.7015, 0, 0, 0, 0, 0, 0, 15.5534, 0, -45.3323, 0, 0, 0, 0, 0, 0, 41.4071, 0, -56.5298, 0, 0, 0, 0, 0, 0, 68.7397, 0, -64.4051, 0, 0, 0, 0, 0, 0, 96.9437, 0, -67.3384, 0, 0, 0, 0, 0, 0, 125.544, 0, -64.0128, 0, 0, 0, 0, 0, 0, 153.874, 0, -58.2838, 0, 0, 0, 0, 0, 0, 183.755, 0, -61.898, 0, 0, 0, 0, 0, 0, 211.431, 0, -71.244, 0, 0, 0, 0, 0, 0, 232.395, 0, -93.1406, 0, 0, 0, 0, 0, 0, 246.456, 0, -118.076, 0, 0, 0, 0, 0, 0, 260.322, 0, -143.083, 0, 0, 0, 0, 0, 0, 277.865, 0, -165.376, 0, 0, 0, 0, 0, 0, 303.503, 0, -178.295, 0, 0, 0, 0, 0, 0, 326.45, 0, -195.92, 0, 0, 0, 0, 0, 0, 333.147, 0, -226.182, 0, 0, 0, 0, 0, 0, 320.525, 0, -250.715, 0, 0, 0, 0, 0, 0, 292.919, 0, -263.71, 0, 0, 0, 0, 0, 0, 263.166, 0, -267.229, 0, 0, 0, 0, 0, 0, 232.735, 0, -268.045, 0, 0, 0, 0, 0, 0, 204.467, 0, -269.542, 0, 0, 0, 0, 0, 0, 175.202, 0, -268.212, 0, 0, 0, 0, 0, 0, 144.108, 0, -264.553, 0, 0, 0, 0, 0, 0, 115.494, 0, -255.104, 0, 0, 0, 0, 0, 0, 93.026, 0, -240.861, 0, 0, 0, 0, 0, 0, 67.9176, 0, -228.224, 0, 0, 0, 0, 0, 0, 40.6752, 0, -220.584, 0, 0, 0, 0, 0, 0, 13.4202, 0, -217.659, 0, 0, 0, 0, 0, 0, -17.1754, 0, -211.174, 0, 0, 0, 0, 0, 0, -41.1435, 0, -193.64, 0, 0, 0, 0, 0, 0, -58.0845, 0, -168.635, 0, 0, 0, 0, 0, 0, -63.7977, 0, -137.923, 0, 0, 0, 0, 0, 0, -63.0392, 0, -108.513, 0, 0, 0, 0, 0, 0, -62.3741, 0, -76.7531, 0, 0, 0, 0, 0, 0, -65.9594, 0, -43.5362, 0, 0, 0, 0, 0, 0, -71.5298, 0, -11.164, 0, 0, 0, 0, 0, 0, -75.3251, 0, 15.4717, 0, 0, 0, 0, 0, 0, -72.6646, 0, 35.7579, 0, 0, 0, 0, 0, 0, -56.0365, 0, 43.4068, 0, 0, 0, 0, 0, 0, -33.2561, 0, 41.0789, 0, 0, 0, 0, 0, 0, -18.6234, 0, 25.9473),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 42
+up_vector_enabled = false
+
 [node name="HarlanTestScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_d6811")
+environment = SubResource("Environment_fkd3l")
 
 [node name="LoopBase" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -210,139 +246,6 @@ curve = SubResource("Curve3D_1p7x2")
 
 [node name="Loop1" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop1"]
-curve = SubResource("Curve3D_uwut7")
-
-[node name="Loop2" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop2"]
-curve = SubResource("Curve3D_ung7k")
-
-[node name="Loop2_2" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop2_2"]
-curve = SubResource("Curve3D_he6wq")
-
-[node name="Loop2_3" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop2_3"]
-curve = SubResource("Curve3D_0ym2k")
-
-[node name="Loop3" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop3"]
-curve = SubResource("Curve3D_fi326")
-
-[node name="Loop4" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop4"]
-curve = SubResource("Curve3D_ysq32")
-
-[node name="Loop5" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="Loop5"]
-curve = SubResource("Curve3D_u87b5")
-
-[node name="LoopZander" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 use_collision = true
 polygon = PackedVector2Array(-4, 0, -3, 1, 3, 1, 4, 0)
 mode = 2
@@ -356,19 +259,157 @@ path_local = false
 path_continuous_u = false
 path_u_distance = 1.0
 path_joined = false
+material = SubResource("StandardMaterial3D_d7can")
 
-[node name="Path3D" type="Path3D" parent="LoopZander"]
+[node name="Path3D" type="Path3D" parent="Loop1"]
 curve = SubResource("Curve3D_uc85k")
 
+[node name="OldLoops" type="Node3D" parent="."]
+
+[node name="OldLoop1" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop1"]
+curve = SubResource("Curve3D_uwut7")
+
+[node name="OldLoop2" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2"]
+curve = SubResource("Curve3D_ung7k")
+
+[node name="OldLoop2_2" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2_2"]
+curve = SubResource("Curve3D_he6wq")
+
+[node name="OldLoop2_3" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2_3"]
+curve = SubResource("Curve3D_0ym2k")
+
+[node name="OldLoop3" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop3"]
+curve = SubResource("Curve3D_fi326")
+
+[node name="OldLoop4" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop4"]
+curve = SubResource("Curve3D_ysq32")
+
+[node name="OldLoop5" type="CSGPolygon3D" parent="OldLoops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop5"]
+curve = SubResource("Curve3D_u87b5")
+
 [node name="tree1" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.5, 0, -6)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.5, 0, -2.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -12, 6, -9)
+visible = false
 mesh = SubResource("PlaneMesh_fi326")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -14, 6, -9)
+visible = false
 mesh = SubResource("PlaneMesh_1p7x2")
 
 [node name="sign1" parent="." instance=ExtResource("4_1p7x2")]
@@ -404,6 +445,7 @@ current = true
 [node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
 transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
 spot_range = 10.0
+spot_angle = 60.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
 shape = SubResource("ConvexPolygonShape3D_o401o")
@@ -460,27 +502,28 @@ damping_relaxation = 2.0
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CylinderMesh_44usg")
 
+[node name="Car_Idle_1" type="AudioStreamPlayer3D" parent="car"]
+stream = ExtResource("11_pd64n")
+autoplay = true
+
+[node name="Car_Drive_1" type="AudioStreamPlayer3D" parent="car"]
+stream = ExtResource("12_j43uk")
+
 [node name="GPUParticles3D" type="GPUParticles3D" parent="car"]
 transform = Transform3D(239.395, 0, 0, 0, 239.395, 0, 0, 0, 239.395, 0, 285.496, 0)
 amount = 6166
 lifetime = 12.27
-process_material = SubResource("ParticleProcessMaterial_rr4e2")
-draw_pass_1 = SubResource("QuadMesh_1f5un")
+process_material = SubResource("ParticleProcessMaterial_d7can")
+draw_pass_1 = SubResource("QuadMesh_fkd3l")
 
-[node name="Car_Idle_1" type="AudioStreamPlayer3D" parent="car"]
-stream = ExtResource("11_pd64n")
-
-[node name="Car_Drive_1" type="AudioStreamPlayer3D" parent="car"]
-stream = ExtResource("12_j43uk")
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
+script = ExtResource("14_nm4gv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("WorldBoundaryShape3D_o401o")
-
-[node name="Power_Pole" parent="." instance=ExtResource("11_44usg")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5, 0.5, -9)
 
 [node name="GuardRails" parent="." instance=ExtResource("12_d6811")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.5, 0.5, -7)
@@ -569,3 +612,39 @@ skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/Do
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_j43uk")
+
+[node name="FakeTreeDeep_1" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_nm4gv")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeDeep_1"]
+curve = SubResource("Curve3D_d7can")
+
+[node name="FakeTreeClose_2" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_fkd3l")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeClose_2"]
+curve = SubResource("Curve3D_2l6m4")

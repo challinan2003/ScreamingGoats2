@@ -1,10 +1,9 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://cpwutcckj0lj4"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://b06osjrid6lwx"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
 resource_name = "Reverb"
 
 [resource]
-bus/0/send = &"Mute_"
 bus/1/name = &"Muted"
 bus/1/solo = false
 bus/1/mute = false
