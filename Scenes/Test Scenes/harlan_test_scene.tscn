@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=56 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
@@ -17,8 +17,9 @@
 [ext_resource type="AudioStream" uid="uid://dn3bub73gh16b" path="res://Assets/Sounds/Car_Idle_1.mp3" id="11_pd64n"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="12_d6811"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
-[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
+[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
+[ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="20_d7can"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -49,55 +50,9 @@ _data = {
 }
 point_count = 43
 
-[sub_resource type="Curve3D" id="Curve3D_uwut7"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0241399, 1.00175, 0.0583458, 0, 0, 0, 0, 0, 0, 0.123186, 1.65214, -7.86155, 0, 0, 0, 0, 0, 0, -3.68432, 2.36273, -15.8309, 0, 0, 0, 0, 0, 0, -9.46957, 2.37064, -24.26, 0, 0, 0, 0, 0, 0, -14.0107, 2.37767, -32.4578, 0, 0, 0, 0, 0, 0, -12.815, 2.38368, -45.2635, 0, 0, 0, 0, 0, 0, -17.5824, 2.39273, -57.0201, 0, 0, 0, 0, 0, 0, -18.4309, 2.40027, -70.3658, 0, 0, 0, 0, 0, 0, -13.7149, 2.4028, -80.4922, 0, 0, 0, 0, 0, 0, -1.59827, 2.39879, -86.6224, 0, 0, 0, 0, 0, 0, 10.2329, 2.39177, -86.7047, 0, 0, 0, 0, 0, 0, 20.2178, 2.38451, -84.213, 0, 0, 0, 0, 0, 0, 29.6807, 2.37448, -75.8815, 0, 0, 0, 0, 0, 0, 34.3349, 2.36647, -65.9043, 0, 0, 0, 0, 0, 0, 43.2398, 2.3577, -59.324, 0, 0, 0, 0, 0, 0, 54.2944, 2.35016, -57.5703, 0, 0, 0, 0, 0, 0, 72.0321, 2.34062, -59.5914, 0, 0, 0, 0, 0, 0, 85.6453, 2.3381, -70.2834, 0, 0, 0, 0, 0, 0, 101.226, 2.33107, -74.6239, 0, 0, 0, 0, 0, 0, 151.191, 2.3017, -75.5676, 0, 0, 0, 0, 0, 0, 177.392, 2.28915, -81.4767, 0, 0, 0, 0, 0, 0, 196.731, 2.28389, -93.4261, 0, 0, 0, 0, 0, 0, 212.075, 2.27711, -97.9749, 0, 0, 0, 0, 0, 0, 224.505, 2.27588, -109.708, 0, 0, 0, 0, 0, 0, 228.504, 2.2829, -127.606, 0, 0, 0, 0, 0, 0, 235.123, 2.28517, -139.416, 0, 0, 0, 0, 0, 0, 247.203, 2.28517, -153.137, 0, 0, 0, 0, 0, 0, 251.626, 2.28842, -164.362, 0, 0, 0, 0, 0, 0, 252.598, 2.30199, -191.223),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 29
-up_vector_enabled = false
-
-[sub_resource type="Curve3D" id="Curve3D_ung7k"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.196595, 1.13165, -0.337977, 0, 0, 0, 0, 0, 0, 0.411609, 2.47793, -8.17657, 0, 0, 0, 0, 0, 0, 4.01221, 3.13465, -17.5291, 0, 0, 0, 0, 0, 0, 9.12482, 3.13464, -26.0846, 0, 0, 0, 0, 0, 0, 16.8367, 2.11671, -33.8325, 0, 0, 0, 0, 0, 0, 30.5839, 2.1167, -37.8696, 0, 0, 0, 0, 0, 0, 47.9705, 2.1167, -38.9913, 0, 0, 0, 0, 0, 0, 62.7354, 2.1167, -42.8565, 0, 0, 0, 0, 0, 0, 76.0134, 2.1167, -53.5736, 0, 0, 0, 0, 0, 0, 86.1088, 2.1167, -61.4256, 0, 0, 0, 0, 0, 0, 101.813, 2.1167, -65.9125, 0, 0, 0, 0, 0, 0, 115.017, 2.1167, -63.6691, 0, 0, 0, 0, 0, 0, 127.369, 2.1167, -52.1345, 0, 0, 0, 0, 0, 0, 128.856, 2.1167, -33.0653, 0, 0, 0, 0, 0, 0, 139.951, 2.1167, -14.8744, 0, 0, 0, 0, 0, 0, 159.02, 2.1167, -9.8267, 0, 0, 0, 0, 0, 0, 181.455, 2.1167, -14.3136, 0, 0, 0, 0, 0, 0, 196.598, 2.1167, -28.8959, 0, 0, 0, 0, 0, 0, 203.889, 2.1167, -51.891, 0, 0, 0, 0, 0, 0, 199.402, 2.1167, -73.7645, 0, 0, 0, 0, 0, 0, 186.502, 2.1167, -96.1988, 0, 0, 0, 0, 0, 0, 184.259, 2.1167, -119.755, 0, 0, 0, 0, 0, 0, 200.524, 2.1167, -136.581, 0, 0, 0, 0, 0, 0, 231.371, 2.1167, -137.702, 0, 0, 0, 0, 0, 0, 245.392, 2.1167, -124.803, 0, 0, 0, 0, 0, 0, 266.705, 2.1167, -111.903, 0, 0, 0, 0, 0, 0, 286.896, 2.1167, -120.316, 0, 0, 0, 0, 0, 0, 299.235, 2.1167, -139.946, 0, 0, 0, 0, 0, 0, 298.113, 2.1167, -165.745, 0, 0, 0, 0, 0, 0, 298.112, 2.1167, -191.46),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 30
-
-[sub_resource type="Curve3D" id="Curve3D_he6wq"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.7126, 1, -18.0455, 0, 0, 0, 0, 0, 0, 8.03493, 1, -29.2365, 0, 0, 0, 0, 0, 0, 9.25894, 1, -45.1487, 0, 0, 0, 0, 0, 0, 7.27788, 1, -64.6637, 0, 0, 0, 0, 0, 0, -2.51423, 1, -100.16, 0, 0, 0, 0, 0, 0, -0.0665665, 1, -117.916, 0, 0, 0, 0, 0, 0, 11.649, 1, -131.206, 0, 0, 0, 0, 0, 0, 33.8561, 1, -135.053, 0, 0, 0, 0, 0, 0, 80.5204, 1, -136.269, 0, 0, 0, 0, 0, 0, 105.7, 1, -143.613, 0, 0, 0, 0, 0, 0, 120.933, 1, -154.929, 0, 0, 0, 0, 0, 0, 129.501, 1, -169.442, 0, 0, 0, 0, 0, 0, 130.026, 1, -187.103, 0, 0, 0, 0, 0, 0, 130.026, 1, -196.196),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 14
-
-[sub_resource type="Curve3D" id="Curve3D_0ym2k"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 186.943, 1, -121.486, 0, 0, 0, 0, 0, 0, 191.986, 1, -143.877, 0, 0, 0, 0, 0, 0, 201.266, 1, -157.998, 0, 0, 0, 0, 0, 0, 220.429, 1, -165.663, 0, 0, 0, 0, 0, 0, 224.464, 1, -176.556, 0, 0, 0, 0, 0, 0, 224.262, 1, -192.291),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 6
-
-[sub_resource type="Curve3D" id="Curve3D_fi326"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.303574, 1, -1.57252, 0, 0, 0, 0, 0, 0, 4.83368, 1, -20.4479, 0, 0, 0, 0, 0, 0, 21.8216, 1, -35.9258, 0, 0, 0, 0, 0, 0, 45.6046, 1, -42.7209, 0, 0, 0, 0, 0, 0, 72.4077, 1, -48.7611, 0, 0, 0, 0, 0, 0, 92.4156, 1, -58.9538, 0, 0, 0, 0, 0, 0, 98.8333, 1, -78.5842, 0, 0, 0, 0, 0, 0, 94.3032, 1, -105.765, 0, 0, 0, 0, 0, 0, 73.5402, 1, -125.018, 0, 0, 0, 0, 0, 0, 40.697, 1, -132.19, 0, 0, 0, 0, 0, 0, 4.83368, 1, -132.19, 0, 0, 0, 0, 0, 0, -28.3871, 1, -132.19, 0, 0, 0, 0, 0, 0, -57.0777, 1, -122.753, 0, 0, 0, 0, 0, 0, -68.0254, 1, -107.652, 0, 0, 0, 0, 0, 0, -75.1981, 1, -85.3794, 0, 0, 0, 0, 0, 0, -75.1981, 1, -60.8413, 0, 0, 0, 0, 0, 0, -85.7683, 1, -40.0784, 0, 0, 0, 0, 0, 0, -101.246, 1, -27.2431, 0, 0, 0, 0, 0, 0, -109.929, 1, -8.74518, 0, 0, 0, 0, 0, 0, -108.796, 1, 16.5479, 0, 0, 0, 0, 0, 0, -96.7161, 1, 29.0057, 0, 0, 0, 0, 0, 0, -79.3507, 1, 38.4434, 0, 0, 0, 0, 0, 0, -45.7379, 1, 49.0625, 0, 0, 0, 0, 0, 0, -16.9765, 1, 48.5489, 0, 0, 0, 0, 0, 0, 20.516, 1, 49.5761, 0, 0, 0, 0, 0, 0, 46.7094, 1, 45.4673, 0, 0, 0, 0, 0, 0, 92.4194, 1, 20.8147, 0, 0, 0, 0, 0, 0, 117.586, 1, 15.1651, 0, 0, 0, 0, 0, 0, 141.211, 1, 19.2739, 0, 0, 0, 0, 0, 0, 162.782, 1, 15.1651, 0, 0, 0, 0, 0, 0, 175.108, 1, 0.784453, 0, 0, 0, 0, 0, 0, 179.731, 1, -21.3002, 0, 0, 0, 0, 0, 0, 179.731, 1, -58.2791, 0, 0, 0, 0, 0, 0, 179.217, 1, -127.101),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 34
-
-[sub_resource type="Curve3D" id="Curve3D_ysq32"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.264463, 1, -2.7393, 0, 0, 0, 0, 0, 0, 0.264463, 1, -9.28064, 0, 0, 0, 0, 0, 0, 2.08352, 1, -21.4302, 0, 0, 0, 0, 0, 0, 9.53979, 1, -31.7728, 0, 0, 0, 0, 0, 0, 19.4013, 1, -38.0264, 0, 0, 0, 0, 0, 0, 28.3008, 1, -38.9885, 0, 0, 0, 0, 0, 0, 36.9596, 1, -37.5454, 0, 0, 0, 0, 0, 0, 43.6944, 1, -32.9754, 0, 0, 0, 0, 0, 0, 52.3532, 1, -32.2538, 0, 0, 0, 0, 0, 0, 61.7337, 1, -36.3427, 0, 0, 0, 0, 0, 0, 66.7848, 1, -45.0016, 0, 0, 0, 0, 0, 0, 67.0253, 1, -55.8253, 0, 0, 0, 0, 0, 0, 62.9364, 1, -63.7626, 0, 0, 0, 0, 0, 0, 53.7964, 1, -71.9404, 0, 0, 0, 0, 0, 0, 43.6944, 1, -75.7888, 0, 0, 0, 0, 0, 0, 31.1871, 1, -76.2699, 0, 0, 0, 0, 0, 0, 18.1987, 1, -72.9025, 0, 0, 0, 0, 0, 0, 8.33716, 1, -68.092, 0, 0, 0, 0, 0, 0, -0.321726, 1, -62.8005, 0, 0, 0, 0, 0, 0, -9.94274, 1, -58.9521, 0, 0, 0, 0, 0, 0, -18.3611, 1, -56.0658, 0, 0, 0, 0, 0, 0, -25.3363, 1, -50.7742, 0, 0, 0, 0, 0, 0, -29.1847, 1, -43.0774, 0, 0, 0, 0, 0, 0, -33.0331, 1, -32.2538, 0, 0, 0, 0, 0, 0, -34.4763, 1, -19.7465, 0, 0, 0, 0, 0, 0, -34.9573, 1, -5.07448, 0, 0, 0, 0, 0, 0, -33.7547, 1, 7.67335, 0, 0, 0, 0, 0, 0, -24.1337, 1, 15.6107, 0, 0, 0, 0, 0, 0, -12.1075, 1, 20.6617, 0, 0, 0, 0, 0, 0, 0.399832, 1, 21.8643, 0, 0, 0, 0, 0, 0, 19.6419, 1, 20.6617, 0, 0, 0, 0, 0, 0, 36.2381, 1, 15.8512, 0, 0, 0, 0, 0, 0, 50.4291, 1, 11.0407, 0, 0, 0, 0, 0, 0, 59.8095, 1, 7.1923, 0, 0, 0, 0, 0, 0, 69.9116, 1, 4.06547, 0, 0, 0, 0, 0, 0, 93.002, 1, 1.17918, 0, 0, 0, 0, 0, 0, 104.788, 1, -3.3908, 0, 0, 0, 0, 0, 0, 113.206, 1, -10.1255, 0, 0, 0, 0, 0, 0, 118.257, 1, -23.3544, 0, 0, 0, 0, 0, 0, 118.738, 1, -36.5833, 0, 0, 0, 0, 0, 0, 119.7, 1, -56.5468, 0, 0, 0, 0, 0, 0, 118.979, 1, -76.5104),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 42
-
-[sub_resource type="Curve3D" id="Curve3D_u87b5"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.100485, 1, -3.44779, 0, 0, 0, 0, 0, 0, 0.619772, 1, -47.0669, 0, 0, 0, 0, 0, 0, -0.418772, 1, -100.552, 0, 0, 0, 0, 0, 0, 0.100485, 1, -147.287, 0, 0, 0, 0, 0, 0, 0.619772, 1, -184.156, 0, 0, 0, 0, 0, 0, -0.418772, 1, -227.775, 0, 0, 0, 0, 0, 0, 0.100485, 1, -256.335),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 7
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l6m4"]
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ym2k"]
 transparency = 1
@@ -220,6 +175,22 @@ _data = {
 point_count = 42
 up_vector_enabled = false
 
+[sub_resource type="Curve3D" id="Curve3D_nm4gv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 86.0873, 0, 7.55645, 0, 0, 0, 0, 0, 0, 113.089, 0, -5.26062, 0, 0, 0, 0, 0, 0, 120.952, 0, -23.3152, 0, 0, 0, 0, 0, 0, 115.082, 0, -36.5956, 0, 0, 0, 0, 0, 0, 96.4349, 0, -40.3285, 0, 0, 0, 0, 0, 0, 68.4055, 0, -37.3797, 0, 0, 0, 0, 0, 0, 40.6905, 0, -28.9429, 0, 0, 0, 0, 0, 0, 24.6141, 0, -20.0998, 0, 0, 0, 0, 0, 0, 15.7526, 0, 2.8163, 0, 0, 0, 0, 0, 0, 8.4613, 0, 36.259, 0, 0, 0, 0, 0, 0, -19.3537, 0, 64.8413, 0, 0, 0, 0, 0, 0, -57.3572, 0, 71.7916, 0, 0, 0, 0, 0, 0, -94.3815, 0, 58.0577, 0, 0, 0, 0, 0, 0, -108.767, 0, 20.7381, 0, 0, 0, 0, 0, 0, -106.107, 0, -17.6167, 0, 0, 0, 0, 0, 0, -96.7477, 0, -46.899, 0, 0, 0, 0, 0, 0, -94.0322, 0, -76.3963, 0, 0, 0, 0, 0, 0, -98.4394, 0, -105.715, 0, 0, 0, 0, 0, 0, -93.9205, 0, -140.017, 0, 0, 0, 0, 0, 0, -86.5947, 0, -173.622, 0, 0, 0, 0, 0, 0, -70.2186, 0, -206.685, 0, 0, 0, 0, 0, 0, -42.6858, 0, -229.71, 0, 0, 0, 0, 0, 0, -9.7385, 0, -240.521, 0, 0, 0, 0, 0, 0, 22.859, 0, -241.288, 0, 0, 0, 0, 0, 0, 49.5394, 0, -248.75, 0, 0, 0, 0, 0, 0, 74.049, 0, -261.454, 0, 0, 0, 0, 0, 0, 102.52, 0, -276.318, 0, 0, 0, 0, 0, 0, 133.667, 0, -289.398, 0, 0, 0, 0, 0, 0, 166.545, 0, -293.674, 0, 0, 0, 0, 0, 0, 199.435, 0, -295.498, 0, 0, 0, 0, 0, 0, 230.97, 0, -296.738, 0, 0, 0, 0, 0, 0, 262.93, 0, -294.13, 0, 0, 0, 0, 0, 0, 294.893, 0, -291.666, 0, 0, 0, 0, 0, 0, 326.161, 0, -282.075, 0, 0, 0, 0, 0, 0, 357, 0, -257.302, 0, 0, 0, 0, 0, 0, 367.501, 0, -219.754, 0, 0, 0, 0, 0, 0, 354.968, 0, -185.602, 0, 0, 0, 0, 0, 0, 329.509, 0, -157.571, 0, 0, 0, 0, 0, 0, 299.09, 0, -144.246, 0, 0, 0, 0, 0, 0, 279.333, 0, -130.087, 0, 0, 0, 0, 0, 0, 272.157, 0, -103.42, 0, 0, 0, 0, 0, 0, 253.557, 0, -74.9541, 0, 0, 0, 0, 0, 0, 253.852, 0, -59.0679, 0, 0, 0, 0, 0, 0, 267.725, 0, -45.4724, 0, 0, 0, 0, 0, 0, 288.031, 0, -46.2167, 0, 0, 0, 0, 0, 0, 304.551, 0, -56.8398),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 46
+up_vector_enabled = false
+
+[sub_resource type="Curve3D" id="Curve3D_fkd3l"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 88.6848, 0, 11.4284, 0, 0, 0, 0, 0, 0, 115.494, 0, -1.67134, 0, 0, 0, 0, 0, 0, 120.123, 0, -35.9324, 0, 0, 0, 0, 0, 0, 91.009, 0, -42.6071, 0, 0, 0, 0, 0, 0, 59.7133, 0, -37.7146, 0, 0, 0, 0, 0, 0, 27.5948, 0, -25.9978, 0, 0, 0, 0, 0, 0, 13.7335, 0, -0.599507, 0, 0, 0, 0, 0, 0, 7.05725, 0, 30.5996, 0, 0, 0, 0, 0, 0, -13.1039, 0, 52.269, 0, 0, 0, 0, 0, 0, -37.8251, 0, 64.943, 0, 0, 0, 0, 0, 0, -65.4222, 0, 66.0084, 0, 0, 0, 0, 0, 0, -92.5847, 0, 55.1855, 0, 0, 0, 0, 0, 0, -103.021, 0, 28.7875, 0, 0, 0, 0, 0, 0, -104.018, 0, -1.82072, 0, 0, 0, 0, 0, 0, -96.7063, 0, -36.5504, 0, 0, 0, 0, 0, 0, -91.7282, 0, -59.8852, 0, 0, 0, 0, 0, 0, -92.5487, 0, -92.066, 0, 0, 0, 0, 0, 0, -92.0523, 0, -122.821, 0, 0, 0, 0, 0, 0, -87.7111, 0, -150.446, 0, 0, 0, 0, 0, 0, -80.6929, 0, -178.158, 0, 0, 0, 0, 0, 0, -67.4232, 0, -206.124, 0, 0, 0, 0, 0, 0, -44.6302, 0, -224.723, 0, 0, 0, 0, 0, 0, -17.5751, 0, -234.55, 0, 0, 0, 0, 0, 0, 14.3781, 0, -238.106, 0, 0, 0, 0, 0, 0, 43.1364, 0, -242.842, 0, 0, 0, 0, 0, 0, 68.7139, 0, -255.924, 0, 0, 0, 0, 0, 0, 101.147, 0, -273.051, 0, 0, 0, 0, 0, 0, 127.187, 0, -283.96, 0, 0, 0, 0, 0, 0, 155.824, 0, -290.357, 0, 0, 0, 0, 0, 0, 183.166, 0, -291.961, 0, 0, 0, 0, 0, 0, 214.999, 0, -293.36, 0, 0, 0, 0, 0, 0, 246.24, 0, -292.095, 0, 0, 0, 0, 0, 0, 282.804, 0, -288.957, 0, 0, 0, 0, 0, 0, 305.561, 0, -284.125, 0, 0, 0, 0, 0, 0, 332.81, 0, -273.427, 0, 0, 0, 0, 0, 0, 355.565, 0, -254.24, 0, 0, 0, 0, 0, 0, 362.309, 0, -225.09, 0, 0, 0, 0, 0, 0, 355.498, 0, -198.394, 0, 0, 0, 0, 0, 0, 339.934, 0, -174.027, 0, 0, 0, 0, 0, 0, 317.125, 0, -154.557, 0, 0, 0, 0, 0, 0, 290.494, 0, -142.177, 0, 0, 0, 0, 0, 0, 269.637, 0, -109.301, 0, 0, 0, 0, 0, 0, 259.724, 0, -90.5843, 0, 0, 0, 0, 0, 0, 250.653, 0, -58.9807, 0, 0, 0, 0, 0, 0, 274.599, 0, -43.5014, 0, 0, 0, 0, 0, 0, 304.206, 0, -52.7838),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 46
+up_vector_enabled = false
+
 [node name="HarlanTestScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -244,7 +215,7 @@ path_joined = false
 [node name="Path3D" type="Path3D" parent="LoopBase"]
 curve = SubResource("Curve3D_1p7x2")
 
-[node name="Loop1" type="CSGPolygon3D" parent="."]
+[node name="Loop1_Road" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 use_collision = true
 polygon = PackedVector2Array(-4, 0, -3, 1, 3, 1, 4, 0)
@@ -261,15 +232,13 @@ path_u_distance = 1.0
 path_joined = false
 material = SubResource("StandardMaterial3D_d7can")
 
-[node name="Path3D" type="Path3D" parent="Loop1"]
+[node name="Path3D" type="Path3D" parent="Loop1_Road"]
 curve = SubResource("Curve3D_uc85k")
 
-[node name="OldLoops" type="Node3D" parent="."]
-
-[node name="OldLoop1" type="CSGPolygon3D" parent="OldLoops"]
+[node name="Loop1_Ground" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
+use_collision = true
+polygon = PackedVector2Array(-20, 0, -20, 0.5, 20, 0.5, 20, 0)
 mode = 2
 path_node = NodePath("Path3D")
 path_interval_type = 1
@@ -281,123 +250,10 @@ path_local = false
 path_continuous_u = false
 path_u_distance = 1.0
 path_joined = false
+material = SubResource("StandardMaterial3D_2l6m4")
 
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop1"]
-curve = SubResource("Curve3D_uwut7")
-
-[node name="OldLoop2" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2"]
-curve = SubResource("Curve3D_ung7k")
-
-[node name="OldLoop2_2" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2_2"]
-curve = SubResource("Curve3D_he6wq")
-
-[node name="OldLoop2_3" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop2_3"]
-curve = SubResource("Curve3D_0ym2k")
-
-[node name="OldLoop3" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop3"]
-curve = SubResource("Curve3D_fi326")
-
-[node name="OldLoop4" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop4"]
-curve = SubResource("Curve3D_ysq32")
-
-[node name="OldLoop5" type="CSGPolygon3D" parent="OldLoops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-polygon = PackedVector2Array(-3, 0, -3, 1, 3, 1, 3, 0)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = false
-path_u_distance = 1.0
-path_joined = false
-
-[node name="Path3D" type="Path3D" parent="OldLoops/OldLoop5"]
-curve = SubResource("Curve3D_u87b5")
+[node name="Path3D" type="Path3D" parent="Loop1_Ground"]
+curve = SubResource("Curve3D_uc85k")
 
 [node name="tree1" parent="." instance=ExtResource("1_ung7k")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.5, 0, -2.5)
@@ -444,7 +300,7 @@ current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
 transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
-spot_range = 10.0
+spot_range = 20.0
 spot_angle = 60.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
@@ -525,8 +381,358 @@ script = ExtResource("14_nm4gv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("WorldBoundaryShape3D_o401o")
 
-[node name="GuardRails" parent="." instance=ExtResource("12_d6811")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.5, 0.5, -7)
+[node name="GuardrailGroup" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0)
+
+[node name="GuardRails" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="GuardrailGroup" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="Vista_Guardrails" type="Node3D" parent="."]
+
+[node name="GuardrailGroup2" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 114.5, 0, -48.5)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup3" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 126.81, 0, -46.3294)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup4" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 139.12, 0, -44.1588)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup4" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup5" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 151.43, 0, -41.9882)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup5" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup6" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, 164.013, 0, -41.5834)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup6" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup7" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 176.379, 0, -43.1652)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup7" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup8" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 188.689, 0, -45.3358)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup8" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup9" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 200.87, 0, -47.9894)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup10" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 212.773, 0, -51.6945)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup11" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 222.912, 0, -57.8848)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup11" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup12" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 232.488, 0, -65.9197)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup12" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup13" type="Node3D" parent="Vista_Guardrails"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 241.71, 0, -74.3081)
+
+[node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
 
 [node name="Vista" type="Node3D" parent="."]
 
@@ -561,7 +767,7 @@ mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
 [node name="Vista_Flat_7" type="MeshInstance3D" parent="Vista"]
-transform = Transform3D(-1, -1.64905e-07, -4.37114e-08, 4.37114e-08, 3.44906e-15, -1, 1.64905e-07, -1, -1.07925e-14, 98.0574, 35.5, 165.226)
+transform = Transform3D(-1, -1.64905e-07, -4.37114e-08, 4.37114e-08, 3.44906e-15, -1, 1.64905e-07, -1, -1.07925e-14, 104.057, 35.5, 163.226)
 mesh = SubResource("PlaneMesh_1f5un")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
@@ -614,6 +820,7 @@ skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/Do
 stream = ExtResource("18_j43uk")
 
 [node name="FakeTreeDeep_1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
 mode = 2
 path_node = NodePath("Path3D")
@@ -631,7 +838,46 @@ material = SubResource("StandardMaterial3D_nm4gv")
 [node name="Path3D" type="Path3D" parent="FakeTreeDeep_1"]
 curve = SubResource("Curve3D_d7can")
 
+[node name="FakeTreeClose_1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_fkd3l")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeClose_1"]
+curve = SubResource("Curve3D_2l6m4")
+
+[node name="FakeTreeDeep_2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_nm4gv")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeDeep_2"]
+curve = SubResource("Curve3D_nm4gv")
+
 [node name="FakeTreeClose_2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
 mode = 2
 path_node = NodePath("Path3D")
@@ -647,4 +893,7 @@ path_joined = false
 material = SubResource("StandardMaterial3D_fkd3l")
 
 [node name="Path3D" type="Path3D" parent="FakeTreeClose_2"]
-curve = SubResource("Curve3D_2l6m4")
+curve = SubResource("Curve3D_fkd3l")
+
+[node name="Power_Pole" parent="." instance=ExtResource("20_d7can")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -13.5)
