@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=54 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
@@ -19,7 +19,6 @@
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
 [ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
-[ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="20_d7can"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -75,9 +74,6 @@ size = Vector3(1.5, 0.4, 3)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o401o"]
 points = PackedVector3Array(-0.77381, -0.22381, -1.52351, 0.75, 0.191775, 1.43118, 0.797619, -0.22381, 1.52351, -0.77381, -0.22381, 1.52351, 0.797619, -0.22381, -1.52351, -0.75, 0.198268, -1.47734, -0.75, 0.198268, 1.47734, 0.75, 0.191775, -1.43118)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l6m4"]
-albedo_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_44usg"]
 material = SubResource("StandardMaterial3D_2l6m4")
@@ -894,6 +890,3 @@ material = SubResource("StandardMaterial3D_fkd3l")
 
 [node name="Path3D" type="Path3D" parent="FakeTreeClose_2"]
 curve = SubResource("Curve3D_fkd3l")
-
-[node name="Power_Pole" parent="." instance=ExtResource("20_d7can")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -13.5)
