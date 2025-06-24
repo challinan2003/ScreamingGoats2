@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://tsuvlrk7cduq"]
+[gd_scene load_steps=30 format=3 uid="uid://tsuvlrk7cduq"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_iiq3e"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="2_r4o68"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="5_m55om"]
 [ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="6_r4o68"]
 [ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="7_t42uy"]
+[ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="8_cj7lp"]
+[ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="9_m55om"]
 
 [sub_resource type="Curve3D" id="Curve3D_im7qt"]
 
@@ -99,6 +101,22 @@ billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_t42uy"]
 material = SubResource("StandardMaterial3D_dlnnn")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cj7lp"]
+sky_top_color = Color(0, 0, 0.0941176, 1)
+sky_horizon_color = Color(0, 0, 0.0117647, 1)
+sky_curve = 0.0989632
+sky_cover = ExtResource("9_m55om")
+sky_cover_modulate = Color(1, 1, 1, 0.054902)
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_m55om"]
+sky_material = SubResource("ProceduralSkyMaterial_cj7lp")
+
+[sub_resource type="Environment" id="Environment_q3qhi"]
+background_mode = 2
+sky = SubResource("Sky_m55om")
+ambient_light_source = 3
 
 [node name="XavierTestScene" type="Node3D"]
 
@@ -372,3 +390,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93716, -0.268677, -15.5364)
 
 [node name="Road Sign" parent="." instance=ExtResource("7_t42uy")]
 transform = Transform3D(-0.441177, 0, -1.5453, 0, 1.93556, 0, 0.89742, 0, -0.75968, 8.10164, 0, -4.80655)
+
+[node name="Road Sign 2" parent="." instance=ExtResource("8_cj7lp")]
+transform = Transform3D(-0.933618, -0.0067384, -0.727037, 0.002488, 2.02912, -0.0319646, 0.358262, -0.0316515, -1.89441, 10.3853, 0, -2.14174)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q3qhi")
