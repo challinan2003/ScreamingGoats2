@@ -21,7 +21,7 @@ var gravity = 9.8
 @onready var camera = $Head/Camera3D
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pass
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -73,6 +73,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	if !get_tree().paused:
+		#pass
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _headbob(time) -> Vector3:

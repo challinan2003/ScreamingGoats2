@@ -5,9 +5,12 @@ signal start_game()
 
 func _ready() -> void:
 	focus_button()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_tree().paused = true
 
 func _on_start_game_button_pressed() -> void:
 	start_game.emit()
+	get_tree().paused = false
 	#print("test2")
 	hide()
 		
