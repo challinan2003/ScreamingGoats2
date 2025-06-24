@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dn3bub73gh16b" path="res://Assets/Sounds/Car_Idle_1.mp3" id="11_pd64n"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="12_d6811"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
-[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
+[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
@@ -121,11 +121,11 @@ size = Vector3(1.5, 0.4, 3)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o401o"]
 points = PackedVector3Array(-0.77381, -0.22381, -1.52351, 0.75, 0.191775, 1.43118, 0.797619, -0.22381, 1.52351, -0.77381, -0.22381, 1.52351, 0.797619, -0.22381, -1.52351, -0.75, 0.198268, -1.47734, -0.75, 0.198268, 1.47734, 0.75, 0.191775, -1.43118)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1a3s"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l6m4"]
 albedo_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_44usg"]
-material = SubResource("StandardMaterial3D_r1a3s")
+material = SubResource("StandardMaterial3D_2l6m4")
 top_radius = 0.4
 bottom_radius = 0.4
 height = 0.25
@@ -136,11 +136,11 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 gravity = Vector3(4, -9.8, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lui43"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
-material = SubResource("StandardMaterial3D_lui43")
+material = SubResource("StandardMaterial3D_dlnnn")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
 

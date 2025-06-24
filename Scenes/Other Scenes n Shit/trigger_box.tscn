@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6m5lj48fce78"]
+
+[ext_resource type="Script" uid="uid://cyc57nq81c3e4" path="res://Scripts/trigger_box.gd" id="1_7ycgp"]
+[ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="2_t2cf4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_optdi"]
+size = Vector3(11.0356, 3.19525, 6.57129)
+
+[node name="Trigger Box" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_7ycgp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.113281, 1.09763, -3.48584)
+shape = SubResource("BoxShape3D_optdi")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_t2cf4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
