@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://tsuvlrk7cduq"]
+[gd_scene load_steps=25 format=3 uid="uid://tsuvlrk7cduq"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_iiq3e"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="2_r4o68"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="4_cj7lp"]
 [ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="5_m55om"]
 [ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="6_r4o68"]
+[ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="7_t42uy"]
 
 [sub_resource type="Curve3D" id="Curve3D_im7qt"]
 
@@ -368,3 +369,6 @@ script = ExtResource("5_m55om")
 
 [node name="Trigger Box" parent="." instance=ExtResource("6_r4o68")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93716, -0.268677, -15.5364)
+
+[node name="Road Sign" parent="." instance=ExtResource("7_t42uy")]
+transform = Transform3D(-0.441177, 0, -1.5453, 0, 1.93556, 0, 0.89742, 0, -0.75968, 8.10164, 0, -4.80655)
