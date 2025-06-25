@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://fnvl2u1r52px"
-path="res://.godot/imported/Power_Pole.glb-6c666d1dd39a900687c0397dd87f3939.scn"
+uid="uid://pi2fhphreawu"
+path="res://.godot/imported/TreeTrunk.glb-93fdf51d768476ea5069fb42274b2ebb.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Power_Pole.glb"
-dest_files=["res://.godot/imported/Power_Pole.glb-6c666d1dd39a900687c0397dd87f3939.scn"]
+source_file="res://Assets/Models/TreeTrunk.glb"
+dest_files=["res://.godot/imported/TreeTrunk.glb-93fdf51d768476ea5069fb42274b2ebb.scn"]
 
 [params]
 

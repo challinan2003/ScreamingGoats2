@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=65 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://coxtgd85l58gn" path="res://Assets/Models/Boulder_2.glb" id="21_dlnnn"]
 [ext_resource type="PackedScene" uid="uid://bxhmfh8u0yrgu" path="res://Assets/Models/Boulder_3.glb" id="22_m37wy"]
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="23_dlnnn"]
+[ext_resource type="PackedScene" uid="uid://pi2fhphreawu" path="res://Assets/Models/TreeTrunk.glb" id="25_sb75f"]
+[ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="26_lsse4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -4454,3 +4456,17 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 
 [node name="Power_Pole5" parent="." instance=ExtResource("23_dlnnn")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 209, -6.5, -32.5)
+
+[node name="TreeTrunk" parent="." instance=ExtResource("25_sb75f")]
+transform = Transform3D(-0.498097, 0.0435778, 1.90485e-09, 0, -2.18557e-08, 0.5, 0.0435778, 0.498097, 2.17725e-08, 173, 0.15, -51.8)
+
+[node name="street_Light" parent="." instance=ExtResource("26_lsse4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 143.5, -0.5, -40.8)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7.3, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
