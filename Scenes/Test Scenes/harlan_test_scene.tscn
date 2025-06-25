@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=77 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
@@ -30,6 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_gfydl"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_r73o1"]
 [ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="30_obecb"]
+[ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="31_obecb"]
+[ext_resource type="AudioStream" uid="uid://dtpi38receduq" path="res://Assets/Sounds/VO_Loop1_01.mp3" id="32_dnxfb"]
+[ext_resource type="AudioStream" uid="uid://b0wjcsgge63ej" path="res://Assets/Sounds/Ambiance_mixdown.wav" id="33_aytlu"]
+[ext_resource type="AudioStream" uid="uid://c6d5mk642hxdn" path="res://Assets/Sounds/VO_Loop1_04.mp3" id="33_sdrom"]
+[ext_resource type="AudioStream" uid="uid://1mlfawy0ncmu" path="res://Assets/Sounds/Music_Loop1_01.mp3" id="34_20kt6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -219,6 +224,14 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 57
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_uvovo"]
+loop = false
+fade_time = 0.5
+stream_count = 3
+stream_0 = ExtResource("32_dnxfb")
+stream_1 = ExtResource("33_sdrom")
+stream_2 = ExtResource("34_20kt6")
 
 [node name="HarlanTestScene" type="Node3D"]
 
@@ -3661,6 +3674,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.2, -13.5)
 
 [node name="car" type="VehicleBody3D" parent="."]
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 1.81191, 0)
+collision_layer = 3
 script = ExtResource("10_o401o")
 
 [node name="carbody" type="MeshInstance3D" parent="car"]
@@ -3736,6 +3750,7 @@ mesh = SubResource("CylinderMesh_44usg")
 [node name="Car_Idle_1" type="AudioStreamPlayer3D" parent="car"]
 stream = ExtResource("13_lsse4")
 autoplay = true
+bus = &"Muted"
 
 [node name="Car_Idle_2" type="AudioStreamPlayer3D" parent="car"]
 stream = ExtResource("14_or8nf")
@@ -4550,3 +4565,16 @@ transform = Transform3D(-0.458882, 0, -0.888497, 0, 1, 0, 0.888497, 0, -0.458882
 
 [node name="Spawn" type="Node3D" parent="."]
 transform = Transform3D(0.978158, 0, -0.20786, 0, 1, 0, 0.20786, 0, 0.978158, -5.19928, 1.4068, 24.467)
+
+[node name="Trigger Box" parent="." instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Trigger Box"]
+stream = SubResource("AudioStreamPlaylist_uvovo")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Ambience_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_aytlu")
+autoplay = true
+bus = &"Muted"
