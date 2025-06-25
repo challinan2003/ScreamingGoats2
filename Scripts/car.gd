@@ -1,6 +1,6 @@
 extends VehicleBody3D
 
-var max_rpm = 500
+var max_rpm = 250
 var max_torque = 200
 var mode = 0
 #Gets the path of the headlight object
@@ -17,9 +17,10 @@ func _physics_process(delta: float) -> void:
 	var acceleration = mode
 	if mode == 0 && rpm > 0:
 		acceleration = -1
-	$back_left_wheel.engine_force  = acceleration * max_torque * (1 - rpm / max_rpm)
+		
+	$back_left_wheel.engine_force  = (acceleration * max_torque * (1 - rpm / max_rpm)) /2
 	rpm = $back_right_wheel.get_rpm()
-	$back_right_wheel.engine_force  = acceleration * max_torque * (1 - rpm / max_rpm)
+	$back_right_wheel.engine_force  = (acceleration * max_torque * (1 - rpm / max_rpm)) /2
 	
 	if Input.is_action_just_pressed("forward") && mode <= 2:
 		mode+=1
