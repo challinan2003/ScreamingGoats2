@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=71 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
@@ -27,6 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="23_dlnnn"]
 [ext_resource type="PackedScene" uid="uid://pi2fhphreawu" path="res://Assets/Models/TreeTrunk.glb" id="25_sb75f"]
 [ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="26_lsse4"]
+[ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_gfydl"]
+[ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_r73o1"]
+[ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="30_obecb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -88,6 +91,13 @@ albedo_texture = ExtResource("3_he6wq")
 [sub_resource type="PlaneMesh" id="PlaneMesh_1p7x2"]
 material = SubResource("StandardMaterial3D_17qc1")
 size = Vector2(8, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3jvb"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_obecb"]
+material = SubResource("StandardMaterial3D_e3jvb")
+size = Vector2(8, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dlbj2"]
 size = Vector3(1.5, 0.4, 3)
@@ -254,6 +264,46 @@ material = SubResource("StandardMaterial3D_d7can")
 [node name="Path3D" type="Path3D" parent="Loop1_Road"]
 curve = SubResource("Curve3D_uc85k")
 
+[node name="Collision_1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(2.9, 0, 2.9, 6.5, 5, 6.5, 5, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="Collision_1"]
+curve = SubResource("Curve3D_uc85k")
+
+[node name="Collision_2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-5, 0, -5, 6.5, -2.9, 6.5, -2.9, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="Collision_2"]
+curve = SubResource("Curve3D_uc85k")
+
 [node name="Loop1_Ground" type="CSGCombiner3D" parent="."]
 
 [node name="Loop1_GroundPos1" type="CSGPolygon3D" parent="Loop1_Ground"]
@@ -305,6 +355,14 @@ mesh = SubResource("PlaneMesh_fi326")
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -14, 6, -9)
 visible = false
 mesh = SubResource("PlaneMesh_1p7x2")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.987946, 0.154797, 0, 6.76637e-09, 4.31845e-08, -1, -0.154797, -0.987946, -4.37114e-08, -6.14238, 3.55625, 28.4404)
+mesh = SubResource("PlaneMesh_obecb")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.987946, 0.154797, 0, 6.76637e-09, 4.31845e-08, -1, -0.154797, -0.987946, -4.37114e-08, -90.0337, 3.55625, 8.53928)
+mesh = SubResource("PlaneMesh_obecb")
 
 [node name="sign1_1" parent="." instance=ExtResource("4_1p7x2")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 12, -0.2, -23)
@@ -3616,6 +3674,7 @@ current = true
 [node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
 transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
 light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
 spot_range = 20.0
 spot_angle = 60.0
 
@@ -4318,9 +4377,6 @@ transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926
 [node name="Boulder1Big_6" parent="Boulders" instance=ExtResource("20_2l6m4")]
 transform = Transform3D(0.75, 0.5, -0.433013, -0.433013, 0.866025, 0.25, 0.5, 0, 0.866025, -75.7, 0, -47)
 
-[node name="Boulder1Big_7" parent="Boulders" instance=ExtResource("20_2l6m4")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -1.70001, 0.25, 29.5)
-
 [node name="Boulder2_1" parent="Boulders" instance=ExtResource("21_dlnnn")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.6, 0, -23.1)
 
@@ -4362,9 +4418,6 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -84.4, 0, -45.6)
 
 [node name="Boulder2_14" parent="Boulders" instance=ExtResource("21_dlnnn")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -80.9, 0, 41.9)
-
-[node name="Boulder2_15" parent="Boulders" instance=ExtResource("21_dlnnn")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.39999, 0, 31.9)
 
 [node name="Boulder2Big_1" parent="Boulders" instance=ExtResource("21_dlnnn")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 65.6, 0, -58.1)
@@ -4469,9 +4522,31 @@ transform = Transform3D(-0.498097, 0.0435778, 1.90485e-09, 0, -2.18557e-08, 0.5,
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 143.5, -0.5, -40.8)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="street_Light"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7.3, 1.55)
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
 light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 0.615572
+
+[node name="Tunnel_entrance" parent="." instance=ExtResource("28_gfydl")]
+transform = Transform3D(0.21724, 0, 0.976118, 0, 1, 0, -0.976118, 0, 0.21724, -1.06596, 0.1, 2.8016)
+
+[node name="Tunnel middle" parent="." instance=ExtResource("29_r73o1")]
+transform = Transform3D(0.235546, 0, 0.980546, 0, 1, 0, -1.17666, 0, 0.196289, -4.21258, 0.1, 17.0324)
+
+[node name="Tunnel_entrance2" parent="." instance=ExtResource("28_gfydl")]
+transform = Transform3D(0.185529, 0, 0.982639, 0, 1, 0, -0.982639, 0, 0.185529, -83.2313, 0.1, -32.8083)
+
+[node name="Tunnel middle2" parent="." instance=ExtResource("29_r73o1")]
+transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -85.9034, 0.1, -18.5772)
+
+[node name="Tunnel middle3" parent="." instance=ExtResource("29_r73o1")]
+transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -88.6293, 0.1, -2.2059)
+
+[node name="Road Sign" parent="." instance=ExtResource("30_obecb")]
+transform = Transform3D(-0.458882, 0, -0.888497, 0, 1, 0, 0.888497, 0, -0.458882, 7.08467, -0.5, -9.75664)
+
+[node name="Spawn" type="Node3D" parent="."]
+transform = Transform3D(0.978158, 0, -0.20786, 0, 1, 0, 0.20786, 0, 0.978158, -5.19928, 1.4068, 24.467)
