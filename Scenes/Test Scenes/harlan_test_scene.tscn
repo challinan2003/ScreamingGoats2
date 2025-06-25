@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=61 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
@@ -19,6 +19,9 @@
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="12_j43uk"]
 [ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
+[ext_resource type="PackedScene" uid="uid://b5umdx6iqwv4o" path="res://Assets/Models/Boulder_1.glb" id="20_2l6m4"]
+[ext_resource type="PackedScene" uid="uid://coxtgd85l58gn" path="res://Assets/Models/Boulder_2.glb" id="21_dlnnn"]
+[ext_resource type="PackedScene" uid="uid://bxhmfh8u0yrgu" path="res://Assets/Models/Boulder_3.glb" id="22_m37wy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -52,6 +55,16 @@ point_count = 43
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l6m4"]
 uv1_scale = Vector3(2, 2, 2)
 texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m37wy"]
+
+[sub_resource type="Curve3D" id="Curve3D_dlnnn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 135.125, 1, -21.5453, 0, 0, 0, 0, 0, 0, 136.343, 1, -29.7351, 0, 0, 0, 0, 0, 0, 156.678, 1, -27.9718, 0, 0, 0, 0, 0, 0, 191.496, 1, -32.885, 0, 0, 0, 0, 0, 0, 227.214, 1, -42.8789, 0, 0, 0, 0, 0, 0, 234.2, 1, -49.4319, 0, 0, 0, 0, 0, 0, 246.296, 1, -47.7494),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+up_vector_enabled = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ym2k"]
 transparency = 1
@@ -138,6 +151,13 @@ emission = Color(0.118581, 0.118581, 0.118581, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_nm4gv"]
 material = SubResource("StandardMaterial3D_j43uk")
 size = Vector2(200, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb75f"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lsse4"]
+material = SubResource("StandardMaterial3D_sb75f")
+size = Vector2(500, 500)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm4gv"]
 transparency = 2
@@ -231,7 +251,9 @@ material = SubResource("StandardMaterial3D_d7can")
 [node name="Path3D" type="Path3D" parent="Loop1_Road"]
 curve = SubResource("Curve3D_uc85k")
 
-[node name="Loop1_Ground" type="CSGPolygon3D" parent="."]
+[node name="Loop1_Ground" type="CSGCombiner3D" parent="."]
+
+[node name="Loop1_GroundPos1" type="CSGPolygon3D" parent="Loop1_Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 use_collision = true
 polygon = PackedVector2Array(-20, 0, -20, 0.9, 20, 0.9, 20, 0)
@@ -248,8 +270,28 @@ path_u_distance = 1.0
 path_joined = false
 material = SubResource("StandardMaterial3D_2l6m4")
 
-[node name="Path3D" type="Path3D" parent="Loop1_Ground"]
+[node name="Path3D" type="Path3D" parent="Loop1_Ground/Loop1_GroundPos1"]
 curve = SubResource("Curve3D_uc85k")
+
+[node name="Loop1_GroundSub1" type="CSGPolygon3D" parent="Loop1_Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+operation = 2
+polygon = PackedVector2Array(-10, -0.5, -10, 1, 10, 1, 10, -0.5)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_m37wy")
+
+[node name="Path3D" type="Path3D" parent="Loop1_Ground/Loop1_GroundSub1"]
+curve = SubResource("Curve3D_dlnnn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, -1, -1, -4.37114e-08, -4.37114e-08, -12, 6, -9)
@@ -263,6 +305,9 @@ mesh = SubResource("PlaneMesh_1p7x2")
 
 [node name="sign1_1" parent="." instance=ExtResource("4_1p7x2")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 12, -0.2, -23)
+
+[node name="sign1_2" parent="." instance=ExtResource("4_1p7x2")]
+transform = Transform3D(-0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866026, 243.749, -0.2, -79.3133)
 
 [node name="RealTrees1" type="Node3D" parent="."]
 
@@ -3728,6 +3773,12 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 [node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
 
+[node name="GuardRails9" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.2, 0, 0.34641, 0, 0.4, 0, -0.34641, 0, -0.2, -7.35359, 0, 1.31962)
+
+[node name="GuardRails10" parent="Vista_Guardrails/GuardrailGroup2" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.34641, 0, 0.2, 0, 0.4, 0, -0.2, 0, -0.34641, -8.11962, 0, 2.04641)
+
 [node name="GuardrailGroup3" type="Node3D" parent="Vista_Guardrails"]
 transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 126.81, 0, -46.3294)
 
@@ -4022,6 +4073,12 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 [node name="GuardRails7" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
 
+[node name="GuardRails9" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.2, 0, 0.34641, 0, 0.4, 0, -0.34641, 0, 0.2, 5.85359, 0, 1.14641)
+
+[node name="GuardRails10" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.34641, 0, 0.2, 0, 0.4, 0, -0.2, 0, 0.34641, 6.7, 0, 1.81244)
+
 [node name="GuardRails8" parent="Vista_Guardrails/GuardrailGroup13" instance=ExtResource("12_d6811")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
 
@@ -4107,6 +4164,11 @@ transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15,
 mesh = SubResource("PlaneMesh_nm4gv")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
+[node name="Vista_Floor" type="MeshInstance3D" parent="Vista"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, -42.5, 166.5)
+mesh = SubResource("PlaneMesh_lsse4")
+skeleton = NodePath("../..")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_j43uk")
 
@@ -4185,3 +4247,12 @@ material = SubResource("StandardMaterial3D_fkd3l")
 
 [node name="Path3D" type="Path3D" parent="FakeTreeClose_2"]
 curve = SubResource("Curve3D_fkd3l")
+
+[node name="Boulder1_1" parent="." instance=ExtResource("20_2l6m4")]
+transform = Transform3D(-0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, -0.482963, 16.3, 0.25, -25.5)
+
+[node name="Boulder2_2" parent="." instance=ExtResource("21_dlnnn")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.6, 0, -23.1)
+
+[node name="Boulder3_3" parent="." instance=ExtResource("22_m37wy")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.5, 1.25, -26)
