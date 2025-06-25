@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://tsuvlrk7cduq"]
+[gd_scene load_steps=31 format=3 uid="uid://tsuvlrk7cduq"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_iiq3e"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="2_r4o68"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="7_t42uy"]
 [ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="8_cj7lp"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="9_m55om"]
+[ext_resource type="PackedScene" uid="uid://ce01ux40dy26s" path="res://Assets/Models/Snowy Bush.glb" id="10_im7qt"]
 
 [sub_resource type="Curve3D" id="Curve3D_im7qt"]
 
@@ -396,3 +397,6 @@ transform = Transform3D(-0.933618, -0.0067384, -0.727037, 0.002488, 2.02912, -0.
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_q3qhi")
+
+[node name="Snowy Bush" parent="." instance=ExtResource("10_im7qt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58263, 0, -7.90807)
