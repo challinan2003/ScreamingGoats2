@@ -4582,7 +4582,6 @@ transform = Transform3D(0.978158, 0, -0.20786, 0, 1, 0, 0.20786, 0, 0.978158, -5
 
 [node name="Loop1Radio" parent="." instance=ExtResource("31_obecb")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-monitoring = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop1Radio"]
 stream = SubResource("AudioStreamPlaylist_uvovo")
@@ -4591,6 +4590,7 @@ bus = &"Radio"
 
 [node name="Loop2Radio" parent="." instance=ExtResource("31_obecb")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+monitoring = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2Radio"]
 stream = SubResource("AudioStreamPlaylist_22f27")

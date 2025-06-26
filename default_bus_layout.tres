@@ -51,6 +51,6 @@ bus/4/send = &"Master"
 bus/4/effect/0/effect = SubResource("AudioEffectHighPassFilter_g28q7")
 bus/4/effect/0/enabled = true
 bus/4/effect/1/effect = SubResource("AudioEffectCompressor_j3pel")
-bus/4/effect/1/enabled = true
+bus/4/effect/1/enabled = false
 bus/4/effect/2/effect = SubResource("AudioEffectDistortion_j3pel")
 bus/4/effect/2/enabled = false
