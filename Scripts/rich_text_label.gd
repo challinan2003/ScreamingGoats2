@@ -18,8 +18,9 @@ func scroll_text(input_text:String) -> void:
 	
 	for i in get_parsed_text():
 		visible_characters += 1
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.0005).timeout
 	
 	print("end")
 	hide()
+	Global.pausable = true
 	

@@ -22,9 +22,9 @@ func _physics_process(delta: float) -> void:
 		if rpm >= 225:
 			acceleration = -2
 	if mode == 1:
-		max_rpm = 250
+		max_rpm = 175
 	elif mode == 2:
-		max_rpm = 400
+		max_rpm = 300
 		
 	$back_left_wheel.engine_force  = (acceleration * max_torque * (1 - rpm / max_rpm)) /2
 	rpm = $back_right_wheel.get_rpm()

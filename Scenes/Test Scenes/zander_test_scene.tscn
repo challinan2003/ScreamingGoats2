@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bcsfmjkbfpspt"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_6ejno"]
+[ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_6ejno"]
 [ext_resource type="Texture2D" uid="uid://cjc4twtspqju5" path="res://Assets/Materials/icon.svg" id="1_h4rev"]
 [ext_resource type="Script" uid="uid://f0e4u0sj1yxi" path="res://Scripts/player.gd" id="2_epsh8"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="4_dcf4f"]
@@ -134,6 +134,7 @@ shape = SubResource("ConvexPolygonShape3D_snm78")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0177924, 2.18823, -16.8198)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="GuardRails" parent="." instance=ExtResource("4_dcf4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.86301, 1.5, -11.5231)

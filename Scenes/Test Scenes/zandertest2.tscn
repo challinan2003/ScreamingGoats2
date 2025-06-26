@@ -1,7 +1,9 @@
-[gd_scene load_steps=83 format=3 uid="uid://cj2oyi1q7g17w"]
+[gd_scene load_steps=86 format=3 uid="uid://cj2oyi1q7g17w"]
 
+[ext_resource type="PackedScene" uid="uid://d0on04df3pi4m" path="res://Assets/UI/PauseMenu.tscn" id="1_0cv8b"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_2tesb"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_5kwj3"]
+[ext_resource type="PackedScene" uid="uid://drm8m3oxfg6as" path="res://Assets/UI/MainMenu.tscn" id="2_sn0bb"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="3_8fj44"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="4_8xj8a"]
 [ext_resource type="PackedScene" uid="uid://dfr3bs2vedkut" path="res://Assets/Models/sign1.glb" id="5_0cv8b"]
@@ -13,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dvjhj65b2qbne" path="res://Assets/Models/sign6.glb" id="11_ehdq3"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="12_raorn"]
 [ext_resource type="AudioStream" uid="uid://cttb6vdcoroby" path="res://Assets/Sounds/Car_Idle_1_loop.mp3" id="13_06tni"]
+[ext_resource type="Script" uid="uid://b78hgihl2detn" path="res://Scripts/driver.gd" id="13_8fj44"]
 [ext_resource type="AudioStream" uid="uid://bsaclk0fsrbe8" path="res://Assets/Sounds/Car_Idle_2_loop.mp3" id="14_8q00t"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="15_vd3vf"]
 [ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="16_uwxbf"]
@@ -39,7 +42,7 @@
 [ext_resource type="AudioStream" uid="uid://dtenjj2r5gym" path="res://Assets/Sounds/VO_Loop2_04.mp3" id="37_fynq6"]
 [ext_resource type="AudioStream" uid="uid://cmljx1wlugbnp" path="res://Assets/Sounds/Music_Loop2_01.mp3" id="38_3ro5j"]
 [ext_resource type="AudioStream" uid="uid://b0wjcsgge63ej" path="res://Assets/Sounds/Ambiance_mixdown.wav" id="39_yp3ke"]
-[ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="40_5kwj3"]
+[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="40_5kwj3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -249,6 +252,10 @@ stream_2 = ExtResource("38_3ro5j")
 stream_3 = ExtResource("35_vyq6i")
 
 [node name="HarlanTestScene" type="Node3D"]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_0cv8b")]
+
+[node name="MainMenu" parent="." instance=ExtResource("2_sn0bb")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fkd3l")
@@ -3696,16 +3703,12 @@ script = ExtResource("12_raorn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0517786, 0)
 mesh = SubResource("BoxMesh_dlbj2")
 
-[node name="Camera3D" type="Camera3D" parent="car/carbody"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, -0.5)
-current = true
+[node name="Head" type="Node3D" parent="car/carbody"]
+script = ExtResource("13_8fj44")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
-transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
-light_color = Color(0.94, 0.91556, 0.8178, 1)
-shadow_enabled = true
-spot_range = 20.0
-spot_angle = 60.0
+[node name="Camera3D" type="Camera3D" parent="car/carbody/Head"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1, -0.5)
+current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
 shape = SubResource("ConvexPolygonShape3D_o401o")
@@ -3783,6 +3786,13 @@ draw_pass_1 = SubResource("QuadMesh_fkd3l")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
 script = ExtResource("16_uwxbf")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="car"]
+transform = Transform3D(1, -7.81622e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, -0.0517786, 1.5)
+light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 60.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -4592,6 +4602,7 @@ bus = &"Radio"
 
 [node name="Loop2Radio" parent="." instance=ExtResource("31_de40o")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2Radio"]
 stream = SubResource("AudioStreamPlaylist_22f27")
