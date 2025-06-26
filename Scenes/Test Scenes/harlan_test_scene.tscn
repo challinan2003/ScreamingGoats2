@@ -1,6 +1,7 @@
-[gd_scene load_steps=88 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=92 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
+[ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_n6cpn"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="1_ung7k"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="2_he6wq"]
@@ -43,6 +44,8 @@
 [ext_resource type="AudioStream" uid="uid://b0g6pbvrfw7jq" path="res://Assets/Sounds/VO_Loop3_04.mp3" id="40_put2j"]
 [ext_resource type="AudioStream" uid="uid://xf3naryguvvl" path="res://Assets/Sounds/VO_Loop4_01.mp3" id="41_oabyp"]
 [ext_resource type="AudioStream" uid="uid://ckdjb2k2mfiuj" path="res://Assets/Sounds/VO_Loop4_04.mp3" id="42_oxvk0"]
+[ext_resource type="Script" uid="uid://cdj2jlp8ayek1" path="res://Scripts/finishLine.gd" id="43_oxvk0"]
+[ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="44_dpq88"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -124,17 +127,6 @@ top_radius = 0.4
 bottom_radius = 0.4
 height = 0.25
 radial_segments = 12
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7can"]
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-gravity = Vector3(4, -9.8, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
-billboard_mode = 1
-
-[sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
-material = SubResource("StandardMaterial3D_dlnnn")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
 
@@ -233,6 +225,9 @@ _data = {
 }
 point_count = 57
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_oabyp"]
+size = Vector3(10, 8, 1)
+
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_uvovo"]
 loop = false
 fade_time = 0.5
@@ -269,7 +264,19 @@ stream_1 = ExtResource("42_oxvk0")
 stream_2 = ExtResource("37_kn02c")
 stream_3 = ExtResource("38_mitny")
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7can"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(4, -9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
+material = SubResource("StandardMaterial3D_dlnnn")
+
 [node name="HarlanTestScene" type="Node3D"]
+script = ExtResource("1_n6cpn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fkd3l")
@@ -2182,7 +2189,7 @@ transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.4242
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 32, 0, -35)
 
 [node name="tree1" parent="RealTrees2/TreeGroup1_118" instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, 2.02878, -0.2, 4.3532)
 
 [node name="tree2" parent="RealTrees2/TreeGroup1_118" instance=ExtResource("1_ung7k")]
 transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
@@ -3709,7 +3716,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.2, -15)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.2, -13.5)
 
 [node name="car" type="VehicleBody3D" parent="."]
-transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 1.81191, 0)
+transform = Transform3D(-0.978148, 0, 0.207912, 0, 1, 0, -0.207912, 0, -0.978148, -3.878, 1, 18.985)
 collision_layer = 3
 script = ExtResource("10_o401o")
 
@@ -3787,16 +3794,6 @@ autoplay = true
 
 [node name="Car_Drive_1" type="AudioStreamPlayer3D" parent="car"]
 stream = ExtResource("12_j43uk")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="car"]
-transform = Transform3D(239.395, 0, 0, 0, 239.395, 0, 0, 0, 239.395, -129.5, 285.496, 106.5)
-amount = 6166
-lifetime = 12.27
-process_material = SubResource("ParticleProcessMaterial_d7can")
-draw_pass_1 = SubResource("QuadMesh_fkd3l")
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
-script = ExtResource("14_nm4gv")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="car"]
 transform = Transform3D(1, -7.81622e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, -0.0517786, 1.5)
@@ -4581,6 +4578,18 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 0.615572
 
+[node name="street_Light2" parent="." instance=ExtResource("26_lsse4")]
+transform = Transform3D(-0.799444, 0, -0.600741, 0, 1, 0, 0.600741, 0, -0.799444, 29.8852, -0.5, -33.7795)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light2"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
+
 [node name="Tunnel_entrance" parent="." instance=ExtResource("28_gfydl")]
 transform = Transform3D(0.21724, 0, 0.976118, 0, 1, 0, -0.976118, 0, 0.21724, -1.06596, 0.1, 2.8016)
 
@@ -4597,47 +4606,103 @@ transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -
 transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -88.6293, 0.1, -2.2059)
 
 [node name="Road Sign" parent="." instance=ExtResource("30_obecb")]
-transform = Transform3D(-0.458882, 0, -0.888497, 0, 1, 0, 0.888497, 0, -0.458882, 7.08467, -0.5, -9.75664)
+transform = Transform3D(-0.97556, 0.0853504, -0.20248, 0.0871557, 0.996195, 0, 0.201709, -0.0176473, -0.979286, 29.1104, -0.5, -35.5286)
 
 [node name="Spawn" type="Node3D" parent="."]
-transform = Transform3D(0.978158, 0, -0.20786, 0, 1, 0, 0.20786, 0, 0.978158, -5.19928, 1.4068, 24.467)
-
-[node name="Loop1Radio" parent="." instance=ExtResource("31_obecb")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop1Radio"]
-stream = SubResource("AudioStreamPlaylist_uvovo")
-volume_db = 10.0
-bus = &"Radio"
-
-[node name="Loop2Radio" parent="." instance=ExtResource("31_obecb")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2Radio"]
-stream = SubResource("AudioStreamPlaylist_22f27")
-volume_db = 10.0
-bus = &"Radio"
-
-[node name="Loop3Radio" parent="." instance=ExtResource("31_obecb")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3Radio"]
-stream = SubResource("AudioStreamPlaylist_oabyp")
-volume_db = 10.0
-bus = &"Radio"
-
-[node name="Loop4Radio" parent="." instance=ExtResource("31_obecb")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4Radio"]
-stream = SubResource("AudioStreamPlaylist_dpq88")
-volume_db = 10.0
-bus = &"Radio"
+transform = Transform3D(-0.978147, 0, 0.207911, 0, 1, 0, -0.207911, 0, -0.978147, -4.517, 0.5, 21.256)
 
 [node name="Ambience_1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_aytlu")
 autoplay = true
 bus = &"Muted"
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(0.978531, 0, -0.206102, 0, 1, 0, 0.206102, 0, 0.978531, -5.99686, 1.31551, 28.4719)
+shape = SubResource("BoxShape3D_oabyp")
+
+[node name="Loop1" type="Node3D" parent="."]
+
+[node name="CheckPoint1" parent="Loop1" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("44_dpq88")
+
+[node name="FinishLine1" parent="Loop1" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("43_oxvk0")
+
+[node name="Loop1Radio" parent="Loop1" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop1/Loop1Radio"]
+stream = SubResource("AudioStreamPlaylist_uvovo")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop2" type="Node3D" parent="."]
+visible = false
+
+[node name="CheckPoint2" parent="Loop2" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("44_dpq88")
+
+[node name="FinishLine2" parent="Loop2" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("43_oxvk0")
+
+[node name="Loop2Radio" parent="Loop2" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2/Loop2Radio"]
+stream = SubResource("AudioStreamPlaylist_22f27")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop3" type="Node3D" parent="."]
+visible = false
+
+[node name="CheckPoint3" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("44_dpq88")
+
+[node name="FinishLine3" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("43_oxvk0")
+
+[node name="Loop3Radio" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3/Loop3Radio"]
+stream = SubResource("AudioStreamPlaylist_oabyp")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop4" type="Node3D" parent="."]
+visible = false
+
+[node name="CheckPoint4" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("44_dpq88")
+
+[node name="FinishLine4" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("43_oxvk0")
+
+[node name="Loop4Radio" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio"]
+stream = SubResource("AudioStreamPlaylist_dpq88")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-239.395, 0, -2.09286e-05, 0, 239.395, 0, 2.09286e-05, 0, -239.395, 129.5, 287.308, -106.5)
+amount = 6166
+lifetime = 12.27
+process_material = SubResource("ParticleProcessMaterial_d7can")
+draw_pass_1 = SubResource("QuadMesh_fkd3l")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
+script = ExtResource("14_nm4gv")
