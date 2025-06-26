@@ -2,4 +2,4 @@ extends Node
 
 var loop = 1
 var checkpoint = false
-var pausable = false
+var gameStarted = false

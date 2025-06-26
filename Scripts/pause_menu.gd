@@ -16,7 +16,7 @@ func pause():
 	
 func testEsc():
 	#print("test1")
-	if Global.pausable == true:
+	if Global.gameStarted == true:
 		if Input.is_action_just_pressed("escape") and !get_tree().paused:
 			pause()
 		elif Input.is_action_just_pressed("escape") and get_tree().paused:

@@ -22,5 +22,5 @@ func scroll_text(input_text:String) -> void:
 	
 	print("end")
 	hide()
-	Global.pausable = true
+	Global.gameStarted = true
 	

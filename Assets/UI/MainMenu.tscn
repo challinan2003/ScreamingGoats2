@@ -53,6 +53,7 @@ texture = ExtResource("1_bc6al")
 expand_mode = 1
 
 [node name="background" parent="Menu" instance=ExtResource("5_aclpl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1000, 0)
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1

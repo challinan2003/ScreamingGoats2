@@ -20,3 +20,5 @@ func _process(delta: float) -> void:
 	if !get_tree().paused:
 		#pass
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if Global.gameStarted == true:
+		camera.make_current()

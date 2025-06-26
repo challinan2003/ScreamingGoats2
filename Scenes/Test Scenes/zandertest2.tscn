@@ -251,7 +251,7 @@ stream_1 = ExtResource("37_fynq6")
 stream_2 = ExtResource("38_3ro5j")
 stream_3 = ExtResource("35_vyq6i")
 
-[node name="HarlanTestScene" type="Node3D"]
+[node name="z2" type="Node3D"]
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_0cv8b")]
 
