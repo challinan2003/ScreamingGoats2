@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://tsuvlrk7cduq"]
+[gd_scene load_steps=34 format=3 uid="uid://tsuvlrk7cduq"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_iiq3e"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="2_r4o68"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="11_h6fad"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="12_q3qhi"]
 [ext_resource type="PackedScene" uid="uid://bk4l6r7xtq2lj" path="res://Scenes/Other Scenes n Shit/enemy_spawn_trigger.tscn" id="13_8aqqd"]
+[ext_resource type="PackedScene" uid="uid://ctbyfmg47ng11" path="res://Assets/Models/Cross Grave.glb" id="13_kqj4m"]
 
 [sub_resource type="Curve3D" id="Curve3D_im7qt"]
 
@@ -408,3 +409,6 @@ transform = Transform3D(-1.08253, 0, -0.625, 0, 1.25, 0, 0.625, 0, -1.08253, 32.
 
 [node name="Trigger Box2" parent="." instance=ExtResource("13_8aqqd")]
 transform = Transform3D(0.0600207, 0, -0.998197, 0, 1, 0, 0.998197, 0, 0.0600207, 92.1986, 0.3516, -58.2261)
+
+[node name="Cross Grave" parent="." instance=ExtResource("13_kqj4m")]
+transform = Transform3D(-0.998967, 0, 0.0454502, 0, 1, 0, -0.0454502, 0, -0.998967, 60.6975, 0.785937, -48.0002)
