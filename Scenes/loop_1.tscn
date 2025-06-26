@@ -1,0 +1,63 @@
+[gd_scene load_steps=14 format=3 uid="uid://cx15qksafm6em"]
+
+[ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="1_h2cff"]
+[ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="2_ehj8x"]
+[ext_resource type="Script" uid="uid://cdj2jlp8ayek1" path="res://Scripts/finishLine.gd" id="3_pv5rl"]
+[ext_resource type="AudioStream" uid="uid://dtpi38receduq" path="res://Assets/Sounds/VO_Loop1_01.mp3" id="4_e2rpg"]
+[ext_resource type="AudioStream" uid="uid://dk8s76mpgmqth" path="res://Assets/Sounds/VO_Loop1_02.mp3" id="5_boal5"]
+[ext_resource type="AudioStream" uid="uid://c6d5mk642hxdn" path="res://Assets/Sounds/VO_Loop1_04.mp3" id="6_ea3g8"]
+[ext_resource type="AudioStream" uid="uid://1mlfawy0ncmu" path="res://Assets/Sounds/Music_Loop1_01.mp3" id="7_t6k5u"]
+[ext_resource type="AudioStream" uid="uid://cnpk54fys6778" path="res://Assets/Sounds/RadioStatic_01.wav" id="8_rxnyg"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_uvovo"]
+loop = false
+fade_time = 0.5
+stream_count = 5
+stream_0 = ExtResource("4_e2rpg")
+stream_1 = ExtResource("5_boal5")
+stream_2 = ExtResource("6_ea3g8")
+stream_3 = ExtResource("7_t6k5u")
+stream_4 = ExtResource("8_rxnyg")
+
+[sub_resource type="Gradient" id="Gradient_rr4e2"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1f5un"]
+gradient = SubResource("Gradient_rr4e2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j43uk"]
+transparency = 1
+albedo_texture = SubResource("GradientTexture2D_1f5un")
+emission_enabled = true
+emission = Color(0.158472, 0.158472, 0.158472, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nm4gv"]
+material = SubResource("StandardMaterial3D_j43uk")
+size = Vector2(200, 100)
+
+[node name="Loop1" type="Node3D"]
+
+[node name="CheckPoint1" parent="." instance=ExtResource("1_h2cff")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("2_ehj8x")
+
+[node name="FinishLine1" parent="." instance=ExtResource("1_h2cff")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("3_pv5rl")
+
+[node name="Loop1Radio" parent="." instance=ExtResource("1_h2cff")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop1Radio"]
+stream = SubResource("AudioStreamPlaylist_uvovo")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Vista_Flat_16" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -7.00899, 122.759)
+mesh = SubResource("PlaneMesh_nm4gv")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")

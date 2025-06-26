@@ -1,0 +1,53 @@
+[gd_scene load_steps=13 format=3 uid="uid://o7ypl30psvvd"]
+
+[ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="1_y2ffe"]
+[ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="2_4il0h"]
+[ext_resource type="Script" uid="uid://cdj2jlp8ayek1" path="res://Scripts/finishLine.gd" id="3_eiw7i"]
+[ext_resource type="AudioStream" uid="uid://b3lhhf0h66bqe" path="res://Assets/Sounds/VO_Loop3_01.mp3" id="4_y6ee0"]
+[ext_resource type="AudioStream" uid="uid://fc0p4couobwo" path="res://Assets/Sounds/VO_Loop3_02.mp3" id="5_1xdor"]
+[ext_resource type="AudioStream" uid="uid://b0g6pbvrfw7jq" path="res://Assets/Sounds/VO_Loop3_04.mp3" id="6_8c8ga"]
+[ext_resource type="AudioStream" uid="uid://b8ntghkfcddv3" path="res://Assets/Sounds/Music_Loop3_1.mp3" id="7_tg1yn"]
+[ext_resource type="AudioStream" uid="uid://dr6we1t0x6i4j" path="res://Assets/Sounds/VO_Improv_02.mp3" id="8_ofmb4"]
+[ext_resource type="AudioStream" uid="uid://d2hskgiewvkcb" path="res://Assets/Sounds/VO_Extra_03.mp3" id="9_jr7bj"]
+[ext_resource type="AudioStream" uid="uid://c860udjfshpng" path="res://Assets/Sounds/VO_Improv_01.mp3" id="10_vmnka"]
+[ext_resource type="AudioStream" uid="uid://bsayjpoyiwpkx" path="res://Assets/Sounds/VO_Improv_05.mp3" id="11_6tfxp"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_oabyp"]
+loop = false
+fade_time = 1.0
+stream_count = 8
+stream_0 = ExtResource("4_y6ee0")
+stream_1 = ExtResource("5_1xdor")
+stream_2 = ExtResource("6_8c8ga")
+stream_3 = ExtResource("7_tg1yn")
+stream_4 = ExtResource("8_ofmb4")
+stream_5 = ExtResource("9_jr7bj")
+stream_6 = ExtResource("10_vmnka")
+stream_7 = ExtResource("11_6tfxp")
+
+[node name="Loop3" type="Node3D"]
+visible = false
+
+[node name="CheckPoint3" parent="." instance=ExtResource("1_y2ffe")]
+transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
+script = ExtResource("2_4il0h")
+
+[node name="FinishLine3" parent="." instance=ExtResource("1_y2ffe")]
+transform = Transform3D(0.982199, 0, -0.187844, 0, 1, 0, 0.187844, 0, 0.982199, -84.766, 1.1265, -22.3324)
+script = ExtResource("3_eiw7i")
+
+[node name="Loop3Radio" parent="." instance=ExtResource("1_y2ffe")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3Radio"]
+stream = SubResource("AudioStreamPlaylist_oabyp")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop3Radio2" parent="." instance=ExtResource("1_y2ffe")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3Radio2"]
+stream = SubResource("AudioStreamPlaylist_oabyp")
+volume_db = 10.0
+bus = &"Radio"
