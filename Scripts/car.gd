@@ -3,12 +3,11 @@ extends VehicleBody3D
 var max_rpm = 250
 var max_torque = 200
 var mode = 0
-#Gets the path of the headlight object
-@onready var light = get_node("carbody/SpotLight3D")
 
+#Toggle headlights
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("toggle_light"):
-		$carbody/SpotLight3D.visible = !$carbody/SpotLight3D.visible
+		$SpotLight3D.visible = !$SpotLight3D.visible
 
 func _physics_process(delta: float) -> void:
 	

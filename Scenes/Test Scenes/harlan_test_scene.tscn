@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=88 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
@@ -41,6 +41,8 @@
 [ext_resource type="AudioStream" uid="uid://cnpk54fys6778" path="res://Assets/Sounds/RadioStatic_01.wav" id="38_mitny"]
 [ext_resource type="AudioStream" uid="uid://b3lhhf0h66bqe" path="res://Assets/Sounds/VO_Loop3_01.mp3" id="39_22f27"]
 [ext_resource type="AudioStream" uid="uid://b0g6pbvrfw7jq" path="res://Assets/Sounds/VO_Loop3_04.mp3" id="40_put2j"]
+[ext_resource type="AudioStream" uid="uid://xf3naryguvvl" path="res://Assets/Sounds/VO_Loop4_01.mp3" id="41_oabyp"]
+[ext_resource type="AudioStream" uid="uid://ckdjb2k2mfiuj" path="res://Assets/Sounds/VO_Loop4_04.mp3" id="42_oxvk0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -255,6 +257,15 @@ fade_time = 0.5
 stream_count = 4
 stream_0 = ExtResource("39_22f27")
 stream_1 = ExtResource("40_put2j")
+stream_2 = ExtResource("37_kn02c")
+stream_3 = ExtResource("38_mitny")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_dpq88"]
+loop = false
+fade_time = 0.5
+stream_count = 4
+stream_0 = ExtResource("41_oabyp")
+stream_1 = ExtResource("42_oxvk0")
 stream_2 = ExtResource("37_kn02c")
 stream_3 = ExtResource("38_mitny")
 
@@ -3710,13 +3721,6 @@ mesh = SubResource("BoxMesh_dlbj2")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, -0.5)
 current = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
-transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
-light_color = Color(0.94, 0.91556, 0.8178, 1)
-shadow_enabled = true
-spot_range = 20.0
-spot_angle = 60.0
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
 shape = SubResource("ConvexPolygonShape3D_o401o")
 
@@ -3793,6 +3797,13 @@ draw_pass_1 = SubResource("QuadMesh_fkd3l")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
 script = ExtResource("14_nm4gv")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="car"]
+transform = Transform3D(1, -7.81622e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, -0.0517786, 1.5)
+light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 60.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -4614,6 +4625,15 @@ visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3Radio"]
 stream = SubResource("AudioStreamPlaylist_oabyp")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop4Radio" parent="." instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4Radio"]
+stream = SubResource("AudioStreamPlaylist_dpq88")
 volume_db = 10.0
 bus = &"Radio"
 
