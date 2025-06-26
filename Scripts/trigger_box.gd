@@ -1,9 +1,15 @@
 extends Area3D
 
-var should_show = true
+var loop_start
 
+func _process(delta: float) -> void:
+	if is_visible_in_tree() == true:
+		monitoring = true
+	else:
+		monitoring = false
+	if Global.loop != loop_start:
+		$AudioStreamPlayer.stop()
 
 func _on_body_entered(body: Node3D):
-	if should_show == true:
+		loop_start = Global.loop
 		$AudioStreamPlayer.play()
-		should_show = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=85 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_nm4gv"]
@@ -39,6 +39,8 @@
 [ext_resource type="AudioStream" uid="uid://dtenjj2r5gym" path="res://Assets/Sounds/VO_Loop2_04.mp3" id="36_mitny"]
 [ext_resource type="AudioStream" uid="uid://cmljx1wlugbnp" path="res://Assets/Sounds/Music_Loop2_01.mp3" id="37_kn02c"]
 [ext_resource type="AudioStream" uid="uid://cnpk54fys6778" path="res://Assets/Sounds/RadioStatic_01.wav" id="38_mitny"]
+[ext_resource type="AudioStream" uid="uid://b3lhhf0h66bqe" path="res://Assets/Sounds/VO_Loop3_01.mp3" id="39_22f27"]
+[ext_resource type="AudioStream" uid="uid://b0g6pbvrfw7jq" path="res://Assets/Sounds/VO_Loop3_04.mp3" id="40_put2j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -244,6 +246,15 @@ fade_time = 0.5
 stream_count = 4
 stream_0 = ExtResource("35_s2co6")
 stream_1 = ExtResource("36_mitny")
+stream_2 = ExtResource("37_kn02c")
+stream_3 = ExtResource("38_mitny")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_oabyp"]
+loop = false
+fade_time = 0.5
+stream_count = 4
+stream_0 = ExtResource("39_22f27")
+stream_1 = ExtResource("40_put2j")
 stream_2 = ExtResource("37_kn02c")
 stream_3 = ExtResource("38_mitny")
 
@@ -4590,10 +4601,19 @@ bus = &"Radio"
 
 [node name="Loop2Radio" parent="." instance=ExtResource("31_obecb")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
-monitoring = false
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2Radio"]
 stream = SubResource("AudioStreamPlaylist_22f27")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop3Radio" parent="." instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3Radio"]
+stream = SubResource("AudioStreamPlaylist_oabyp")
 volume_db = 10.0
 bus = &"Radio"
 
