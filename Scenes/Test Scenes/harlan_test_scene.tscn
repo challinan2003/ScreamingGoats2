@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=94 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_n6cpn"]
@@ -62,6 +62,7 @@ sky_material = SubResource("ProceduralSkyMaterial_nm4gv")
 [sub_resource type="Environment" id="Environment_fkd3l"]
 background_mode = 2
 sky = SubResource("Sky_d7can")
+fog_light_color = Color(0.0954933, 0.0944, 0.16, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_1p7x2"]
 
@@ -168,7 +169,7 @@ metadata/_snap_enabled = true
 transparency = 1
 albedo_texture = SubResource("GradientTexture2D_1f5un")
 emission_enabled = true
-emission = Color(0.118581, 0.118581, 0.118581, 1)
+emission = Color(0.158472, 0.158472, 0.158472, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nm4gv"]
 material = SubResource("StandardMaterial3D_j43uk")
@@ -224,6 +225,15 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 57
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6cpn"]
+emission_enabled = true
+emission = Color(0.839216, 0.658824, 0.419608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nhkuj"]
+material = SubResource("StandardMaterial3D_n6cpn")
+radius = 0.25
+height = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oabyp"]
 size = Vector3(10, 8, 1)
@@ -4279,6 +4289,7 @@ skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/Do
 
 [node name="Vista_Flat_16" type="MeshInstance3D" parent="Vista"]
 transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -17, 122.759)
+visible = false
 mesh = SubResource("PlaneMesh_nm4gv")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
@@ -4581,8 +4592,16 @@ spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 0.615572
 
+[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.839216, 0.658824, 0.419608, 1)
+
+[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
+mesh = SubResource("SphereMesh_nhkuj")
+
 [node name="street_Light2" parent="." instance=ExtResource("26_lsse4")]
-transform = Transform3D(-0.799444, 0, -0.600741, 0, 1, 0, 0.600741, 0, -0.799444, 29.8852, -0.5, -33.7795)
+transform = Transform3D(-0.903522, 0, -0.428541, 0, 1, 0, 0.428541, 0, -0.903522, 29.2789, -0.5, -33.0749)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="street_Light2"]
 transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
@@ -4592,6 +4611,54 @@ spot_range = 10.0
 spot_attenuation = 0.5
 spot_angle = 40.0
 spot_angle_attenuation = 0.615572
+
+[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light2"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.839216, 0.658824, 0.419608, 1)
+
+[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light2"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
+mesh = SubResource("SphereMesh_nhkuj")
+
+[node name="street_Light3" parent="." instance=ExtResource("26_lsse4")]
+transform = Transform3D(-0.569394, 0, 0.822065, 0, 1, 0, -0.822065, 0, -0.569394, -87.6698, -0.5, -38.995)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light3"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
+
+[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light3"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.839216, 0.658824, 0.419608, 1)
+
+[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light3"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
+mesh = SubResource("SphereMesh_nhkuj")
+
+[node name="street_Light4" parent="." instance=ExtResource("26_lsse4")]
+transform = Transform3D(-0.999833, 0, -0.0182552, 0, 1, 0, 0.0182552, 0, -0.999833, 14.0787, -0.5, -225.127)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light4"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
+
+[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light4"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.839216, 0.658824, 0.419608, 1)
+
+[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light4"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
+mesh = SubResource("SphereMesh_nhkuj")
 
 [node name="Tunnel_entrance" parent="." instance=ExtResource("28_gfydl")]
 transform = Transform3D(0.21724, 0, 0.976118, 0, 1, 0, -0.976118, 0, 0.21724, -1.06596, 0.1, 2.8016)
@@ -4643,6 +4710,11 @@ stream = SubResource("AudioStreamPlaylist_uvovo")
 volume_db = 10.0
 bus = &"Radio"
 
+[node name="Vista_Flat_16" type="MeshInstance3D" parent="Loop1"]
+transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -7.00899, 122.759)
+mesh = SubResource("PlaneMesh_nm4gv")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
 [node name="Loop2" type="Node3D" parent="."]
 visible = false
 
@@ -4661,6 +4733,11 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 stream = SubResource("AudioStreamPlaylist_22f27")
 volume_db = 10.0
 bus = &"Radio"
+
+[node name="Vista_Flat_16" type="MeshInstance3D" parent="Loop2"]
+transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -7.00899, 122.759)
+mesh = SubResource("PlaneMesh_nm4gv")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
 [node name="Loop3" type="Node3D" parent="."]
 visible = false
