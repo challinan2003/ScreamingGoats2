@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=95 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_n6cpn"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="23_dlnnn"]
 [ext_resource type="PackedScene" uid="uid://pi2fhphreawu" path="res://Assets/Models/TreeTrunk.glb" id="25_sb75f"]
 [ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="26_lsse4"]
+[ext_resource type="PackedScene" uid="uid://efdx5mecsjp0" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="27_nhkuj"]
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_gfydl"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_r73o1"]
 [ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="30_obecb"]
@@ -4580,25 +4581,7 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 [node name="TreeTrunk" parent="." instance=ExtResource("25_sb75f")]
 transform = Transform3D(-0.498097, 0.0435778, 1.90485e-09, 0, -2.18557e-08, 0.5, 0.0435778, 0.498097, 2.17725e-08, 173, 0.15, -51.8)
 
-[node name="street_Light" parent="." instance=ExtResource("26_lsse4")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 143.5, -0.5, -40.8)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
-
-[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.839216, 0.658824, 0.419608, 1)
-
-[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
-mesh = SubResource("SphereMesh_nhkuj")
+[node name="Street_Light" parent="." instance=ExtResource("27_nhkuj")]
 
 [node name="street_Light2" parent="." instance=ExtResource("26_lsse4")]
 transform = Transform3D(-0.903522, 0, -0.428541, 0, 1, 0, 0.428541, 0, -0.903522, 29.2789, -0.5, -33.0749)
