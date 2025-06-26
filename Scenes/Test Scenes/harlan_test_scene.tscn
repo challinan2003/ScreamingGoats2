@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=110 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_n6cpn"]
@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="10_o401o"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="12_d6811"]
 [ext_resource type="AudioStream" uid="uid://cttb6vdcoroby" path="res://Assets/Sounds/Car_Idle_1_loop.mp3" id="13_lsse4"]
-[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
+[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_nm4gv"]
 [ext_resource type="AudioStream" uid="uid://bsaclk0fsrbe8" path="res://Assets/Sounds/Car_Idle_2_loop.mp3" id="14_or8nf"]
 [ext_resource type="AudioStream" uid="uid://c5p230kw00kd3" path="res://Assets/Sounds/Car_Drive_2.mp3" id="16_n6cpn"]
 [ext_resource type="AudioStream" uid="uid://blqrbabu1a6e1" path="res://Assets/Sounds/Ambient_Scary_1.wav" id="18_j43uk"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://bxhmfh8u0yrgu" path="res://Assets/Models/Boulder_3.glb" id="22_m37wy"]
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="23_dlnnn"]
 [ext_resource type="PackedScene" uid="uid://pi2fhphreawu" path="res://Assets/Models/TreeTrunk.glb" id="25_sb75f"]
-[ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="26_lsse4"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="27_nhkuj"]
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_gfydl"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_r73o1"]
@@ -39,14 +38,31 @@
 [ext_resource type="AudioStream" uid="uid://1mlfawy0ncmu" path="res://Assets/Sounds/Music_Loop1_01.mp3" id="34_20kt6"]
 [ext_resource type="AudioStream" uid="uid://6slx2w0kpi7y" path="res://Assets/Sounds/VO_Loop2_01.mp3" id="35_s2co6"]
 [ext_resource type="AudioStream" uid="uid://dtenjj2r5gym" path="res://Assets/Sounds/VO_Loop2_04.mp3" id="36_mitny"]
+[ext_resource type="AudioStream" uid="uid://dk8s76mpgmqth" path="res://Assets/Sounds/VO_Loop1_02.mp3" id="37_c3uql"]
 [ext_resource type="AudioStream" uid="uid://cmljx1wlugbnp" path="res://Assets/Sounds/Music_Loop2_01.mp3" id="37_kn02c"]
 [ext_resource type="AudioStream" uid="uid://cnpk54fys6778" path="res://Assets/Sounds/RadioStatic_01.wav" id="38_mitny"]
 [ext_resource type="AudioStream" uid="uid://b3lhhf0h66bqe" path="res://Assets/Sounds/VO_Loop3_01.mp3" id="39_22f27"]
 [ext_resource type="AudioStream" uid="uid://b0g6pbvrfw7jq" path="res://Assets/Sounds/VO_Loop3_04.mp3" id="40_put2j"]
 [ext_resource type="AudioStream" uid="uid://xf3naryguvvl" path="res://Assets/Sounds/VO_Loop4_01.mp3" id="41_oabyp"]
+[ext_resource type="AudioStream" uid="uid://5eigq0sl38xw" path="res://Assets/Sounds/VO_Loop2_02.mp3" id="42_gcmcu"]
 [ext_resource type="AudioStream" uid="uid://ckdjb2k2mfiuj" path="res://Assets/Sounds/VO_Loop4_04.mp3" id="42_oxvk0"]
-[ext_resource type="Script" path="res://Scripts/finishLine.gd" id="43_oxvk0"]
+[ext_resource type="Script" uid="uid://cdj2jlp8ayek1" path="res://Scripts/finishLine.gd" id="43_oxvk0"]
 [ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="44_dpq88"]
+[ext_resource type="AudioStream" uid="uid://fc0p4couobwo" path="res://Assets/Sounds/VO_Loop3_02.mp3" id="44_l2hb2"]
+[ext_resource type="AudioStream" uid="uid://b8ntghkfcddv3" path="res://Assets/Sounds/Music_Loop3_1.mp3" id="45_nhkuj"]
+[ext_resource type="AudioStream" uid="uid://dr6we1t0x6i4j" path="res://Assets/Sounds/VO_Improv_02.mp3" id="46_1vtrw"]
+[ext_resource type="AudioStream" uid="uid://d2hskgiewvkcb" path="res://Assets/Sounds/VO_Extra_03.mp3" id="47_l2hb2"]
+[ext_resource type="AudioStream" uid="uid://bq7nn3gat0o5v" path="res://Assets/Sounds/Music_Loop4_1.mp3" id="48_s5th0"]
+[ext_resource type="AudioStream" uid="uid://bsayjpoyiwpkx" path="res://Assets/Sounds/VO_Improv_05.mp3" id="52_orr1k"]
+[ext_resource type="AudioStream" uid="uid://dqtrudjykf1vd" path="res://Assets/Sounds/VO_Extra_01.mp3" id="52_t0ry8"]
+[ext_resource type="AudioStream" uid="uid://dewi6hxusgnjy" path="res://Assets/Sounds/VO_Extra_02.mp3" id="53_c3uql"]
+[ext_resource type="AudioStream" uid="uid://bh1c0prtn8l0q" path="res://Assets/Sounds/VO_Extra_04.mp3" id="54_gcmcu"]
+[ext_resource type="AudioStream" uid="uid://brwapf6ghiib2" path="res://Assets/Sounds/VO_Hey_01.mp3" id="55_orr1k"]
+[ext_resource type="AudioStream" uid="uid://cewf17bjsr43f" path="res://Assets/Sounds/VO_Hey_02.mp3" id="56_v8fab"]
+[ext_resource type="AudioStream" uid="uid://dmf7fgmmmt67e" path="res://Assets/Sounds/VO_Hey_03.mp3" id="57_krswa"]
+[ext_resource type="AudioStream" uid="uid://c860udjfshpng" path="res://Assets/Sounds/VO_Improv_01.mp3" id="58_pdbo7"]
+[ext_resource type="AudioStream" uid="uid://cxlwxeuieitad" path="res://Assets/Sounds/VO_Improv_03.mp3" id="59_1mjbn"]
+[ext_resource type="AudioStream" uid="uid://8ya2wk3aullg" path="res://Assets/Sounds/VO_Improv_04.mp3" id="60_wo6ot"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -129,6 +145,18 @@ top_radius = 0.4
 bottom_radius = 0.4
 height = 0.25
 radial_segments = 12
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7can"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(4, -9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
+material = SubResource("StandardMaterial3D_dlnnn")
+size = Vector2(0.1, 0.1)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
 
@@ -227,64 +255,63 @@ _data = {
 }
 point_count = 57
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6cpn"]
-emission_enabled = true
-emission = Color(0.839216, 0.658824, 0.419608, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_nhkuj"]
-material = SubResource("StandardMaterial3D_n6cpn")
-radius = 0.25
-height = 0.5
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_oabyp"]
 size = Vector3(10, 8, 1)
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_uvovo"]
 loop = false
 fade_time = 0.5
-stream_count = 4
+stream_count = 5
 stream_0 = ExtResource("32_dnxfb")
-stream_1 = ExtResource("33_sdrom")
-stream_2 = ExtResource("34_20kt6")
-stream_3 = ExtResource("38_mitny")
+stream_1 = ExtResource("37_c3uql")
+stream_2 = ExtResource("33_sdrom")
+stream_3 = ExtResource("34_20kt6")
+stream_4 = ExtResource("38_mitny")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_22f27"]
 loop = false
 fade_time = 0.5
-stream_count = 4
+stream_count = 5
 stream_0 = ExtResource("35_s2co6")
-stream_1 = ExtResource("36_mitny")
-stream_2 = ExtResource("37_kn02c")
-stream_3 = ExtResource("38_mitny")
+stream_1 = ExtResource("42_gcmcu")
+stream_2 = ExtResource("36_mitny")
+stream_3 = ExtResource("37_kn02c")
+stream_4 = ExtResource("38_mitny")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_oabyp"]
 loop = false
-fade_time = 0.5
-stream_count = 4
+fade_time = 1.0
+stream_count = 8
 stream_0 = ExtResource("39_22f27")
-stream_1 = ExtResource("40_put2j")
-stream_2 = ExtResource("37_kn02c")
-stream_3 = ExtResource("38_mitny")
+stream_1 = ExtResource("44_l2hb2")
+stream_2 = ExtResource("40_put2j")
+stream_3 = ExtResource("45_nhkuj")
+stream_4 = ExtResource("46_1vtrw")
+stream_5 = ExtResource("47_l2hb2")
+stream_6 = ExtResource("58_pdbo7")
+stream_7 = ExtResource("52_orr1k")
 
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_dpq88"]
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_nhkuj"]
 loop = false
 fade_time = 0.5
-stream_count = 4
+stream_count = 3
 stream_0 = ExtResource("41_oabyp")
 stream_1 = ExtResource("42_oxvk0")
-stream_2 = ExtResource("37_kn02c")
-stream_3 = ExtResource("38_mitny")
+stream_2 = ExtResource("48_s5th0")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d7can"]
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-gravity = Vector3(4, -9.8, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
-billboard_mode = 1
-
-[sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
-material = SubResource("StandardMaterial3D_dlnnn")
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_gie8w"]
+shuffle = true
+fade_time = 1.0
+stream_count = 9
+stream_0 = ExtResource("52_t0ry8")
+stream_1 = ExtResource("53_c3uql")
+stream_2 = ExtResource("54_gcmcu")
+stream_3 = ExtResource("55_orr1k")
+stream_4 = ExtResource("56_v8fab")
+stream_5 = ExtResource("57_krswa")
+stream_6 = ExtResource("58_pdbo7")
+stream_7 = ExtResource("59_1mjbn")
+stream_8 = ExtResource("60_wo6ot")
 
 [node name="HarlanTestScene" type="Node3D"]
 script = ExtResource("1_n6cpn")
@@ -3816,6 +3843,16 @@ shadow_enabled = true
 spot_range = 20.0
 spot_angle = 60.0
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="car"]
+transform = Transform3D(48.9074, 0, 10.3956, 0, 50, 0, -10.3956, 0, 48.9074, 0, 58, 0)
+amount = 6166
+lifetime = 12.27
+process_material = SubResource("ParticleProcessMaterial_d7can")
+draw_pass_1 = SubResource("QuadMesh_fkd3l")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
+script = ExtResource("14_nm4gv")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
@@ -4582,66 +4619,16 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 transform = Transform3D(-0.498097, 0.0435778, 1.90485e-09, 0, -2.18557e-08, 0.5, 0.0435778, 0.498097, 2.17725e-08, 173, 0.15, -51.8)
 
 [node name="Street_Light" parent="." instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.994219, 0, -0.107375, 0, 1, 0, 0.107375, 0, 0.994219, 143.527, -0.889192, -41.0222)
 
-[node name="street_Light2" parent="." instance=ExtResource("26_lsse4")]
-transform = Transform3D(-0.903522, 0, -0.428541, 0, 1, 0, 0.428541, 0, -0.903522, 29.2789, -0.5, -33.0749)
+[node name="Street_Light2" parent="." instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.846973, 0, 0.531635, 0, 1, 0, -0.531635, 0, 0.846973, 29.3183, -0.889192, -32.991)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light2"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
+[node name="Street_Light3" parent="." instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.649926, 0, -0.759998, 0, 1, 0, 0.759998, 0, 0.649926, -86.5036, -0.781207, -39.6421)
 
-[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light2"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.839216, 0.658824, 0.419608, 1)
-
-[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light2"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
-mesh = SubResource("SphereMesh_nhkuj")
-
-[node name="street_Light3" parent="." instance=ExtResource("26_lsse4")]
-transform = Transform3D(-0.569394, 0, 0.822065, 0, 1, 0, -0.822065, 0, -0.569394, -87.6698, -0.5, -38.995)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light3"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
-
-[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light3"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.839216, 0.658824, 0.419608, 1)
-
-[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light3"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
-mesh = SubResource("SphereMesh_nhkuj")
-
-[node name="street_Light4" parent="." instance=ExtResource("26_lsse4")]
-transform = Transform3D(-0.999833, 0, -0.0182552, 0, 1, 0, 0.0182552, 0, -0.999833, 14.0787, -0.5, -225.127)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light4"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
-
-[node name="SpotLight3D2" type="OmniLight3D" parent="street_Light4"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.839216, 0.658824, 0.419608, 1)
-
-[node name="SpotLight3D3" type="MeshInstance3D" parent="street_Light4"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 3.26388e-08, 7.37334, 1.55)
-mesh = SubResource("SphereMesh_nhkuj")
+[node name="Street_Light4" parent="." instance=ExtResource("27_nhkuj")]
+transform = Transform3D(-0.989288, 0, -0.145979, 0, 1, 0, 0.145979, 0, -0.989288, 18.9809, -0.781207, -233.76)
 
 [node name="Tunnel_entrance" parent="." instance=ExtResource("28_gfydl")]
 transform = Transform3D(0.21724, 0, 0.976118, 0, 1, 0, -0.976118, 0, 0.21724, -1.06596, 0.1, 2.8016)
@@ -4741,6 +4728,14 @@ stream = SubResource("AudioStreamPlaylist_oabyp")
 volume_db = 10.0
 bus = &"Radio"
 
+[node name="Loop3Radio2" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3/Loop3Radio2"]
+stream = SubResource("AudioStreamPlaylist_oabyp")
+volume_db = 10.0
+bus = &"Radio"
+
 [node name="Loop4" type="Node3D" parent="."]
 visible = false
 
@@ -4756,16 +4751,30 @@ script = ExtResource("43_oxvk0")
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio"]
-stream = SubResource("AudioStreamPlaylist_dpq88")
+stream = SubResource("AudioStreamPlaylist_nhkuj")
 volume_db = 10.0
 bus = &"Radio"
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(-239.395, 0, -2.09286e-05, 0, 239.395, 0, 2.09286e-05, 0, -239.395, 129.5, 287.308, -106.5)
-amount = 6166
-lifetime = 12.27
-process_material = SubResource("ParticleProcessMaterial_d7can")
-draw_pass_1 = SubResource("QuadMesh_fkd3l")
+[node name="Loop4Radio2" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(0.718988, 0, 0.695023, 0, 1, 0, -0.695023, 0, 0.718988, 320.593, 0, -268.492)
 
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
-script = ExtResource("14_nm4gv")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio2"]
+stream = SubResource("AudioStreamPlaylist_gie8w")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop4Radio3" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.0246068, 0, 0.999697, 0, 1, 0, -0.999697, 0, -0.0246068, 212.373, 0, -282.586)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio3"]
+stream = SubResource("AudioStreamPlaylist_gie8w")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop4Radio4" parent="Loop4" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.302553, 0, 0.953133, 0, 1, 0, -0.953133, 0, -0.302553, 137.241, 0, -276.059)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio4"]
+stream = SubResource("AudioStreamPlaylist_gie8w")
+volume_db = 10.0
+bus = &"Radio"

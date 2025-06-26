@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 	steering = lerp(steering, Input.get_axis("right","left") * 0.4,5 * delta)
 	#var acceleration = Input.get_axis("back","forward")
 	var rpm = $back_left_wheel.get_rpm()
-	print(rpm)
+	#print(rpm)
 	#print(mode)
 	var acceleration = mode
 	if mode == 0 && rpm > 0:
