@@ -35,3 +35,8 @@ func _process(delta: float) -> void:
 func _on_quit_button_pressed() -> void:
 	if get_tree().paused:
 		get_tree().quit()
+
+
+func _on_reset_button_pressed() -> void:
+	if get_tree().paused:
+		get_tree().reload_current_scene()
