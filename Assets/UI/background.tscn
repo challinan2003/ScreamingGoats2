@@ -1,0 +1,325 @@
+[gd_scene load_steps=22 format=3 uid="uid://cgdb6bakasotv"]
+
+[ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="1_dqq8k"]
+[ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_frv31"]
+[ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="3_vhgt6"]
+[ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="4_frv31"]
+[ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
+[ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
+[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggsor"]
+albedo_color = Color(0.305882, 1, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_03qtj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdoyi"]
+albedo_texture = ExtResource("2_frv31")
+
+[sub_resource type="Curve3D" id="Curve3D_bpkh4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.260971, 1, -0.115986, 0, 0, 0, 0, 0, 0, 6.66921, 1, 0.289966, 0, 0, 0, 0, 0, 0, 18.1519, 1, 0.695917, 0, 0, 0, 0, 0, 0, 22.0954, 1, 0.666921, 0, 0, 0, 0, 0, 0, 35.6595, 1, -1.34714, 0, 0, 0, 0, 0, 0, 46.9913, 1, -5.07158, 0, 0, 0, 0, 0, 0, 54.5987, 1, -4.04141, 0, 0, 0, 0, 0, 0, 61.1759, 1, -0.475461, 0, 0, 0, 0, 0, 0, 65.5343, 1, 1.18865, 0, 0, 0, 0, 0, 0, 71.9224, 0.999939, 1.26426, 0, 0, 0, 0, 0, 0, 90.8863, 1.00027, 0.842838, 0, 0, 0, 0, 0, 0, 105.496, 1.00026, 0.842838, 0, 0, 0, 0, 0, 0, 112.66, 1.0007, 0.280946, 0, 0, 0, 0, 0, 0, 118.56, 1.00405, -3.93325, 0, 0, 0, 0, 0, 0, 120.807, 1.00304, -2.66899, 0, 0, 0, 0, 0, 0, 133.529, 1.00218, -1.57402, 0, 0, 0, 0, 0, 0, 157.664, 1.00218, -1.57402, 0, 0, 0, 0, 0, 0, 176.29, 1.00218, -1.57402, 0, 0, 0, 0, 0, 0, 183.898, 1.00365, -3.41038, 0, 0, 0, 0, 0, 0, 194.391, 1.00365, -3.41038, 0, 0, 0, 0, 0, 0, 199.638, 1.00134, -0.52467, 0, 0, 0, 0, 0, 0, 213.017, 1.00198, -1.31168),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 22
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vhgt6"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_cover = ExtResource("4_frv31")
+sky_cover_modulate = Color(0.741176, 0.741176, 0.741176, 0.113725)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+energy_multiplier = 0.8
+
+[sub_resource type="Sky" id="Sky_d7can"]
+sky_material = SubResource("ProceduralSkyMaterial_vhgt6")
+
+[sub_resource type="Environment" id="Environment_03qtj"]
+background_mode = 2
+background_energy_multiplier = 8.0
+sky = SubResource("Sky_d7can")
+ambient_light_energy = 10.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpkh4"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("5_03qtj")
+uv1_scale = Vector3(4, 8, 4)
+
+[sub_resource type="Curve3D" id="Curve3D_7dbse"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16.8781, 0.25, 0.568014, 0, 0, 0, 0, 0, 0, 15.5885, 0.248825, 2.04439, 0, 0, 0, 0, 0, 0, 39.3546, 0.249847, 0.766654, 0, 0, 0, 0, 0, 0, 66.1873, 0.251282, -1.02219, 0, 0, 0, 0, 0, 0, 95.5755, 0.252731, -2.81104, 0, 0, 0, 0, 0, 0, 119.597, 0.254166, -4.59989, 0, 0, 0, 0, 0, 0, 159.974, 0.255402, -6.13318, 0, 0, 0, 0, 0, 0, 185.529, 0.253159, -3.32214, 0, 0, 0, 0, 0, 0, 211.85, 0.256012, -6.89983),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txywg"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("6_rdoyi")
+uv1_scale = Vector3(4, 8, 4)
+
+[sub_resource type="Curve3D" id="Curve3D_5bky2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 31.9881, 0.249023, 1.23031, 0, 0, 0, 0, 0, 0, 78.0017, 0.250977, -1.23031, 0, 0, 0, 0, 0, 0, 103.1, 0.251175, -1.47637, 0, 0, 0, 0, 0, 0, 119.094, 0.249619, 0.492122, 0, 0, 0, 0, 0, 0, 139.763, 0.246689, 4.18306, 0, 0, 0, 0, 0, 0, 157.48, 0.247467, 3.1988, 0, 0, 0, 0, 0, 0, 172.736, 0.249222, 0.984244, 0, 0, 0, 0, 0, 0, 194.635, 0.249237, 0.984244, 0, 0, 0, 0, 0, 0, 204.97, 0.249252, 0.984244, 0, 0, 0, 0, 0, 0, 232.734, 0.254089, -5.11503, 0, 0, 0, 0, 0, 0, 251.489, 0.249359, 0.852502),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bpkh4"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(4, -9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_7dbse"]
+material = SubResource("StandardMaterial3D_dlnnn")
+
+[node name="background" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 1.39621, 1.54019, 16.3861)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_ggsor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.454574, 0)
+mesh = SubResource("PlaneMesh_03qtj")
+
+[node name="street_Light" parent="." instance=ExtResource("1_dqq8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4327, -0.546175, -0.858454)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
+
+[node name="LoopBase" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.7107, -0.999999, 2.51335)
+use_collision = true
+polygon = PackedVector2Array(-3.5, 0, -3, 1, 3, 1, 3.5, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_rdoyi")
+
+[node name="Path3D" type="Path3D" parent="LoopBase"]
+curve = SubResource("Curve3D_bpkh4")
+
+[node name="street_Light2" parent="." instance=ExtResource("1_dqq8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0382, -0.546175, -0.5609)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="street_Light2"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
+light_color = Color(0.84, 0.658, 0.42, 1)
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 40.0
+spot_angle_attenuation = 0.615572
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_03qtj")
+
+[node name="trees" type="Node3D" parent="."]
+
+[node name="TreeGroup1_10" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -26.4048, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_10" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_10" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_10" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_10" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_9" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -11.7699, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_9" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_9" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_9" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_9" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_8" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 8.32356, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_8" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_8" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_8" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_8" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_6" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 22.7351, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_6" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_6" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_6" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_6" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_7" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.2901, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_7" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_7" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_7" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_7" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_5" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7.26868, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_5" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_5" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_5" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_5" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_4" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 3.83175, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_4" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_4" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_4" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_4" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_3" type="Node3D" parent="trees"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 12.8636, -1.05593, -3.64502)
+
+[node name="tree1" parent="trees/TreeGroup1_3" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_3" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_3" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_3" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="TreeGroup1_2" type="Node3D" parent="trees"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -17.7247, -0.221497, -2.52723)
+
+[node name="tree1" parent="trees/TreeGroup1_2" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.482963, 0, 0.12941, 0, 0.5, 0, -0.12941, 0, 0.482963, -0.0924115, -0.2, 3.64382)
+
+[node name="tree2" parent="trees/TreeGroup1_2" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(0.2, 0, -0.34641, 0, 0.4, 0, 0.34641, 0, 0.2, 0.838839, -0.2, 1.32374)
+
+[node name="tree3" parent="trees/TreeGroup1_2" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.0776457, -0.903544, -0.2, -1.31522)
+
+[node name="tree4" parent="trees/TreeGroup1_2" instance=ExtResource("3_vhgt6")]
+transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
+
+[node name="FakeTreeDeep_1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.3664, -0.939449, -5.50403)
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_bpkh4")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeDeep_1"]
+curve = SubResource("Curve3D_7dbse")
+
+[node name="FakeTreeClose_1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0669, -0.249901, -4.94973)
+polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = false
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_txywg")
+
+[node name="Path3D" type="Path3D" parent="FakeTreeClose_1"]
+curve = SubResource("Curve3D_5bky2")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(97.3348, 0, 0, 0, 239.395, 0, 0, 0, 110.961, 6.43982, 285.496, -24.6598)
+amount = 6166
+lifetime = 12.27
+process_material = SubResource("ParticleProcessMaterial_bpkh4")
+draw_pass_1 = SubResource("QuadMesh_7dbse")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
+script = ExtResource("7_rdoyi")
