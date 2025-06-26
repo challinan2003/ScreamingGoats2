@@ -76,7 +76,7 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.454574, 0)
 mesh = SubResource("PlaneMesh_03qtj")
 
 [node name="LoopBase" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.7107, -0.999999, 2.51335)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -300, -1, 2.513)
 use_collision = true
 polygon = PackedVector2Array(-3.5, 0, -3, 1, 3, 1, 3.5, 0)
 mode = 2
@@ -233,7 +233,7 @@ transform = Transform3D(-0.0776457, 0, 0.289778, 0, 0.3, 0, -0.289778, 0, -0.077
 transform = Transform3D(-0.424264, 0, 0.424264, 0, 0.6, 0, -0.424264, 0, -0.424264, 0.157116, -0.2, -3.15234)
 
 [node name="FakeTreeDeep_1" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.3664, -0.939449, -5.50403)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 350, -0.939, -5.504)
 polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
 mode = 2
 path_node = NodePath("Path3D")
@@ -252,7 +252,7 @@ material = SubResource("StandardMaterial3D_bpkh4")
 curve = SubResource("Curve3D_7dbse")
 
 [node name="FakeTreeClose_1" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0669, -0.249901, -4.94973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -300, -0.25, -4.95)
 polygon = PackedVector2Array(0, 0, 0, 12, 1, 12, 1, 0)
 mode = 2
 path_node = NodePath("Path3D")
@@ -271,7 +271,7 @@ material = SubResource("StandardMaterial3D_txywg")
 curve = SubResource("Curve3D_5bky2")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(97.3348, 0, 0, 0, 239.395, 0, 0, 0, 110.961, 6.43982, 285.496, -24.6598)
+transform = Transform3D(97.3348, 0, 0, 0, 239.395, 0, 0, 0, 110.961, -34.5676, 285.496, -24.6598)
 amount = 6166
 lifetime = 12.27
 process_material = SubResource("ParticleProcessMaterial_bpkh4")
@@ -285,3 +285,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.22
 
 [node name="Street_Light2" parent="." instance=ExtResource("8_bpkh4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.8656, -0.754476, -1.20743)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3307, 51.0312, 42.4055)
+light_color = Color(0.858824, 1, 1, 1)
+light_energy = 4.0
+omni_range = 90.0

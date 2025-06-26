@@ -1,7 +1,8 @@
 extends VehicleBody3D
 
-var max_rpm = 250
+var max_rpm = 25
 var max_torque = 200
+var min_rpm = -1
 var mode = 0
 
 #Toggle headlights
@@ -39,7 +40,12 @@ func _physics_process(delta: float) -> void:
 	$back_right_wheel.engine_force  = (acceleration * max_torque * (1 - rpm / max_rpm)) /2
 	
 	if Input.is_action_just_pressed("forward") && mode < 2:
+		if mode < 0:
+			mode = 0
 		mode+=1
 	elif Input.is_action_just_pressed("back") && mode > 0:
 		mode=0
+	elif Input.is_action_just_pressed("back") && mode == 0:
+		mode = -0.02
+	
 	
