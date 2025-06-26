@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://drm8m3oxfg6as"]
+[gd_scene load_steps=6 format=3 uid="uid://drm8m3oxfg6as"]
 
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="1_bc6al"]
 [ext_resource type="Script" uid="uid://b5jctlirnh364" path="res://Assets/UI/main_menu.gd" id="1_trh8p"]
 [ext_resource type="Theme" uid="uid://bwlfq1mbni6ka" path="res://Assets/UI/UI.tres" id="2_trh8p"]
 [ext_resource type="PackedScene" uid="uid://d23e3wknckh5c" path="res://Assets/UI/IntroCutscene.tscn" id="4_ggsor"]
+[ext_resource type="PackedScene" uid="uid://cgdb6bakasotv" path="res://Assets/UI/background.tscn" id="5_aclpl"]
 
 [node name="MainMenu" type="Control" groups=["UI"]]
 process_mode = 3
@@ -31,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,6 +42,7 @@ grow_vertical = 2
 color = Color(0.00016677, 0.0135328, 0.163351, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,7 +52,9 @@ grow_vertical = 2
 texture = ExtResource("1_bc6al")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/TextureRect"]
+[node name="background" parent="Menu" instance=ExtResource("5_aclpl")]
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,48 +66,48 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/TextureRect/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/MarginContainer"]
 layout_mode = 2
 
-[node name="left" type="VBoxContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="middle" type="VBoxContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer"]
+[node name="left" type="VBoxContainer" parent="Menu/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle"]
+[node name="middle" type="VBoxContainer" parent="Menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer/HBoxContainer/middle"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_trh8p")
 bbcode_enabled = true
 text = "[center][b]Missed My Exit[/b][/center]"
 fit_content = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer"]
 layout_mode = 2
 
-[node name="ButtonsBox" type="VBoxContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer"]
+[node name="ButtonsBox" type="VBoxContainer" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="StartGameButton" type="Button" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox"]
+[node name="StartGameButton" type="Button" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox"]
 layout_mode = 2
 text = "Start"
 
-[node name="QuitGameButton" type="Button" parent="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox"]
+[node name="QuitGameButton" type="Button" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox"]
 layout_mode = 2
 text = "Quit"
 
-[node name="right" type="VBoxContainer" parent="Menu/TextureRect/MarginContainer/HBoxContainer"]
+[node name="right" type="VBoxContainer" parent="Menu/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[connection signal="pressed" from="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="Menu/TextureRect/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer/MarginContainer/ButtonsBox/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
