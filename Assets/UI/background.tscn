@@ -1,12 +1,12 @@
 [gd_scene load_steps=22 format=3 uid="uid://cgdb6bakasotv"]
 
-[ext_resource type="PackedScene" uid="uid://1dim5e7ri70o" path="res://Assets/Models/street_Light.glb" id="1_dqq8k"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_frv31"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="3_vhgt6"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="4_frv31"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
 [ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+[ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="8_bpkh4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggsor"]
 albedo_color = Color(0.305882, 1, 1, 1)
@@ -92,18 +92,6 @@ material = SubResource("StandardMaterial3D_ggsor")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.454574, 0)
 mesh = SubResource("PlaneMesh_03qtj")
 
-[node name="street_Light" parent="." instance=ExtResource("1_dqq8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4327, -0.546175, -0.858454)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
-
 [node name="LoopBase" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.7107, -0.999999, 2.51335)
 use_collision = true
@@ -123,18 +111,6 @@ material = SubResource("StandardMaterial3D_rdoyi")
 
 [node name="Path3D" type="Path3D" parent="LoopBase"]
 curve = SubResource("Curve3D_bpkh4")
-
-[node name="street_Light2" parent="." instance=ExtResource("1_dqq8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0382, -0.546175, -0.5609)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="street_Light2"]
-transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 7, 1.55)
-light_color = Color(0.84, 0.658, 0.42, 1)
-shadow_enabled = true
-spot_range = 10.0
-spot_attenuation = 0.5
-spot_angle = 40.0
-spot_angle_attenuation = 0.615572
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_03qtj")
@@ -323,3 +299,9 @@ draw_pass_1 = SubResource("QuadMesh_7dbse")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
 script = ExtResource("7_rdoyi")
+
+[node name="Street_Light" parent="." instance=ExtResource("8_bpkh4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.2275, -0.754476, -1.20743)
+
+[node name="Street_Light2" parent="." instance=ExtResource("8_bpkh4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.8656, -0.754476, -1.20743)

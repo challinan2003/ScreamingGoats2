@@ -42,7 +42,7 @@
 [ext_resource type="AudioStream" uid="uid://dtenjj2r5gym" path="res://Assets/Sounds/VO_Loop2_04.mp3" id="37_fynq6"]
 [ext_resource type="AudioStream" uid="uid://cmljx1wlugbnp" path="res://Assets/Sounds/Music_Loop2_01.mp3" id="38_3ro5j"]
 [ext_resource type="AudioStream" uid="uid://b0wjcsgge63ej" path="res://Assets/Sounds/Ambiance_mixdown.wav" id="39_yp3ke"]
-[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="40_5kwj3"]
+[ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="40_5kwj3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
