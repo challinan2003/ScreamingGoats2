@@ -16,10 +16,11 @@ func pause():
 	
 func testEsc():
 	#print("test1")
-	if Input.is_action_just_pressed("escape") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("escape") and get_tree().paused:
-		resume()
+	if Global.pausable == true:
+		if Input.is_action_just_pressed("escape") and !get_tree().paused:
+			pause()
+		elif Input.is_action_just_pressed("escape") and get_tree().paused:
+			resume()
 
 
 func _on_resume_button_pressed() -> void:

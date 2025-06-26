@@ -1,7 +1,9 @@
-[gd_scene load_steps=84 format=3 uid="uid://cj2oyi1q7g17w"]
+[gd_scene load_steps=86 format=3 uid="uid://cj2oyi1q7g17w"]
 
+[ext_resource type="PackedScene" uid="uid://d0on04df3pi4m" path="res://Assets/UI/PauseMenu.tscn" id="1_0cv8b"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_2tesb"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_5kwj3"]
+[ext_resource type="PackedScene" uid="uid://drm8m3oxfg6as" path="res://Assets/UI/MainMenu.tscn" id="2_sn0bb"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="3_8fj44"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="4_8xj8a"]
 [ext_resource type="PackedScene" uid="uid://dfr3bs2vedkut" path="res://Assets/Models/sign1.glb" id="5_0cv8b"]
@@ -250,6 +252,10 @@ stream_2 = ExtResource("38_3ro5j")
 stream_3 = ExtResource("35_vyq6i")
 
 [node name="HarlanTestScene" type="Node3D"]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_0cv8b")]
+
+[node name="MainMenu" parent="." instance=ExtResource("2_sn0bb")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fkd3l")
