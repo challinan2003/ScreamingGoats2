@@ -1,11 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://cgdb6bakasotv"]
+[gd_scene load_steps=21 format=3 uid="uid://cgdb6bakasotv"]
 
 [ext_resource type="Script" uid="uid://dt7l6tcnhws4t" path="res://Assets/UI/background.gd" id="1_rdoyi"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_frv31"]
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="3_vhgt6"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
-[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
 [ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="8_7dbse"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="8_bpkh4"]
 
@@ -59,6 +59,14 @@ billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_7dbse"]
 material = SubResource("StandardMaterial3D_dlnnn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dbse"]
+emission_enabled = true
+emission = Color(0.71, 0.643733, 0.426, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_txywg"]
+material = SubResource("StandardMaterial3D_7dbse")
+size = Vector2(9, 7)
 
 [node name="background" type="Node3D"]
 script = ExtResource("1_rdoyi")
@@ -289,3 +297,39 @@ omni_range = 90.0
 
 [node name="Car" parent="." instance=ExtResource("8_7dbse")]
 transform = Transform3D(0.0282441, 0, 0.0101129, 0, 0.03, 0, -0.0101129, 0, 0.0282441, 5.6669, -0.978698, 5.9985)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Car"]
+transform = Transform3D(0.359785, -0.933035, 0, 0.933035, 0.359785, 0, 0, 0, 1, -92.2805, 51.2253, -25.585)
+visible = false
+mesh = SubResource("PlaneMesh_txywg")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Car"]
+transform = Transform3D(0.359785, -0.933035, 0, 0.933035, 0.359785, 0, 0, 0, 1, -92.2805, 51.2253, 25.6658)
+visible = false
+mesh = SubResource("PlaneMesh_txywg")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Car"]
+transform = Transform3D(11.9928, -31.1012, 9.53674e-07, 31.1012, 11.9928, 1.01788e-07, 0, 9.53674e-07, 33.3333, -92.2805, 51.2253, 25.7872)
+light_color = Color(1, 0.864, 0.66, 1)
+omni_range = 1.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Car"]
+transform = Transform3D(11.9928, -31.1012, 9.53674e-07, 31.1012, 11.9928, -1.20922e-07, 2.38419e-07, 0, 33.3333, -92.3206, 51.2253, -25.5177)
+light_color = Color(1, 0.864, 0.66, 1)
+omni_range = 1.0
+omni_attenuation = 2.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Car"]
+transform = Transform3D(1.35103e-07, -7.10543e-15, 1, -8.74228e-08, -1, 7.10543e-15, 1, -8.74228e-08, -1.35103e-07, -97.3899, 48.9259, -27.1789)
+light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 60.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Car"]
+transform = Transform3D(1.35103e-07, -7.10543e-15, 1, -8.74228e-08, -1, 7.10543e-15, 1, -8.74228e-08, -1.35103e-07, -97.3899, 48.9259, 25.3503)
+light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 60.0
