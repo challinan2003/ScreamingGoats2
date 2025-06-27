@@ -10,6 +10,8 @@ const FOV_CHANGE =  1.5
 @onready var camera = $Camera3D
 @onready var tutorial = $tutorialUI
 
+var check = true
+
 func _ready() -> void:
 	tutorial.hide()
 func _unhandled_input(event):
@@ -26,6 +28,8 @@ func _process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Global.gameStarted == true:
 		camera.make_current()
-		tutorial.show()
-		await get_tree().create_timer(5).timeout
-		tutorial.hide()
+		if check == true:
+			tutorial.show()
+			await get_tree().create_timer(4).timeout
+			tutorial.hide()
+			check = false

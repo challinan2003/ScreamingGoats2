@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://cttb6vdcoroby" path="res://Assets/Sounds/Car_Idle_1_loop.mp3" id="13_popre"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="13_y7swj"]
 [ext_resource type="AudioStream" uid="uid://bsaclk0fsrbe8" path="res://Assets/Sounds/Car_Idle_2_loop.mp3" id="14_kj0py"]
-[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_popre"]
+[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="14_popre"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="15_kj0py"]
 [ext_resource type="Texture2D" uid="uid://bfn8ubpsbs6ax" path="res://Assets/Materials/Vista1.png" id="16_mm3tq"]
 [ext_resource type="Texture2D" uid="uid://bplxec58341x7" path="res://Assets/Materials/Vista2.png" id="17_yacfx"]
@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_spqaa"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_onsdh"]
 [ext_resource type="PackedScene" uid="uid://dhoku0moy4qrs" path="res://Assets/Models/Road Sign.glb" id="30_k7mpb"]
-[ext_resource type="Script" uid="uid://ce4dn58eakon4" path="res://Scripts/trigger_3.gd" id="31_y7swj"]
+[ext_resource type="Script" path="res://Scripts/trigger_3.gd" id="31_y7swj"]
 [ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="32_h57vy"]
 [ext_resource type="AudioStream" uid="uid://dtpi38receduq" path="res://Assets/Sounds/VO_Loop1_01.mp3" id="33_gxhe1"]
 [ext_resource type="AudioStream" uid="uid://c6d5mk642hxdn" path="res://Assets/Sounds/VO_Loop1_04.mp3" id="34_vulkh"]
@@ -43,6 +43,45 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm3tq"]
 albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_h57vy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-30.0107, -0.530586, -11.5315)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_yacfx"]
 resource_name = "run_across_road"
@@ -82,45 +121,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
-}
-
-[sub_resource type="Animation" id="Animation_h57vy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-30.0107, -0.530586, -11.5315)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gxhe1"]
