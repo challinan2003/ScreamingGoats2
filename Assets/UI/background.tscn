@@ -6,10 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
 [ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+[ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="8_7dbse"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="8_bpkh4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggsor"]
-albedo_color = Color(0.305882, 1, 1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_03qtj"]
 
@@ -66,10 +64,7 @@ material = SubResource("StandardMaterial3D_dlnnn")
 script = ExtResource("1_rdoyi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 1.39621, 1.54019, 16.3861)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-material = SubResource("StandardMaterial3D_ggsor")
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 1.39621, 1.54019, 13.1641)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.454574, 0)
@@ -291,3 +286,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3307, 51.0312, 42.4055)
 light_color = Color(0.858824, 1, 1, 1)
 light_energy = 4.0
 omni_range = 90.0
+
+[node name="Car" parent="." instance=ExtResource("8_7dbse")]
+transform = Transform3D(0.0282441, 0, 0.0101129, 0, 0.03, 0, -0.0101129, 0, 0.0282441, 5.6669, -0.978698, 5.9985)
