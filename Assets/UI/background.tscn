@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cgdb6bakasotv"]
+[gd_scene load_steps=24 format=3 uid="uid://cgdb6bakasotv"]
 
 [ext_resource type="Script" uid="uid://dt7l6tcnhws4t" path="res://Assets/UI/background.gd" id="1_rdoyi"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_frv31"]
@@ -6,8 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
 [ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+[ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="8_5bky2"]
 [ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="8_7dbse"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="8_bpkh4"]
+[ext_resource type="PackedScene" uid="uid://b5umdx6iqwv4o" path="res://Assets/Models/Boulder_1.glb" id="9_svkst"]
+[ext_resource type="PackedScene" uid="uid://ce01ux40dy26s" path="res://Assets/Models/Snowy Bush.glb" id="11_y5wrc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_03qtj"]
 
@@ -333,3 +336,18 @@ light_color = Color(0.94, 0.89488, 0.7144, 1)
 shadow_enabled = true
 spot_range = 20.0
 spot_angle = 60.0
+
+[node name="Road Sign 2" parent="." instance=ExtResource("8_5bky2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18966, 0, 9.90968)
+
+[node name="Snowy Bush" parent="." instance=ExtResource("11_y5wrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82105, 0, -1.45952)
+
+[node name="Snowy Bush2" parent="." instance=ExtResource("11_y5wrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8543, 0, -2.16027)
+
+[node name="Snowy Bush3" parent="." instance=ExtResource("11_y5wrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0943, 0, -1.43699)
+
+[node name="Boulder_1" parent="." instance=ExtResource("9_svkst")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6587, 0, -2.57114)

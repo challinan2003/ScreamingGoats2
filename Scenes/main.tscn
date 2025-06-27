@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://bun72ygp23xwu"]
+[gd_scene load_steps=130 format=3 uid="uid://b4cvwfmct6qog"]
 
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_hdf80"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="2_jwpg7"]
@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cttb6vdcoroby" path="res://Assets/Sounds/Car_Idle_1_loop.mp3" id="14_v2nl5"]
 [ext_resource type="AudioStream" uid="uid://bsaclk0fsrbe8" path="res://Assets/Sounds/Car_Idle_2_loop.mp3" id="15_dmskm"]
 [ext_resource type="AudioStream" uid="uid://c5p230kw00kd3" path="res://Assets/Sounds/Car_Drive_2.mp3" id="16_xdkp6"]
-[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="17_54nrm"]
+[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="17_54nrm"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="18_55jeb"]
 [ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="18_ynmfv"]
 [ext_resource type="Texture2D" uid="uid://bfn8ubpsbs6ax" path="res://Assets/Materials/Vista1.png" id="19_gsvbx"]
@@ -34,7 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://b0wjcsgge63ej" path="res://Assets/Sounds/Ambiance_mixdown.wav" id="32_nay3j"]
 [ext_resource type="PackedScene" uid="uid://c6m5lj48fce78" path="res://Scenes/Other Scenes n Shit/trigger_box.tscn" id="33_my4ki"]
 [ext_resource type="Script" uid="uid://ber3clns8y3bo" path="res://Scripts/checkpoint.gd" id="34_lx3vj"]
-[ext_resource type="Script" uid="uid://cdj2jlp8ayek1" path="res://Scripts/finishLine.gd" id="35_ynmfv"]
+[ext_resource type="Script" path="res://Scripts/finishLine.gd" id="35_ynmfv"]
 [ext_resource type="AudioStream" uid="uid://dtpi38receduq" path="res://Assets/Sounds/VO_Loop1_01.mp3" id="36_cblf0"]
 [ext_resource type="AudioStream" uid="uid://dk8s76mpgmqth" path="res://Assets/Sounds/VO_Loop1_02.mp3" id="37_nay3j"]
 [ext_resource type="AudioStream" uid="uid://c6d5mk642hxdn" path="res://Assets/Sounds/VO_Loop1_04.mp3" id="38_ovafv"]
@@ -61,11 +61,15 @@
 [ext_resource type="AudioStream" uid="uid://brwapf6ghiib2" path="res://Assets/Sounds/VO_Hey_01.mp3" id="59_87bhu"]
 [ext_resource type="AudioStream" uid="uid://cewf17bjsr43f" path="res://Assets/Sounds/VO_Hey_02.mp3" id="60_33qc4"]
 [ext_resource type="AudioStream" uid="uid://dmf7fgmmmt67e" path="res://Assets/Sounds/VO_Hey_03.mp3" id="61_e6rcu"]
+[ext_resource type="Script" uid="uid://b78hgihl2detn" path="res://Scripts/driver.gd" id="62_ovafv"]
 [ext_resource type="AudioStream" uid="uid://cxlwxeuieitad" path="res://Assets/Sounds/VO_Improv_03.mp3" id="62_p4gyq"]
 [ext_resource type="AudioStream" uid="uid://8ya2wk3aullg" path="res://Assets/Sounds/VO_Improv_04.mp3" id="63_32dfi"]
 [ext_resource type="PackedScene" uid="uid://kmsbhewx3jc0" path="res://Assets/Models/Cross Grave2.glb" id="63_nay3j"]
+[ext_resource type="PackedScene" uid="uid://k8yahsbd5dsc" path="res://Assets/UI/tutorial_ui.tscn" id="63_owhal"]
 [ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="64_ovafv"]
-[ext_resource type="PackedScene" uid="uid://bk4l6r7xtq2lj" path="res://Scenes/Other Scenes n Shit/enemy_spawn_trigger.tscn" id="66_cblf0"]
+[ext_resource type="PackedScene" uid="uid://d0on04df3pi4m" path="res://Assets/UI/PauseMenu.tscn" id="64_ynmfv"]
+[ext_resource type="PackedScene" uid="uid://drm8m3oxfg6as" path="res://Assets/UI/MainMenu.tscn" id="65_cblf0"]
+[ext_resource type="PackedScene" path="res://Scenes/Other Scenes n Shit/enemy_spawn_trigger.tscn" id="66_cblf0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -3825,9 +3829,16 @@ script = ExtResource("13_jut3y")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0517786, 0)
 mesh = SubResource("BoxMesh_dlbj2")
 
-[node name="Camera3D" type="Camera3D" parent="car/carbody"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.350252, 0.839707, 0.0798092)
+[node name="Head" type="Node3D" parent="car/carbody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0921857, 0.706724, 0.205519)
+script = ExtResource("62_ovafv")
+
+[node name="Camera3D" type="Camera3D" parent="car/carbody/Head"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.0620511, 0.191946, -0.00990295)
 current = true
+
+[node name="tutorialUI" parent="car/carbody/Head/Camera3D" instance=ExtResource("63_owhal")]
+unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
 shape = SubResource("ConvexPolygonShape3D_o401o")
@@ -8762,6 +8773,10 @@ omni_range = 15.0
 
 [node name="Trigger Box" parent="Loop4" instance=ExtResource("66_cblf0")]
 transform = Transform3D(-0.692408, 0, 0.721506, 0, 1, 0, -0.721506, 0, -0.692408, -42.1979, 4.76837e-07, -214.651)
+
+[node name="PauseMenu" parent="." instance=ExtResource("64_ynmfv")]
+
+[node name="MainMenu" parent="." instance=ExtResource("65_cblf0")]
 
 [editable path="Loop4/Street_Light2"]
 [editable path="Loop4/Street_Light3"]

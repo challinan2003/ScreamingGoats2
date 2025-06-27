@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var check = false
+var check = true
 
 func _process(delta: float) -> void:
 	if Global.gameStarted == true:
