@@ -33,3 +33,7 @@ func focus_button() -> void:
 func _on_quit_game_button_pressed() -> void:
 	#print("test3")
 	get_tree().quit()
+	
+func _process(delta: float) -> void:
+	if Global.gameStarted:
+		$AudioStreamPlayer2D.stop()
