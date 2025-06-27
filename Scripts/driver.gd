@@ -8,7 +8,10 @@ const BASE_FOV = 75.0
 const FOV_CHANGE =  1.5
 
 @onready var camera = $Camera3D
+@onready var tutorial = $tutorialUI
 
+func _ready() -> void:
+	tutorial.hide()
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * SENSITIVITY)
@@ -17,8 +20,12 @@ func _unhandled_input(event):
 		rotation.y = clamp(rotation.y, deg_to_rad(-100), deg_to_rad(80))
 
 func _process(delta: float) -> void:
+	
 	if !get_tree().paused:
 		#pass
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Global.gameStarted == true:
 		camera.make_current()
+		tutorial.show()
+		await get_tree().create_timer(5).timeout
+		tutorial.hide()

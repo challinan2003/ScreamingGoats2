@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://drm8m3oxfg6as"]
 
+[ext_resource type="Theme" uid="uid://cjgnatdx87733" path="res://mainmenu.tres" id="1_aclpl"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="1_bc6al"]
 [ext_resource type="Script" uid="uid://b5jctlirnh364" path="res://Assets/UI/main_menu.gd" id="1_trh8p"]
-[ext_resource type="Theme" uid="uid://bwlfq1mbni6ka" path="res://Assets/UI/UI.tres" id="2_trh8p"]
 [ext_resource type="PackedScene" uid="uid://d23e3wknckh5c" path="res://Assets/UI/IntroCutscene.tscn" id="4_ggsor"]
 [ext_resource type="PackedScene" uid="uid://cgdb6bakasotv" path="res://Assets/UI/background.tscn" id="5_aclpl"]
 
@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource("2_trh8p")
+theme = ExtResource("1_aclpl")
 script = ExtResource("1_trh8p")
 
 [node name="IntroCutscene" parent="." groups=["UI"] instance=ExtResource("4_ggsor")]
@@ -86,7 +86,7 @@ theme_override_constants/separation = 20
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Menu/MarginContainer/HBoxContainer/middle/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_trh8p")
+theme_override_font_sizes/bold_font_size = 50
 bbcode_enabled = true
 text = "[center][b]Missed My Exit[/b][/center]"
 fit_content = true

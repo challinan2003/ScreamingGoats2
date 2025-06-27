@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cjgnatdx87733"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_utg3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dsidt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4gjd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsbx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63s3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqjoq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1lhv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aifd3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifgt8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p2w2r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bot8t"]
+
+[sub_resource type="SystemFont" id="SystemFont_diwea"]
+font_names = PackedStringArray("Baskerville")
+
+[resource]
+default_font = SubResource("SystemFont_diwea")
+default_font_size = 32
+Button/styles/disabled = SubResource("StyleBoxEmpty_utg3x")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_dsidt")
+Button/styles/focus = SubResource("StyleBoxEmpty_w4gjd")
+Button/styles/hover = SubResource("StyleBoxEmpty_bsbx7")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_63s3q")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_cqjoq")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_u1lhv")
+Button/styles/normal = SubResource("StyleBoxEmpty_aifd3")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_ifgt8")
+Button/styles/pressed = SubResource("StyleBoxEmpty_p2w2r")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_bot8t")
