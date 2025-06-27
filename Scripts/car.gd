@@ -30,10 +30,10 @@ func _physics_process(delta: float) -> void:
 		max_rpm = 175
 		if $Car_Drive_1.volume_db < 0:
 			$Car_Drive_1.volume_db += 1
-	#elif mode == 2:
-		#max_rpm = 300
-		#if $Car_Drive_1.volume_db < 10:
-		#	$Car_Drive_1.volume_db += 1
+	if Global.loop == 4:
+		max_rpm = 225
+		if $Car_Drive_1.volume_db < 10:
+			$Car_Drive_1.volume_db += 1
 		
 	$back_left_wheel.engine_force  = (acceleration * max_torque * (1 - rpm / max_rpm)) /2
 	rpm = $back_right_wheel.get_rpm()
