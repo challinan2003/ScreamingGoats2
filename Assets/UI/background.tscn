@@ -322,14 +322,14 @@ omni_attenuation = 2.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Car"]
 transform = Transform3D(1.35103e-07, -7.10543e-15, 1, -8.74228e-08, -1, 7.10543e-15, 1, -8.74228e-08, -1.35103e-07, -97.3899, 48.9259, -27.1789)
-light_color = Color(0.94, 0.91556, 0.8178, 1)
+light_color = Color(0.941176, 0.894118, 0.713726, 1)
 shadow_enabled = true
 spot_range = 20.0
 spot_angle = 60.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Car"]
 transform = Transform3D(1.35103e-07, -7.10543e-15, 1, -8.74228e-08, -1, 7.10543e-15, 1, -8.74228e-08, -1.35103e-07, -97.3899, 48.9259, 25.3503)
-light_color = Color(0.94, 0.91556, 0.8178, 1)
+light_color = Color(0.94, 0.89488, 0.7144, 1)
 shadow_enabled = true
 spot_range = 20.0
 spot_angle = 60.0
