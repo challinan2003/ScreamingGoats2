@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://qb8wj1alwm" path="res://Assets/Models/tree1.glb" id="3_vhgt6"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="5_03qtj"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="6_rdoyi"]
-[ext_resource type="Script" uid="uid://b5qodj7w4k8wh" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
+[ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="7_rdoyi"]
 [ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="8_7dbse"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="8_bpkh4"]
 
