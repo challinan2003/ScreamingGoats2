@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://bun72ygp23xwu"]
+[gd_scene load_steps=126 format=3 uid="uid://bun72ygp23xwu"]
 
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_hdf80"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="2_jwpg7"]
@@ -65,6 +65,7 @@
 [ext_resource type="AudioStream" uid="uid://8ya2wk3aullg" path="res://Assets/Sounds/VO_Improv_04.mp3" id="63_32dfi"]
 [ext_resource type="PackedScene" uid="uid://kmsbhewx3jc0" path="res://Assets/Models/Cross Grave2.glb" id="63_nay3j"]
 [ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="64_ovafv"]
+[ext_resource type="PackedScene" uid="uid://bk4l6r7xtq2lj" path="res://Scenes/Other Scenes n Shit/enemy_spawn_trigger.tscn" id="66_cblf0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -4723,7 +4724,6 @@ transform = Transform3D(0.978531, 0, -0.206102, 0, 1, 0, 0.206102, 0, 0.978531, 
 shape = SubResource("BoxShape3D_oabyp")
 
 [node name="Loop1" type="Node3D" parent="."]
-visible = false
 
 [node name="CheckPoint1" parent="Loop1" instance=ExtResource("33_my4ki")]
 transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
@@ -5015,6 +5015,7 @@ transform = Transform3D(-0.292113, 0, 0.273258, 0, 0.4, 0, -0.273258, 0, -0.2921
 transform = Transform3D(-0.3909, 0, 0.0848368, 0.0247104, 0.382656, 0.113857, -0.0811584, 0.116508, -0.373951, 210.413, -0.244, -48.3844)
 
 [node name="Loop4" type="Node3D" parent="."]
+visible = false
 
 [node name="CheckPoint4" parent="Loop4" instance=ExtResource("33_my4ki")]
 transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
@@ -8758,6 +8759,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 0.525018, 3.552
 light_energy = 2.616
 shadow_enabled = true
 omni_range = 15.0
+
+[node name="Trigger Box" parent="Loop4" instance=ExtResource("66_cblf0")]
+transform = Transform3D(-0.692408, 0, 0.721506, 0, 1, 0, -0.721506, 0, -0.692408, -42.1979, 4.76837e-07, -214.651)
 
 [editable path="Loop4/Street_Light2"]
 [editable path="Loop4/Street_Light3"]
