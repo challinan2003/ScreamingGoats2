@@ -10,12 +10,20 @@
 [node name="EnemyCar" type="Node3D"]
 script = ExtResource("1_631gj")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, -5.38425e-15, 2.78182e-08, 7.8162e-15, -1, 8.74228e-08, 2.78182e-08, 8.74228e-08, 1, 9.23837e-08, 0.51212, -0.581631)
+spot_range = 10.0
+spot_angle = 60.0
+
+[node name="Car" parent="." instance=ExtResource("2_oluv3")]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -0.068, -2.12218, 3.42515)
+
 [node name="Death Zone" type="Area3D" parent="."]
 transform = Transform3D(-2, 0, 3.01992e-07, 0, 2, 0, -3.01992e-07, 0, -2, 0, 0.563898, -1.64506)
 collision_mask = 2
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Death Zone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.147172, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.19543e-07, 0.147172, -0.791699)
 shape = SubResource("BoxShape3D_jdyta")
 
 [node name="Detection Zone" type="Area3D" parent="."]
@@ -23,14 +31,6 @@ shape = SubResource("BoxShape3D_jdyta")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detection Zone"]
 transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
 shape = SubResource("SphereShape3D_jdyta")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, -5.38425e-15, 2.78182e-08, 7.8162e-15, -1, 8.74228e-08, 2.78182e-08, 8.74228e-08, 1, 9.23837e-08, 0.51212, -0.581631)
-spot_range = 10.0
-spot_angle = 60.0
-
-[node name="Car" parent="." instance=ExtResource("2_oluv3")]
-transform = Transform3D(-1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, -0.068, -0.694026, 2.306)
 
 [connection signal="body_shape_entered" from="Death Zone" to="." method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_entered" from="Death Zone" to="." method="_on_death_zone_body_shape_entered"]

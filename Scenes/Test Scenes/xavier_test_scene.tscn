@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://tsuvlrk7cduq"]
+[gd_scene load_steps=115 format=3 uid="uid://tsuvlrk7cduq"]
 
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="1_iiq3e"]
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_ixchs"]
@@ -65,6 +65,7 @@
 [ext_resource type="AudioStream" uid="uid://cxlwxeuieitad" path="res://Assets/Sounds/VO_Improv_03.mp3" id="61_u5tde"]
 [ext_resource type="AudioStream" uid="uid://8ya2wk3aullg" path="res://Assets/Sounds/VO_Improv_04.mp3" id="62_cl2oq"]
 [ext_resource type="PackedScene" uid="uid://kmsbhewx3jc0" path="res://Assets/Models/Cross Grave2.glb" id="65_48v3o"]
+[ext_resource type="PackedScene" uid="uid://bk4l6r7xtq2lj" path="res://Scenes/Other Scenes n Shit/enemy_spawn_trigger.tscn" id="66_wsehe"]
 [ext_resource type="PackedScene" uid="uid://cf274jlgbbcjv" path="res://Assets/Models/Car.glb" id="66_xubg4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3x5wg"]
@@ -5009,3 +5010,6 @@ transform = Transform3D(-0.694659, 0, -0.71934, 0, 1, 0, 0.71934, 0, -0.694659, 
 
 [node name="Tunnel_entrance4" parent="Loop 3 Tunnels" instance=ExtResource("11_h6fad")]
 transform = Transform3D(-0.694659, 0, -0.71934, 0, 1, 0, 0.71934, 0, -0.694659, 278.575, -0.0242455, -147.991)
+
+[node name="Trigger Box" parent="." instance=ExtResource("66_wsehe")]
+transform = Transform3D(-0.998474, 0, 0.0552283, 0, 1, 0, -0.0552283, 0, -0.998474, -75.1852, 0.666893, -171.236)
