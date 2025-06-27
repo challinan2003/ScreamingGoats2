@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Horror Drive"
-run/main_scene="uid://1r32sox6phr5"
+run/main_scene="uid://bun72ygp23xwu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/Materials/icon.svg"
 
@@ -23,6 +23,7 @@ Global="*res://Scripts/Global.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [dotnet]
