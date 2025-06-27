@@ -27,7 +27,7 @@ font_names = PackedStringArray("Baskerville")
 
 [resource]
 default_font = SubResource("SystemFont_diwea")
-default_font_size = 32
+default_font_size = 50
 Button/styles/disabled = SubResource("StyleBoxEmpty_utg3x")
 Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_dsidt")
 Button/styles/focus = SubResource("StyleBoxEmpty_w4gjd")

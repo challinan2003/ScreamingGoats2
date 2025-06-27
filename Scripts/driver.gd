@@ -16,7 +16,7 @@ func _ready() -> void:
 	tutorial.hide()
 	
 func _input(event: InputEvent) -> void:
-	print("rage")
+	#print("rage")
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(event.relative.y * SENSITIVITY)	
@@ -26,12 +26,12 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	
-	print("test1")
+	#print("test1")
 	if !get_tree().paused:
 		#pass
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Global.gameStarted == true && check == true:
 		camera.make_current()
 		check = false
-		print("test2")
+		#print("test2")
 		
