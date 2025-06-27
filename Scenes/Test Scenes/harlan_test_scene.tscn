@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://o1qfsdfpsdp1"]
+[gd_scene load_steps=120 format=3 uid="uid://o1qfsdfpsdp1"]
 
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_m37wy"]
 [ext_resource type="Script" uid="uid://cj6yh3pupsgdl" path="res://Scripts/main.gd" id="1_n6cpn"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://coxtgd85l58gn" path="res://Assets/Models/Boulder_2.glb" id="21_dlnnn"]
 [ext_resource type="PackedScene" uid="uid://bxhmfh8u0yrgu" path="res://Assets/Models/Boulder_3.glb" id="22_m37wy"]
 [ext_resource type="PackedScene" uid="uid://fnvl2u1r52px" path="res://Assets/Models/Power_Pole.glb" id="23_dlnnn"]
-[ext_resource type="PackedScene" uid="uid://pi2fhphreawu" path="res://Assets/Models/TreeTrunk.glb" id="25_sb75f"]
 [ext_resource type="PackedScene" uid="uid://cgb1a0uoxdykt" path="res://Scenes/Other Scenes n Shit/street_light.tscn" id="27_nhkuj"]
 [ext_resource type="PackedScene" uid="uid://ckr40vhe0sbtg" path="res://Assets/Models/Tunnel_entrance.glb" id="28_gfydl"]
 [ext_resource type="PackedScene" uid="uid://cmxspunl6c6ud" path="res://Assets/Models/Tunnel middle.glb" id="29_r73o1"]
@@ -53,7 +52,6 @@
 [ext_resource type="AudioStream" uid="uid://dr6we1t0x6i4j" path="res://Assets/Sounds/VO_Improv_02.mp3" id="46_1vtrw"]
 [ext_resource type="AudioStream" uid="uid://d2hskgiewvkcb" path="res://Assets/Sounds/VO_Extra_03.mp3" id="47_l2hb2"]
 [ext_resource type="AudioStream" uid="uid://bq7nn3gat0o5v" path="res://Assets/Sounds/Music_Loop4_1.mp3" id="48_s5th0"]
-[ext_resource type="AudioStream" uid="uid://bsayjpoyiwpkx" path="res://Assets/Sounds/VO_Improv_05.mp3" id="52_orr1k"]
 [ext_resource type="AudioStream" uid="uid://dqtrudjykf1vd" path="res://Assets/Sounds/VO_Extra_01.mp3" id="52_t0ry8"]
 [ext_resource type="AudioStream" uid="uid://dewi6hxusgnjy" path="res://Assets/Sounds/VO_Extra_02.mp3" id="53_c3uql"]
 [ext_resource type="AudioStream" uid="uid://bh1c0prtn8l0q" path="res://Assets/Sounds/VO_Extra_04.mp3" id="54_gcmcu"]
@@ -63,6 +61,7 @@
 [ext_resource type="AudioStream" uid="uid://c860udjfshpng" path="res://Assets/Sounds/VO_Improv_01.mp3" id="58_pdbo7"]
 [ext_resource type="AudioStream" uid="uid://cxlwxeuieitad" path="res://Assets/Sounds/VO_Improv_03.mp3" id="59_1mjbn"]
 [ext_resource type="AudioStream" uid="uid://8ya2wk3aullg" path="res://Assets/Sounds/VO_Improv_04.mp3" id="60_wo6ot"]
+[ext_resource type="PackedScene" uid="uid://c2dj5cjkfpmfq" path="res://Assets/Models/Road Sign 2.glb" id="62_gcmcu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nm4gv"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -187,21 +186,21 @@ size = Vector2(100, 100)
 [sub_resource type="Gradient" id="Gradient_rr4e2"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1f5un"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c3uql"]
 gradient = SubResource("Gradient_rr4e2")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 metadata/_snap_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j43uk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gcmcu"]
 transparency = 1
-albedo_texture = SubResource("GradientTexture2D_1f5un")
+albedo_texture = SubResource("GradientTexture2D_c3uql")
 emission_enabled = true
 emission = Color(0.158472, 0.158472, 0.158472, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nm4gv"]
-material = SubResource("StandardMaterial3D_j43uk")
+material = SubResource("StandardMaterial3D_gcmcu")
 size = Vector2(200, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb75f"]
@@ -278,18 +277,36 @@ stream_2 = ExtResource("36_mitny")
 stream_3 = ExtResource("37_kn02c")
 stream_4 = ExtResource("38_mitny")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_orr1k"]
+material = SubResource("StandardMaterial3D_gcmcu")
+size = Vector2(200, 100)
+
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_oabyp"]
 loop = false
 fade_time = 1.0
-stream_count = 8
+stream_count = 4
 stream_0 = ExtResource("39_22f27")
 stream_1 = ExtResource("44_l2hb2")
 stream_2 = ExtResource("40_put2j")
 stream_3 = ExtResource("45_nhkuj")
-stream_4 = ExtResource("46_1vtrw")
-stream_5 = ExtResource("47_l2hb2")
-stream_6 = ExtResource("58_pdbo7")
-stream_7 = ExtResource("52_orr1k")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_gcmcu"]
+loop = false
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("46_1vtrw")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_orr1k"]
+loop = false
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("47_l2hb2")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_v8fab"]
+loop = false
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("58_pdbo7")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_nhkuj"]
 loop = false
@@ -312,6 +329,39 @@ stream_5 = ExtResource("57_krswa")
 stream_6 = ExtResource("58_pdbo7")
 stream_7 = ExtResource("59_1mjbn")
 stream_8 = ExtResource("60_wo6ot")
+
+[sub_resource type="Gradient" id="Gradient_v8fab"]
+colors = PackedColorArray(1, 0.14, 0.14, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1f5un"]
+gradient = SubResource("Gradient_v8fab")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j43uk"]
+transparency = 1
+albedo_texture = SubResource("GradientTexture2D_1f5un")
+emission_enabled = true
+emission = Color(0.5, 0.12, 0.132667, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c3uql"]
+material = SubResource("StandardMaterial3D_j43uk")
+size = Vector2(50, 50)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gcmcu"]
+material = SubResource("StandardMaterial3D_j43uk")
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orr1k"]
+emission_enabled = true
+emission = Color(0.870588, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_v8fab"]
+material = SubResource("StandardMaterial3D_orr1k")
+radius = 0.25
+height = 0.5
 
 [node name="HarlanTestScene" type="Node3D"]
 script = ExtResource("1_n6cpn")
@@ -459,7 +509,7 @@ transform = Transform3D(-0.987946, 0.154797, 0, 6.76637e-09, 4.31845e-08, -1, -0
 mesh = SubResource("PlaneMesh_obecb")
 
 [node name="sign1_1" parent="." instance=ExtResource("4_1p7x2")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 12, -0.2, -23)
+transform = Transform3D(-0.69948, 0.103577, -0.707107, 0.14648, 0.989214, 0, 0.69948, -0.103577, -0.707107, 12, -0.2, -23)
 
 [node name="sign1_2" parent="." instance=ExtResource("4_1p7x2")]
 transform = Transform3D(-0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866026, 243.749, -0.2, -79.3133)
@@ -4085,6 +4135,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 
 [node name="GuardrailGroup9" type="Node3D" parent="Vista_Guardrails"]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 200.87, 0, -47.9894)
+visible = false
 
 [node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup9" instance=ExtResource("12_d6811")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
@@ -4112,6 +4163,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 
 [node name="GuardrailGroup10" type="Node3D" parent="Vista_Guardrails"]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 212.773, 0, -51.6945)
+visible = false
 
 [node name="GuardRails" parent="Vista_Guardrails/GuardrailGroup10" instance=ExtResource("12_d6811")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
@@ -4241,6 +4293,7 @@ transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 188.2, 0
 
 [node name="sign5_6" parent="Vista_Guardrails" instance=ExtResource("8_dlbj2")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 206.3, 0, -49.2482)
+visible = false
 
 [node name="sign5_7" parent="Vista_Guardrails" instance=ExtResource("8_dlbj2")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 218.9, 0, -54.3982)
@@ -4615,21 +4668,6 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 [node name="Power_Pole5" parent="." instance=ExtResource("23_dlnnn")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 209, -6.5, -32.5)
 
-[node name="TreeTrunk" parent="." instance=ExtResource("25_sb75f")]
-transform = Transform3D(-0.498097, 0.0435778, 1.90485e-09, 0, -2.18557e-08, 0.5, 0.0435778, 0.498097, 2.17725e-08, 173, 0.15, -51.8)
-
-[node name="Street_Light" parent="." instance=ExtResource("27_nhkuj")]
-transform = Transform3D(0.994219, 0, -0.107375, 0, 1, 0, 0.107375, 0, 0.994219, 143.527, -0.889192, -41.0222)
-
-[node name="Street_Light2" parent="." instance=ExtResource("27_nhkuj")]
-transform = Transform3D(0.846973, 0, 0.531635, 0, 1, 0, -0.531635, 0, 0.846973, 29.3183, -0.889192, -32.991)
-
-[node name="Street_Light3" parent="." instance=ExtResource("27_nhkuj")]
-transform = Transform3D(0.649926, 0, -0.759998, 0, 1, 0, 0.759998, 0, 0.649926, -86.5036, -0.781207, -39.6421)
-
-[node name="Street_Light4" parent="." instance=ExtResource("27_nhkuj")]
-transform = Transform3D(-0.989288, 0, -0.145979, 0, 1, 0, 0.145979, 0, -0.989288, 18.9809, -0.781207, -233.76)
-
 [node name="Tunnel_entrance" parent="." instance=ExtResource("28_gfydl")]
 transform = Transform3D(0.21724, 0, 0.976118, 0, 1, 0, -0.976118, 0, 0.21724, -1.06596, 0.1, 2.8016)
 
@@ -4646,7 +4684,16 @@ transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -
 transform = Transform3D(0.197334, 0, 0.986386, 0, 1, 0, -1.18366, 0, 0.164445, -88.6293, 0.1, -2.2059)
 
 [node name="Road Sign" parent="." instance=ExtResource("30_obecb")]
-transform = Transform3D(-0.97556, 0.0853504, -0.20248, 0.0871557, 0.996195, 0, 0.201709, -0.0176473, -0.979286, 29.1104, -0.5, -35.5286)
+transform = Transform3D(-1.46334, 0.147775, -0.294616, 0.130734, 1.49104, 0.098538, 0.302564, 0.0704523, -1.46748, 29.0599, -1.08985, -35.5182)
+
+[node name="Road Sign3" parent="." instance=ExtResource("30_obecb")]
+transform = Transform3D(-0.920719, 0.298602, 0.251223, 0.22933, 0.93493, -0.270766, -0.315727, -0.191686, -0.929286, 29.762, -1.05658, -37.6949)
+
+[node name="Road Sign4" parent="." instance=ExtResource("30_obecb")]
+transform = Transform3D(0.46074, 0.331046, 0.823485, -0.190113, 0.943109, -0.272767, -0.866935, -0.0308804, 0.497464, 29.762, -1.05658, -47.4801)
+
+[node name="Road Sign2" parent="." instance=ExtResource("30_obecb")]
+transform = Transform3D(-0.9744, -0.0745776, -0.21209, -0.046715, 0.98995, -0.133476, 0.219913, -0.120152, -0.968092, 29.4089, 0.858085, -35.2324)
 
 [node name="Spawn" type="Node3D" parent="."]
 transform = Transform3D(-0.978147, 0, 0.207911, 0, 1, 0, -0.207911, 0, -0.978147, -4.517, 0.5, 21.256)
@@ -4663,6 +4710,7 @@ transform = Transform3D(0.978531, 0, -0.206102, 0, 1, 0, 0.206102, 0, 0.978531, 
 shape = SubResource("BoxShape3D_oabyp")
 
 [node name="Loop1" type="Node3D" parent="."]
+visible = false
 
 [node name="CheckPoint1" parent="Loop1" instance=ExtResource("31_obecb")]
 transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
@@ -4685,6 +4733,75 @@ transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15,
 mesh = SubResource("PlaneMesh_nm4gv")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
 
+[node name="GuardrailGroup9" type="Node3D" parent="Loop1"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 200.87, 0, -47.9894)
+
+[node name="GuardRails" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Loop1/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup10" type="Node3D" parent="Loop1"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 212.773, 0, -51.6945)
+
+[node name="GuardRails" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Loop1/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="sign5_6" parent="Loop1" instance=ExtResource("8_dlbj2")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 206.3, 0, -49.2482)
+
+[node name="Street_Light" parent="Loop1" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.994219, 0, -0.107375, 0, 1, 0, 0.107375, 0, 0.994219, 143.527, -0.889192, -41.0222)
+
+[node name="Street_Light2" parent="Loop1" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.846973, 0, 0.531635, 0, 1, 0, -0.531635, 0, 0.846973, 29.3183, -0.889192, -32.991)
+
+[node name="Street_Light3" parent="Loop1" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.649926, 0, -0.759998, 0, 1, 0, 0.759998, 0, 0.649926, -86.5036, -0.781207, -39.6421)
+
+[node name="Street_Light4" parent="Loop1" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(-0.989288, 0, -0.145979, 0, 1, 0, 0.145979, 0, -0.989288, 18.9809, -0.781207, -233.76)
+
 [node name="Loop2" type="Node3D" parent="."]
 visible = false
 
@@ -4706,8 +4823,77 @@ bus = &"Radio"
 
 [node name="Vista_Flat_16" type="MeshInstance3D" parent="Loop2"]
 transform = Transform3D(-0.5, -0.866025, -2.18557e-08, 4.37114e-08, 3.44906e-15, -1, 0.866025, -0.5, 3.78552e-08, 359.009, -7.00899, 122.759)
-mesh = SubResource("PlaneMesh_nm4gv")
+mesh = SubResource("PlaneMesh_orr1k")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="GuardrailGroup9" type="Node3D" parent="Loop2"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 200.87, 0, -47.9894)
+
+[node name="GuardRails" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Loop2/GuardrailGroup9" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="GuardrailGroup10" type="Node3D" parent="Loop2"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 212.773, 0, -51.6945)
+
+[node name="GuardRails" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0, 1)
+
+[node name="GuardRails2" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -1.6, 0, 1)
+
+[node name="GuardRails3" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.6, 0, 1)
+
+[node name="GuardRails4" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -3.2, 0, 1)
+
+[node name="GuardRails5" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 3.2, 0, 1)
+
+[node name="GuardRails6" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -4.8, 0, 1)
+
+[node name="GuardRails7" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 4.8, 0, 1)
+
+[node name="GuardRails8" parent="Loop2/GuardrailGroup10" instance=ExtResource("12_d6811")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -6.4, 0, 1)
+
+[node name="sign5_6" parent="Loop2" instance=ExtResource("8_dlbj2")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 206.3, 0, -49.2482)
+
+[node name="Street_Light" parent="Loop2" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.994219, 0, -0.107375, 0, 1, 0, 0.107375, 0, 0.994219, 143.527, -0.889192, -41.0222)
+
+[node name="Street_Light2" parent="Loop2" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.846973, 0, 0.531635, 0, 1, 0, -0.531635, 0, 0.846973, 29.3183, -0.889192, -32.991)
+
+[node name="Street_Light3" parent="Loop2" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.649926, 0, -0.759998, 0, 1, 0, 0.759998, 0, 0.649926, -86.5036, -0.781207, -39.6421)
+
+[node name="Street_Light4" parent="Loop2" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(-0.989288, 0, -0.145979, 0, 1, 0, 0.145979, 0, -0.989288, 18.9809, -0.781207, -233.76)
 
 [node name="Loop3" type="Node3D" parent="."]
 visible = false
@@ -4729,15 +4915,69 @@ volume_db = 10.0
 bus = &"Radio"
 
 [node name="Loop3Radio2" parent="Loop3" instance=ExtResource("31_obecb")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+transform = Transform3D(-0.379908, 0, 0.925024, 0, 1, 0, -0.925024, 0, -0.379908, 108.355, 0, -263.228)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3/Loop3Radio2"]
-stream = SubResource("AudioStreamPlaylist_oabyp")
+stream = SubResource("AudioStreamPlaylist_gcmcu")
 volume_db = 10.0
 bus = &"Radio"
 
+[node name="Loop3Radio3" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.127809, 0, 0.991799, 0, 1, 0, -0.991799, 0, -0.127809, -6.77061, 0, -228.539)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3/Loop3Radio3"]
+stream = SubResource("AudioStreamPlaylist_orr1k")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="Loop3Radio4" parent="Loop3" instance=ExtResource("31_obecb")]
+transform = Transform3D(-0.127809, 0, 0.991799, 0, 1, 0, -0.991799, 0, -0.127809, -78.8694, 0, -135.495)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop3/Loop3Radio4"]
+stream = SubResource("AudioStreamPlaylist_v8fab")
+volume_db = 10.0
+bus = &"Radio"
+
+[node name="GuardRails7" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.0403947, 0, 0.397955, 0, 0.4, 0, -0.397955, 0, 0.0403947, 194.906, 0, -45.2768)
+
+[node name="GuardRails8" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.147749, 0, 0.371712, 0, 0.4, 0, -0.371712, 0, 0.147749, 196.16, 0, -45.0095)
+
+[node name="GuardRails9" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.223203, 0.0532624, 0.327633, -0.0299878, 0.396438, -0.0440183, -0.330577, 0, 0.225209, 197.256, 0.00242542, -44.3721)
+
+[node name="GuardRails10" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.127686, 0.0532624, 0.375312, -0.017155, 0.396438, -0.0504241, -0.378684, 0, 0.128834, 198.859, -0.212907, -43.5511)
+
+[node name="GuardRails11" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.0114289, 0.0532624, 0.396273, 0.0015355, 0.396438, -0.0532402, -0.399834, 0, -0.0115316, 200.704, -0.460804, -43.2284)
+
+[node name="GuardRails12" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.0115316, 0, 0.399834, 0, 0.4, 0, -0.399834, 0, -0.0115316, 216.718, 0, -52.388)
+
+[node name="GuardRails13" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.0985967, 0, 0.387658, 0, 0.4, 0, -0.387658, 0, -0.0985967, 215.427, 0, -52.2639)
+
+[node name="GuardRails14" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.339519, 0, 0.211488, 0, 0.4, 0, -0.211488, 0, -0.339519, 214.807, 0, -51.8419)
+
+[node name="GuardRails15" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(0.12845, 0, 0.378815, 0, 0.4, 0, -0.378815, 0, 0.12845, 212.647, 0, -51.1965)
+
+[node name="GuardRails16" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.397286, 0, 0.0465157, 0, 0.4, 0, -0.0465157, 0, -0.397286, 213.268, 0, -51.3703)
+
+[node name="GuardRails17" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.135613, 0, 0.37631, 0, 0.4, 0, -0.37631, 0, -0.135613, 211.729, 0, -49.6823)
+
+[node name="GuardRails18" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.292113, 0, 0.273258, 0, 0.4, 0, -0.273258, 0, -0.292113, 210.785, 0, -49.0121)
+
+[node name="GuardRails19" parent="Loop3" instance=ExtResource("12_d6811")]
+transform = Transform3D(-0.3909, 0, 0.0848368, 0.0247104, 0.382656, 0.113857, -0.0811584, 0.116508, -0.373951, 210.413, -0.244, -48.3844)
+
 [node name="Loop4" type="Node3D" parent="."]
-visible = false
 
 [node name="CheckPoint4" parent="Loop4" instance=ExtResource("31_obecb")]
 transform = Transform3D(-0.0490591, 0, 0.998796, 0, 1, 0, -0.998796, 0, -0.0490591, 21.3882, 1.1265, -229.695)
@@ -4756,7 +4996,7 @@ volume_db = 10.0
 bus = &"Radio"
 
 [node name="Loop4Radio2" parent="Loop4" instance=ExtResource("31_obecb")]
-transform = Transform3D(0.718988, 0, 0.695023, 0, 1, 0, -0.695023, 0, 0.718988, 320.593, 0, -268.492)
+transform = Transform3D(0.718988, 0, 0.695023, 0, 1, 0, -0.695023, 0, 0.718988, 63.0012, 0, -241.37)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio2"]
 stream = SubResource("AudioStreamPlaylist_gie8w")
@@ -4764,7 +5004,7 @@ volume_db = 10.0
 bus = &"Radio"
 
 [node name="Loop4Radio3" parent="Loop4" instance=ExtResource("31_obecb")]
-transform = Transform3D(-0.0246068, 0, 0.999697, 0, 1, 0, -0.999697, 0, -0.0246068, 212.373, 0, -282.586)
+transform = Transform3D(-0.0246068, 0, 0.999697, 0, 1, 0, -0.999697, 0, -0.0246068, -35.3689, 0, -219.851)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio3"]
 stream = SubResource("AudioStreamPlaylist_gie8w")
@@ -4772,9 +5012,85 @@ volume_db = 10.0
 bus = &"Radio"
 
 [node name="Loop4Radio4" parent="Loop4" instance=ExtResource("31_obecb")]
-transform = Transform3D(-0.302553, 0, 0.953133, 0, 1, 0, -0.953133, 0, -0.302553, 137.241, 0, -276.059)
+transform = Transform3D(-0.302553, 0, 0.953133, 0, 1, 0, -0.953133, 0, -0.302553, -73.0504, 0, -164.394)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop4/Loop4Radio4"]
 stream = SubResource("AudioStreamPlaylist_gie8w")
 volume_db = 10.0
 bus = &"Radio"
+
+[node name="Vista_Flat_16" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.649806, -0.760099, -2.84039e-08, 4.37114e-08, 3.44906e-15, -1, 0.760099, -0.649806, 3.3225e-08, 316.823, 105.922, 172.105)
+mesh = SubResource("PlaneMesh_c3uql")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_18" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.649806, -0.760099, -2.84039e-08, 4.37114e-08, 3.44906e-15, -1, 0.760099, -0.649806, 3.3225e-08, 406.236, 4.7286, 67.5164)
+mesh = SubResource("PlaneMesh_c3uql")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_25" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(0.15945, -0.969635, 0.185424, 2.6077e-08, -0.187827, -0.982202, 0.987206, 0.156612, -0.029949, 574.747, 147.724, -129.597)
+mesh = SubResource("PlaneMesh_c3uql")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_19" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.998581, -0.0462288, 0.0264123, 2.98023e-08, -0.49608, -0.868277, 0.053242, -0.867045, 0.495377, 148.137, 241.96, 369.423)
+mesh = SubResource("PlaneMesh_c3uql")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_17" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.24326, -0.940614, 0.23679, 3.72529e-08, -0.244123, -0.969744, 0.969961, -0.2359, 0.0593853, 471.798, 226.939, -9.17369)
+mesh = SubResource("PlaneMesh_c3uql")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_20" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.368539, -0.898949, 0.23679, -0.0330974, -0.241869, -0.969744, 0.929022, -0.365226, 0.0593853, 463.581, 155.127, 97.904)
+mesh = SubResource("PlaneMesh_gcmcu")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_21" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.737204, -0.576067, 0.353096, -0.139523, -0.381534, -0.913764, 0.661108, -0.722895, 0.200894, 390.286, 259.84, 232.425)
+mesh = SubResource("PlaneMesh_gcmcu")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_22" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.924859, -0.141273, 0.353096, -0.308483, -0.264336, -0.913764, 0.222426, -0.954027, 0.200894, 201.623, 204.219, 412.124)
+mesh = SubResource("PlaneMesh_gcmcu")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_23" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(-0.862642, -0.406992, 0.300343, -0.23485, -0.203624, -0.950465, 0.447988, -0.890446, 0.0800725, 379.531, 137.802, 404.182)
+mesh = SubResource("PlaneMesh_gcmcu")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Vista_Flat_24" type="MeshInstance3D" parent="Loop4"]
+transform = Transform3D(0.0650047, -0.951613, 0.300343, 0.104149, -0.292866, -0.950465, 0.992435, 0.0930654, 0.0800725, 1695.93, 294.199, -233.263)
+mesh = SubResource("PlaneMesh_gcmcu")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/HarlanTestScene")
+
+[node name="Street_Light2" parent="Loop4" instance=ExtResource("27_nhkuj")]
+transform = Transform3D(0.846973, 0, 0.531635, 0, 1, 0, -0.531635, 0, 0.846973, 29.3183, -0.889192, -32.991)
+
+[node name="SpotLight3D" parent="Loop4/Street_Light2/street_Light_model" index="2"]
+light_color = Color(0.87, 0.0609, 0.0609, 1)
+
+[node name="SpotLight3D2" parent="Loop4/Street_Light2/street_Light_model" index="3"]
+light_color = Color(0.870588, 0.0627451, 0.0627451, 1)
+
+[node name="SpotLight3D3" parent="Loop4/Street_Light2/street_Light_model" index="4"]
+mesh = SubResource("SphereMesh_v8fab")
+
+[node name="sign7" parent="." instance=ExtResource("5_u87b5")]
+transform = Transform3D(-0.865097, 0.120575, -0.486898, 0.0689832, 0.990055, 0.12261, 0.496839, 0.0724818, -0.864811, 12.2385, -0.208915, -22.7262)
+
+[node name="Road Sign 2" parent="." instance=ExtResource("62_gcmcu")]
+transform = Transform3D(-0.959481, 0, -0.281772, 0, 1, 0, 0.281772, 0, -0.959481, 29.3095, 1.80653, -35.867)
+
+[node name="Road Sign 4" parent="." instance=ExtResource("62_gcmcu")]
+transform = Transform3D(0.555315, -0.147914, -0.818381, 0.257386, 0.966309, 0, 0.790808, -0.21064, 0.574677, 19.5171, -0.228113, -40.0133)
+
+[node name="Road Sign 3" parent="." instance=ExtResource("62_gcmcu")]
+transform = Transform3D(-0.522224, -0.0950555, -0.847494, 0.271133, 0.9237, -0.270674, 0.80856, -0.371136, -0.456606, 29.2987, 1.20926, -35.9287)
+
+[editable path="Loop4/Street_Light2"]
