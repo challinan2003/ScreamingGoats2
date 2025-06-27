@@ -5421,19 +5421,2860 @@ transform = Transform3D(-0.169401, 0, -0.985547, 0, 1, 0, 0.985547, 0, -0.169401
 [node name="Tunnel_entrance3" parent="Loop4" instance=ExtResource("28_gfydl")]
 transform = Transform3D(-0.466927, 0, -0.884296, 0, 1, 0, 0.884296, 0, -0.466927, 253.222, 0.0945914, -102.85)
 
-[node name="tree1" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 48.176, 0.874159, -246.966)
+[node name="TreeRing" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.89971, 0, 0.436488, 0, 1, 0, -0.436488, 0, 0.89971, 69.8024, 0, -243.982)
 
-[node name="tree2" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 48.176, 0.874159, -222.067)
+[node name="tree1" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
 
-[node name="tree3" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, 48.176, 14.4941, -234.601)
+[node name="tree2" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
 
-[node name="tree4" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, 48.176, 10.5138, -243.764)
+[node name="tree3" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
 
-[node name="tree5" parent="." instance=ExtResource("1_ung7k")]
-transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, 48.176, 10.2941, -225.324)
+[node name="tree10" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing2" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.89971, -0.0623538, 0.432011, 3.72529e-09, 0.989744, 0.142854, -0.436488, -0.128527, 0.890483, 67.6777, 0, -242.951)
+
+[node name="tree1" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing2" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing3" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, 0, 0.450815, 0, 1, 0, -0.450815, 0, 0.892617, 65.5685, 0, -241.734)
+
+[node name="tree1" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing3" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing4" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, 0.0550967, 0.447436, 0, 0.992504, -0.122216, -0.450815, 0.109092, 0.885926, 63.3405, 0, -240.609)
+
+[node name="tree1" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing4" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing5" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, 0, 0.450815, 0, 1, 0, -0.450815, 0, 0.892617, 61.3981, 0, -239.628)
+
+[node name="tree1" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing5" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing6" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, -0.0637385, 0.446287, 3.72529e-09, 0.989955, 0.141385, -0.450815, -0.126203, 0.883651, 59.4036, 0, -238.62)
+
+[node name="tree1" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing6" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing7" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, 0, 0.450815, 0, 1, 0, -0.450815, 0, 0.892617, 57.5249, 0, -237.672)
+
+[node name="tree1" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing7" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing8" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.892617, 0.0756085, 0.44443, 7.45058e-09, 0.985835, -0.167715, -0.450815, 0.149705, 0.879974, 55.5344, 0, -236.666)
+
+[node name="tree1" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing8" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing9" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.914671, 0, 0.4042, 0, 1, 0, -0.4042, 0, 0.914671, 53.6436, 0, -235.705)
+
+[node name="tree1" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing9" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing10" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.93919, -0.0578234, 0.338494, 0, 0.985721, 0.168386, -0.343397, -0.158147, 0.92578, 51.7762, 0, -234.88)
+
+[node name="tree1" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing10" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing11" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.955716, 0, 0.29429, 0, 1, 0, -0.29429, 0, 0.955716, 49.84, 0, -234.172)
+
+[node name="tree1" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing11" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing12" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.963406, 0.0357104, 0.265656, 0, 0.991086, -0.133225, -0.268046, 0.12835, 0.954818, 47.7996, 0.0444989, -233.89)
+
+[node name="tree1" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing12" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing13" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.970241, 0, 0.242142, 0, 1, 0, -0.242142, 0, 0.970241, 45.5341, 0, -233.466)
+
+[node name="tree1" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing13" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing14" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.974327, -0.0201896, 0.224231, 0, 0.995971, 0.0896766, -0.225138, -0.0873743, 0.970401, 43.3509, 0, -232.952)
+
+[node name="tree1" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing14" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing15" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.978256, 0, 0.207399, 0, 1, 0, -0.207399, 0, 0.978256, 41.4572, 0, -232.741)
+
+[node name="tree1" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing15" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing16" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.978256, 0.0225933, 0.206165, 0, 0.994049, -0.108936, -0.207399, 0.106568, 0.972435, 39.2915, 0, -232.168)
+
+[node name="tree1" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing16" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing17" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.987167, 0, 0.159692, 0, 1, 0, -0.159692, 0, 0.987167, 37.4887, 0, -231.916)
+
+[node name="tree1" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing17" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing18" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.987167, -0.0197077, 0.158471, 0, 0.992356, 0.123411, -0.159692, -0.121827, 0.979621, 35.5146, 0, -231.759)
+
+[node name="tree1" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing18" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing19" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.987167, 0, 0.159692, 0, 1, 0, -0.159692, 0, 0.987167, 33.3241, 0, -231.472)
+
+[node name="tree1" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing19" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing20" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.987167, 0.0154861, 0.158939, 0, 0.995287, -0.0969749, -0.159692, 0.0957304, 0.982514, 31.0912, 0, -231.192)
+
+[node name="tree1" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing20" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing21" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.987167, 0, 0.159692, 0, 1, 0, -0.159692, 0, 0.987167, 29.082, 0, -230.745)
+
+[node name="tree1" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing21" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing22" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.989759, -0.0167116, 0.141768, 0, 0.993124, 0.117069, -0.14275, -0.11587, 0.982953, 27.3499, 0, -230.337)
+
+[node name="tree1" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing22" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing23" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.992405, 0, 0.123012, 0, 1, 0, -0.123012, 0, 0.992405, 25.5251, 0, -230.022)
+
+[node name="tree1" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing23" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing24" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.996779, 0.00776334, 0.0798222, -4.65661e-10, 0.995304, -0.0968012, -0.0801988, 0.0964894, 0.992098, 23.5272, 0, -229.683)
+
+[node name="tree1" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing24" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing25" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.996779, 0, 0.0801988, 0, 1, 0, -0.0801988, 0, 0.996779, 21.5624, 0, -229.332)
+
+[node name="tree1" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing25" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing26" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.998752, -0.00575819, 0.0496149, -4.65661e-10, 0.993333, 0.115284, -0.0499479, -0.11514, 0.992093, 19.6222, 0, -229.235)
+
+[node name="tree1" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing26" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing27" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.998752, 0, 0.0499479, 0, 1, 0, -0.0499479, 0, 0.998752, 17.6421, 0, -229.136)
+
+[node name="tree1" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing27" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing28" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.998752, 0.00755688, 0.0493729, 0, 0.988489, -0.151295, -0.0499479, 0.151106, 0.987255, 15.6015, 0, -229.034)
+
+[node name="tree1" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing28" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing29" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.998752, 0, 0.0499479, 0, 1, 0, -0.0499479, 0, 0.998752, 13.571, 0, -228.933)
+
+[node name="tree1" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing29" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing30" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.998752, -0.0060577, 0.0495792, 0, 0.992618, 0.12128, -0.0499479, -0.121129, 0.991379, 11.5031, 0, -228.829)
+
+[node name="tree1" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing30" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing31" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0, 0.0338528, 0, 1, 0, -0.0338528, 0, 0.999427, 9.18888, 0, -228.714)
+
+[node name="tree1" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing31" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing32" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0.00469736, 0.0335253, 4.65661e-10, 0.990326, -0.138758, -0.0338528, 0.138679, 0.989759, 7.01608, 0, -228.64)
+
+[node name="tree1" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing32" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing33" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0, 0.0338528, 0, 1, 0, -0.0338528, 0, 0.999427, 4.6871, 0, -228.71)
+
+[node name="tree1" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing33" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing34" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, -0.00396548, 0.0336198, -4.65661e-10, 0.993116, 0.117139, -0.0338528, -0.117072, 0.992546, 2.52482, 0, -228.637)
+
+[node name="tree1" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing34" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing35" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0, 0.0338528, 0, 1, 0, -0.0338528, 0, 0.999427, 0.463559, 0, -228.567)
+
+[node name="tree1" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing35" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing36" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0.00280682, 0.0337363, 2.32831e-10, 0.996557, -0.0829126, -0.0338528, 0.082865, 0.995986, -1.6677, 0, -228.495)
+
+[node name="tree1" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing36" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing37" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.999427, 0, 0.0338528, 0, 1, 0, -0.0338528, 0, 0.999427, -3.62918, 0, -228.429)
+
+[node name="tree1" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing37" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing38" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.996409, -0.00713941, 0.0843675, 0, 0.996439, 0.0843213, -0.0846691, -0.0840186, 0.99286, -5.67643, 0, -228.359)
+
+[node name="tree1" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing38" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing39" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.979198, 0, 0.202907, 0, 1, 0, -0.202907, 0, 0.979198, -7.84834, 0, -228.175)
+
+[node name="tree1" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing39" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing40" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0.0227307, 0.263146, -1.86265e-09, 0.99629, -0.0860603, -0.264125, 0.0830042, 0.96091, -9.8798, 0, -227.619)
+
+[node name="tree1" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing40" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing41" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0, 0.264125, 0, 1, 0, -0.264125, 0, 0.964488, -12.0215, 0, -227.032)
+
+[node name="tree1" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing41" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing42" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0, 0.264125, 0, 1, 0, -0.264125, 0, 0.964488, -13.7924, 0, -226.547)
+
+[node name="tree1" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing42" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing43" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0, 0.264125, 0, 1, 0, -0.264125, 0, 0.964488, -15.4854, 0, -226.083)
+
+[node name="tree1" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing43" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing44" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0, 0.264125, 0, 1, 0, -0.264125, 0, 0.964488, -17.4036, 0, -225.558)
+
+[node name="tree1" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing44" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing45" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.964488, 0, 0.264125, 0, 1, 0, -0.264125, 0, 0.964488, -19.4614, 0, -224.995)
+
+[node name="tree1" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing45" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing46" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.958397, 0, 0.285437, 0, 1, 0, -0.285437, 0, 0.958397, -21.3804, 0, -223.941)
+
+[node name="tree1" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing46" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing47" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.951121, 0, 0.308818, 0, 1, 0, -0.308818, 0, 0.951121, -23.3743, 0, -223.347)
+
+[node name="tree1" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing47" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing48" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.940419, 0, 0.340018, 0, 1, 0, -0.340018, 0, 0.940419, -25.4574, 0, -222.492)
+
+[node name="tree1" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing48" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing49" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.940419, 0, 0.340018, 0, 1, 0, -0.340018, 0, 0.940419, -27.6705, 0, -221.692)
+
+[node name="tree1" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing49" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing50" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.940419, 0, 0.340018, 0, 1, 0, -0.340018, 0, 0.940419, -29.7354, 0, -220.945)
+
+[node name="tree1" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing50" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing51" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.940419, 0, 0.340018, 0, 1, 0, -0.340018, 0, 0.940419, -32.1189, 0, -220.463)
+
+[node name="tree1" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing51" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing52" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.913318, 0, 0.407247, 0, 1, 0, -0.407247, 0, 0.913318, -34.2808, 0, -219.681)
+
+[node name="tree1" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing52" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing53" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.850168, 0, 0.526511, 0, 1, 0, -0.526511, 0, 0.850168, -36.2197, 0, -218.816)
+
+[node name="tree1" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing53" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing54" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.802307, 0, 0.596911, 0, 1, 0, -0.596911, 0, 0.802307, -37.7288, 0, -217.694)
+
+[node name="tree1" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing54" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing55" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.762589, 0, 0.646883, 0, 1, 0, -0.646883, 0, 0.762589, -39.2694, 0, -216.387)
+
+[node name="tree1" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing55" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing56" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.707082, 0, 0.707131, 0, 1, 0, -0.707131, 0, 0.707082, -40.6146, 0, -215.246)
+
+[node name="tree1" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing56" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing57" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.707082, 0, 0.707131, 0, 1, 0, -0.707131, 0, 0.707082, -41.9781, 0, -213.882)
+
+[node name="tree1" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing57" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing58" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.707082, 0, 0.707131, 0, 1, 0, -0.707131, 0, 0.707082, -43.2898, 0, -212.57)
+
+[node name="tree1" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing58" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing59" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -45.0773, 0, -211.448)
+
+[node name="tree1" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing59" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing60" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -46.4063, 0, -210.157)
+
+[node name="tree1" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing60" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing61" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -47.8407, 0, -208.763)
+
+[node name="tree1" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing61" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing62" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -49.2832, 0, -207.362)
+
+[node name="tree1" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing62" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing63" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -50.4828, 0, -205.683)
+
+[node name="tree1" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing63" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing64" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -51.8454, 0, -204.359)
+
+[node name="tree1" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing64" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing65" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.717263, 0, 0.696802, 0, 1, 0, -0.696802, 0, 0.717263, -53.2183, 0, -202.68)
+
+[node name="tree1" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing65" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing66" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.709755, 0, 0.704448, 0, 1, 0, -0.704448, 0, 0.709755, -54.7552, 0, -201.088)
+
+[node name="tree1" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing66" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing67" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.709755, 0, 0.704448, 0, 1, 0, -0.704448, 0, 0.709755, -56.1694, 0, -199.685)
+
+[node name="tree1" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing67" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
+
+[node name="TreeRing68" type="Node3D" parent="Loop4"]
+transform = Transform3D(0.709755, 0, 0.704448, 0, 1, 0, -0.704448, 0, 0.709755, -57.6354, 0, -198.23)
+
+[node name="tree1" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.623168, 0.874159, -12.4748)
+
+[node name="tree2" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, -0.623168, 0.874159, 12.4242)
+
+[node name="tree3" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 4.37114e-08, 0, -4.37114e-08, -0.5, -0.623168, 14.4941, -0.110133)
+
+[node name="tree10" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, -0.129409, 0, 0.129409, -0.482963, -1.50046, 14.008, -3.55169)
+
+[node name="tree11" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, -0.25, 0, 0.25, -0.433013, -0.623168, 12.5741, -6.70039)
+
+[node name="tree4" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, -0.353553, 0, 0.353553, -0.353553, -1.50046, 10.5138, -9.27261)
+
+[node name="tree12" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, -0.433013, 0, 0.433013, -0.25, -0.623168, 7.71443, -11.4023)
+
+[node name="tree13" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, -0.482963, 0, 0.482963, -0.12941, -1.50046, 4.35268, -12.269)
+
+[node name="tree5" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.353553, 0.353553, 0, -0.353553, -0.353553, -1.50046, 10.2941, 9.16681)
+
+[node name="tree8" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.25, 0.433013, 0, -0.433013, -0.25, -0.623168, 7.33753, 11.1946)
+
+[node name="tree9" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.12941, 0.482963, 0, -0.482963, -0.12941, -1.50046, 4.31989, 12.383)
+
+[node name="tree6" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.433013, 0.25, 0, -0.25, -0.433013, -0.623168, 12.418, 6.51325)
+
+[node name="tree7" parent="Loop4/TreeRing68" instance=ExtResource("1_ung7k")]
+transform = Transform3D(0.5, 0, 0, 0, -0.482963, 0.12941, 0, -0.12941, -0.482963, -1.50046, 13.9717, 3.27808)
 
 [editable path="Loop4/Street_Light2"]
