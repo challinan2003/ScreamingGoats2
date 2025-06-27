@@ -18,9 +18,10 @@ func scroll_text(input_text:String) -> void:
 	
 	for i in get_parsed_text():
 		visible_characters += 1
-		await get_tree().create_timer(0.0005).timeout
+		await get_tree().create_timer(0.05).timeout
 	
 	print("end")
+	await get_tree().create_timer(2).timeout
 	hide()
 	Global.gameStarted = true
 	
