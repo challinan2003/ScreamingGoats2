@@ -15,7 +15,7 @@ func _on_body_entered(body: Node3D):
 		var enemy = enemy_scene.instantiate()
 		# The position and rotation_degrees are relative to the trigger box scene
 		# NOT the game world scene.
-		enemy.position = Vector3(1, 0, -15)
+		enemy.position = Vector3(1, 0, -30)
 		enemy.rotation_degrees = Vector3(0, 180, 0)
 		add_child(enemy)
 		# print("spawning enemy")
