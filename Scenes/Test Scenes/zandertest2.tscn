@@ -1,7 +1,9 @@
-[gd_scene load_steps=83 format=3 uid="uid://cj2oyi1q7g17w"]
+[gd_scene load_steps=87 format=3 uid="uid://cj2oyi1q7g17w"]
 
+[ext_resource type="PackedScene" uid="uid://d0on04df3pi4m" path="res://Assets/UI/PauseMenu.tscn" id="1_0cv8b"]
 [ext_resource type="Texture2D" uid="uid://cns5tk5jrqf7r" path="res://Assets/Materials/Skybox Star Cover.png" id="1_2tesb"]
 [ext_resource type="Texture2D" uid="uid://ccolugeyphrds" path="res://Assets/Materials/roadtexture.png" id="2_5kwj3"]
+[ext_resource type="PackedScene" uid="uid://drm8m3oxfg6as" path="res://Assets/UI/MainMenu.tscn" id="2_sn0bb"]
 [ext_resource type="Texture2D" uid="uid://b134fu4ajo62e" path="res://Assets/Materials/TreeFakeWall.png" id="3_8fj44"]
 [ext_resource type="Texture2D" uid="uid://l3k5yman5k01" path="res://Assets/Materials/TreeFakeWall2.png" id="4_8xj8a"]
 [ext_resource type="PackedScene" uid="uid://dfr3bs2vedkut" path="res://Assets/Models/sign1.glb" id="5_0cv8b"]
@@ -13,8 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://dvjhj65b2qbne" path="res://Assets/Models/sign6.glb" id="11_ehdq3"]
 [ext_resource type="Script" uid="uid://deyv6fcgecabj" path="res://Scripts/car.gd" id="12_raorn"]
 [ext_resource type="AudioStream" uid="uid://cttb6vdcoroby" path="res://Assets/Sounds/Car_Idle_1_loop.mp3" id="13_06tni"]
+[ext_resource type="Script" uid="uid://b78hgihl2detn" path="res://Scripts/driver.gd" id="13_8fj44"]
 [ext_resource type="AudioStream" uid="uid://bsaclk0fsrbe8" path="res://Assets/Sounds/Car_Idle_2_loop.mp3" id="14_8q00t"]
 [ext_resource type="AudioStream" uid="uid://dwtutw5bqlaqu" path="res://Assets/Sounds/Car_Drive_1.mp3" id="15_vd3vf"]
+[ext_resource type="PackedScene" uid="uid://k8yahsbd5dsc" path="res://Assets/UI/tutorial_ui.tscn" id="16_sn0bb"]
 [ext_resource type="Script" path="res://Scenes/Test Scenes/gpu_particles_collision_box_3d.gd" id="16_uwxbf"]
 [ext_resource type="PackedScene" uid="uid://dlrlaju1n3mov" path="res://Assets/Models/GuardRails.glb" id="17_nfr04"]
 [ext_resource type="Texture2D" uid="uid://bfn8ubpsbs6ax" path="res://Assets/Materials/Vista1.png" id="18_2qm37"]
@@ -50,12 +54,12 @@ ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 energy_multiplier = 0.8
 
-[sub_resource type="Sky" id="Sky_d7can"]
+[sub_resource type="Sky" id="Sky_0cv8b"]
 sky_material = SubResource("ProceduralSkyMaterial_nm4gv")
 
 [sub_resource type="Environment" id="Environment_fkd3l"]
 background_mode = 2
-sky = SubResource("Sky_d7can")
+sky = SubResource("Sky_0cv8b")
 
 [sub_resource type="Curve3D" id="Curve3D_1p7x2"]
 
@@ -67,10 +71,10 @@ texture_filter = 2
 [sub_resource type="Curve3D" id="Curve3D_uc85k"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0214024, 1, -0.319985, 0, 0, 0, 0, 0, 0, 0.921793, 1, -11.1247, 0, 0, 0, 0, 0, 0, 4.52336, 1, -24.1804, 0, 0, 0, 0, 0, 0, 19.3798, 1, -39.9373, 0, 0, 0, 0, 0, 0, 38.2881, 1, -46.6902, 0, 0, 0, 0, 0, 0, 59.8975, 1, -52.0926, 0, 0, 0, 0, 0, 0, 86.0089, 1, -57.9451, 0, 0, 0, 0, 0, 0, 106.268, 1, -57.0447, 0, 0, 0, 0, 0, 0, 128.327, 1, -51.1922, 0, 0, 0, 0, 0, 0, 152.638, 1, -45.7898, 0, 0, 0, 0, 0, 0, 182.351, 1, -48.9412, 0, 0, 0, 0, 0, 0, 215.215, 1, -58.3953, 0, 0, 0, 0, 0, 0, 237.275, 1, -77.3036, 0, 0, 0, 0, 0, 0, 253.482, 1, -99.8134, 0, 0, 0, 0, 0, 0, 261.45, 1, -127.535, 0, 0, 0, 0, 0, 0, 272.255, 1, -147.794, 0, 0, 0, 0, 0, 0, 294.315, 1, -162.2, 0, 0, 0, 0, 0, 0, 323.578, 1, -175.256, 0, 0, 0, 0, 0, 0, 345.637, 1, -195.515, 0, 0, 0, 0, 0, 0, 351.94, 1, -226.578, 0, 0, 0, 0, 0, 0, 344.287, 1, -251.789, 0, 0, 0, 0, 0, 0, 317.275, 1, -272.048, 0, 0, 0, 0, 0, 0, 288.912, 1, -278.801, 0, 0, 0, 0, 0, 0, 243.893, 1, -281.502, 0, 0, 0, 0, 0, 0, 193.921, 1, -283.753, 0, 0, 0, 0, 0, 0, 138.997, 1, -277.451, 0, 0, 0, 0, 0, 0, 90.3758, 1, -256.291, 0, 0, 0, 0, 0, 0, 62.0134, 1, -237.833, 0, 0, 0, 0, 0, 0, 38.6032, 1, -230.18, 0, 0, 0, 0, 0, 0, -10.9184, 1, -228.379, 0, 0, 0, 0, 0, 0, -36.1294, 1, -220.276, 0, 0, 0, 0, 0, 0, -55.938, 1, -202.268, 0, 0, 0, 0, 0, 0, -71.6949, 1, -176.156, 0, 0, 0, 0, 0, 0, -79.3482, 1, -148.694, 0, 0, 0, 0, 0, 0, -79.7984, 1, -123.483, 0, 0, 0, 0, 0, 0, -77.4338, 1, -75.0936, 0, 0, 0, 0, 0, 0, -81.9358, 1, -32.7751, 0, 0, 0, 0, 0, 0, -90.9397, 1, 3.6908, 0, 0, 0, 0, 0, 0, -91.3899, 1, 37.0053, 0, 0, 0, 0, 0, 0, -73.8322, 1, 54.563, 0, 0, 0, 0, 0, 0, -43.6691, 1, 55.9136, 0, 0, 0, 0, 0, 0, -17.1075, 1, 46.9096, 0, 0, 0, 0, 0, 0, -1.80083, 1, 22.1488),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0214024, 1, -0.319985, 0, 0, 0, 0, 0, 0, 0.921793, 1, -11.1247, 0, 0, 0, 0, 0, 0, 4.52336, 1, -24.1804, 0, 0, 0, 0, 0, 0, 19.3798, 1, -39.9373, 0, 0, 0, 0, 0, 0, 38.2881, 1, -46.6902, 0, 0, 0, 0, 0, 0, 59.8975, 1, -52.0926, 0, 0, 0, 0, 0, 0, 86.0089, 1, -57.9451, 0, 0, 0, 0, 0, 0, 106.268, 1, -57.0447, 0, 0, 0, 0, 0, 0, 128.327, 1, -51.1922, 0, 0, 0, 0, 0, 0, 152.638, 1, -45.7898, 0, 0, 0, 0, 0, 0, 182.351, 1, -48.9412, 0, 0, 0, 0, 0, 0, 215.215, 1, -58.3953, 0, 0, 0, 0, 0, 0, 237.275, 1, -77.3036, 0, 0, 0, 0, 0, 0, 253.482, 1, -99.8134, 0, 0, 0, 0, 0, 0, 261.45, 1, -127.535, 0, 0, 0, 0, 0, 0, 272.255, 1, -147.794, 0, 0, 0, 0, 0, 0, 294.315, 1, -162.2, 0, 0, 0, 0, 0, 0, 323.578, 1, -175.256, 0, 0, 0, 0, 0, 0, 345.637, 1, -195.515, 0, 0, 0, 0, 0, 0, 351.94, 1, -226.578, 0, 0, 0, 0, 0, 0, 344.287, 1, -251.789, 0, 0, 0, 0, 0, 0, 317.275, 1, -272.048, 0, 0, 0, 0, 0, 0, 288.912, 1, -278.801, 0, 0, 0, 0, 0, 0, 243.893, 1, -281.502, 0, 0, 0, 0, 0, 0, 193.921, 1, -283.753, 0, 0, 0, 0, 0, 0, 138.997, 1, -277.451, 0, 0, 0, 0, 0, 0, 90.3758, 1, -256.291, 0, 0, 0, 0, 0, 0, 62.0134, 1, -237.833, 0, 0, 0, 0, 0, 0, 38.6032, 1, -230.18, 0, 0, 0, 0, 0, 0, -10.9184, 1, -228.379, 0, 0, 0, 0, 0, 0, -36.1294, 1, -220.276, 0, 0, 0, 0, 0, 0, -55.938, 1, -202.268, 0, 0, 0, 0, 0, 0, -71.6949, 1, -176.156, 0, 0, 0, 0, 0, 0, -79.3482, 1, -148.694, 0, 0, 0, 0, 0, 0, -79.7984, 1, -123.483, 0, 0, 0, 0, 0, 0, -77.4338, 1, -75.0936, 0, 0, 0, 0, 0, 0, -81.9358, 1, -32.7751, 0, 0, 0, 0, 0, 0, -90.9397, 1, 3.6908, 0, 0, 0, 0, 0, 0, -91.3899, 1, 37.0053, 0, 0, 0, 0, 0, 0, -73.8322, 1, 54.563, 0, 0, 0, 0, 0, 0, -43.6691, 1, 55.9136, 0, 0, 0, 0, 0, 0, -17.1075, 1, 46.9096, 0, 0, 0, 0, 0, 0, -1.80083, 1, 22.1488, 0, 0, 0, 0, 0, 0, -4.09799, 10.4226, 2.97695),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 43
+point_count = 44
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l6m4"]
 uv1_scale = Vector3(2, 2, 2)
@@ -127,11 +131,11 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 gravity = Vector3(4, -9.8, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlnnn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cv8b"]
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_fkd3l"]
-material = SubResource("StandardMaterial3D_dlnnn")
+material = SubResource("StandardMaterial3D_0cv8b")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o401o"]
 
@@ -248,7 +252,11 @@ stream_1 = ExtResource("37_fynq6")
 stream_2 = ExtResource("38_3ro5j")
 stream_3 = ExtResource("35_vyq6i")
 
-[node name="HarlanTestScene" type="Node3D"]
+[node name="z2" type="Node3D"]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_0cv8b")]
+
+[node name="MainMenu" parent="." instance=ExtResource("2_sn0bb")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fkd3l")
@@ -3696,16 +3704,15 @@ script = ExtResource("12_raorn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0517786, 0)
 mesh = SubResource("BoxMesh_dlbj2")
 
-[node name="Camera3D" type="Camera3D" parent="car/carbody"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, -0.5)
+[node name="Head" type="Node3D" parent="car/carbody"]
+script = ExtResource("13_8fj44")
+
+[node name="Camera3D" type="Camera3D" parent="car/carbody/Head"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1, -0.5)
 current = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="car/carbody"]
-transform = Transform3D(1, -7.8162e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, 0, 1.5)
-light_color = Color(0.94, 0.91556, 0.8178, 1)
-shadow_enabled = true
-spot_range = 20.0
-spot_angle = 60.0
+[node name="tutorialUI" parent="car/carbody/Head/Camera3D" instance=ExtResource("16_sn0bb")]
+unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="car"]
 shape = SubResource("ConvexPolygonShape3D_o401o")
@@ -3783,6 +3790,13 @@ draw_pass_1 = SubResource("QuadMesh_fkd3l")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="car/GPUParticles3D"]
 script = ExtResource("16_uwxbf")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="car"]
+transform = Transform3D(1, -7.81622e-15, -1.78814e-07, 7.8162e-15, -1, 8.74228e-08, -1.78814e-07, -8.74228e-08, -1, 1.3411e-07, -0.0517786, 1.5)
+light_color = Color(0.94, 0.91556, 0.8178, 1)
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 60.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -4592,6 +4606,7 @@ bus = &"Radio"
 
 [node name="Loop2Radio" parent="." instance=ExtResource("31_de40o")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.25882, 0, -5.46593)
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Loop2Radio"]
 stream = SubResource("AudioStreamPlaylist_22f27")

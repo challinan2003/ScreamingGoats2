@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk4l6r7xtq2lj"]
+
+[ext_resource type="Script" uid="uid://bp72dog8ldte" path="res://Scripts/enemy_spawn_trigger.gd" id="1_5m85q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_optdi"]
+size = Vector3(11.0356, 3.19525, 6.57129)
+
+[node name="Trigger Box" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_5m85q")
+
+[node name="SpawnBox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.113281, 1.09763, -3.48584)
+shape = SubResource("BoxShape3D_optdi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

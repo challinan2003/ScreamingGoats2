@@ -16,10 +16,11 @@ func pause():
 	
 func testEsc():
 	#print("test1")
-	if Input.is_action_just_pressed("escape") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("escape") and get_tree().paused:
-		resume()
+	if Global.gameStarted == true:
+		if Input.is_action_just_pressed("escape") and !get_tree().paused:
+			pause()
+		elif Input.is_action_just_pressed("escape") and get_tree().paused:
+			resume()
 
 
 func _on_resume_button_pressed() -> void:
@@ -34,3 +35,8 @@ func _process(delta: float) -> void:
 func _on_quit_button_pressed() -> void:
 	if get_tree().paused:
 		get_tree().quit()
+
+
+func _on_reset_button_pressed() -> void:
+	if get_tree().paused:
+		get_tree().reload_current_scene()
